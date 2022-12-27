@@ -1,0 +1,18 @@
+.button {
+    height : 60px;
+    min-width: 80px;
+    border : 2px solid aqua;
+    background-color: transparent;
+    border-radius: 10px;
+    /* box-shadow:0px 0px 0px 10px black inset; */
+    padding:0px 5px 0px;
+}
+
+.content {
+    margin: 0px 5px 0px;
+}
+
+.button:hover {
+    background-color: aqua;
+}
+

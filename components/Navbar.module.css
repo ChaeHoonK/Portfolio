@@ -1,0 +1,28 @@
+.navbar {
+    display : flex;
+    height : 50px;
+    border-bottom: 2px solid aquamarine;
+    position: fixed;
+    width : 100%;
+    top:0;
+    align-items: center;
+    background-color: navy;
+}
+
+.buttonGroup {
+    display : flex;
+    gap : 10px;
+    height : 40px;
+    justify-content: space-around;
+}
+
+.navbarMenu {
+    height : 40px;
+    min-width: 80px;
+    border : none;
+    background-color: transparent;
+}
+
+.navbarMenu:hover {
+    background-color: aqua;
+}

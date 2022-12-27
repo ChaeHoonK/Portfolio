@@ -1,0 +1,29 @@
+.container {
+    height : 500px;
+    background-color: transparent;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.cardGroup {
+    display : flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.card {
+    display : flex;
+    align-items: center;
+    flex-direction: column;
+    flex:25%;
+}
+
+@media screen and (max-width : 600px) {
+    .card {
+        flex:50%
+    }
+}
