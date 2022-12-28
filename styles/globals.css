@@ -100,7 +100,18 @@ a {
   text-decoration: none;
 }
 
+h3 {
+  color:aqua
+}
+
 .container {
+  width: 100%;
+  display : flex;
+  margin: 100px 0px 100px;
+}
+
+.containerInfo {
+  position: absolute;
   width: 100%;
   display : flex;
 }
@@ -110,3 +121,4 @@ a {
     color-scheme: dark;
   }
 }
+

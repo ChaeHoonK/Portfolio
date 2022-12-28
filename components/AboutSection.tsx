@@ -1,5 +1,6 @@
 import styles from "./AboutSection.module.css";
 import Button from "./Button";
+import Image from "next/image";
 
 export default function AboutSection() {
   return (
@@ -8,54 +9,58 @@ export default function AboutSection() {
       <h3>Aiming For...</h3>
       <div className={styles.cardGroup}>
         <div className={styles.card}>
-          <div
-            style={{
-              width: "100px",
-              height: "100px",
-              backgroundColor: "white",
-              border: "3px solid black",
-            }}
+          <Image
+            className={styles.filterMint + " " + styles.img}
+            src="/fast.svg"
+            alt="hi"
+            width={200}
+            height={100}
           />
           <h3>Fast</h3>
-          <p>Diversified Experience is all I need to do thank you so much bye</p>
+          <p>
+            Building Fast interface (3second loading time, 60fr/s) by obtimization
+          </p>
         </div>
         <div className={styles.card}>
-          <div
-            style={{
-              width: "100px",
-              height: "100px",
-              backgroundColor: "white",
-              border: "3px solid black",
-            }}
+          <Image
+            className={styles.filterMint + " " + styles.img}
+            src="/devices.svg"
+            alt="hi"
+            width={200}
+            height={100}
           />
           <h3>Responsive</h3>
-          <p>Diversified Experience is all I need to do thank you so much bye</p>
+          <p>
+            Building Responsive interface so that the application is usable throughout any devices
+          </p>
         </div>
         <div className={styles.card}>
-          <div
-            style={{
-              width: "100px",
-              height: "100px",
-              backgroundColor: "white",
-              border: "3px solid black",
-            }}
+          <Image
+            className={styles.filterMint + " " + styles.img}
+            src="/communication.svg"
+            alt="hi"
+            width={200}
+            height={100}
           />
           <h3>Communication</h3>
-          <p>Diversified Experience is all I need to do thank you so much bye</p>
+          <p>
+            Cooperate as a team
+          </p>
         </div>
         <div className={styles.card}>
-          <div
-            style={{
-              width: "100px",
-              height: "100px",
-              backgroundColor: "white",
-              border: "3px solid black",
-            }}
+          <Image
+            className={styles.filterMint + " " + styles.img}
+            src="/diversity.svg"
+            alt="hi"
+            width={200}
+            height={100}
           />
+
           <h3>Diversified</h3>
-          <p>Diversified Experience is all I need to do thank you so much bye</p>
+          <p>
+            Diversified Experience is my power
+          </p>
         </div>
-        
       </div>
       <Button text="More" />
     </div>

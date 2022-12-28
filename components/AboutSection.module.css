@@ -1,5 +1,5 @@
 .container {
-    height : 500px;
+    height : auto;
     background-color: transparent;
     width: 100%;
     display: flex;
@@ -13,17 +13,44 @@
     flex-wrap: wrap;
     flex-direction: row;
     justify-content: space-between;
+    align-items: flex-start;
 }
 
 .card {
     display : flex;
     align-items: center;
     flex-direction: column;
+    /* justify-content: start; */
     flex:25%;
+    padding : 0px 5px 0px;
+}
+
+.img {
+    /* flex :inherit; */
+    width : 15vw;
+    height : auto;
+    margin-bottom: 10px;
+    margin-top: 15px;
+}
+
+.img:hover {
+    transform: scale(1.15);
+}
+/* https://codepen.io/sosuke/pen/Pjoqqp */
+.filterGreen{
+    filter: invert(48%) sepia(79%) saturate(2476%) hue-rotate(86deg) brightness(118%) contrast(119%);
+}
+
+.filterMint{
+    filter: invert(95%) sepia(5%) saturate(4537%) hue-rotate(140deg) brightness(85%) contrast(82%);
 }
 
 @media screen and (max-width : 600px) {
     .card {
         flex:50%
+    }
+    .img {
+        /* flex :inherit; */
+        width : 30vw
     }
 }

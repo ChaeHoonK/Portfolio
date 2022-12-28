@@ -1,0 +1,21 @@
+.comment {
+    position : absolute;
+    z-index: 1;
+    display : none;
+    border : 2px dotted white;
+    border-radius: 10px;
+    padding: 1px 5px 2px;
+}
+
+.tag {
+    padding:1px 5px 1px;
+}
+
+.dropdown{
+    position : relative;
+    display: inline-block;
+}
+
+.dropdown:hover .comment{
+    display: block;
+}

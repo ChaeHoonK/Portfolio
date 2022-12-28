@@ -14,5 +14,6 @@
 
 .button:hover {
     background-color: aqua;
+    cursor: pointer;
 }
 

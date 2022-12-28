@@ -1,9 +1,39 @@
 .container {
-    height : 500px;
     background-color: transparent;
     width: 100%;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
+}
+
+.portfolioContainer {
+    display : flex;
+    flex-wrap: wrap;
+    gap:10px;
+    justify-content: center;
+}
+
+.project {
+    display : flex;
+    flex-direction: column;
+    width : 20vw;
+    height: 200px;
+}
+
+@media (max-width:1200px){
+    .project {
+        width : 30vw
+    }
+  }
+  @media (max-width:800px){
+    .project {
+        width : 40vw
+    }
+
+  }
+  @media (max-width:600px){
+    .project {
+        width : 60vw
+    }
 }

@@ -13,9 +13,7 @@ export default function Button({ text, onClick }: props): ReactElement {
       className={styles.button}
       onClick={() => (onClick ? onClick() : undefined)}
     >
-      {/* <div className={styles.content}> */}
         {text}
-        {/* </div> */}
     </button>
   );
 }

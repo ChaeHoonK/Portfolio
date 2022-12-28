@@ -9,6 +9,8 @@ import PortfolioSection from '../components/PortfolioSection'
 import AboutSection from '../components/AboutSection'
 import ContactSection from '../components/ContactSection'
 
+import ParticlesWrapper from '../components/ParticleWrapper'
+
 const inter = Inter({ subsets: ['latin'] })
 
 export default function Home() {
@@ -23,15 +25,14 @@ export default function Home() {
       </Head>
       <main className={styles.main}>
         <Navbar/>
-        <section id = "info" className='container'><IntroSection/></section>
-
+        <ParticlesWrapper>
+        <section id = "info" className='containerInfo'><IntroSection/></section>
+        </ParticlesWrapper>
         <div id = "about" className = 'container'><AboutSection/></div>
 
         <div id = 'portfolio' className='container'><PortfolioSection/></div>
 
         <div id = 'contact' className='container'><ContactSection/></div>
-        
-        <IntroSection/>
         
       </main>
     </>
