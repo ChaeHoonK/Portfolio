@@ -7,17 +7,41 @@ import Button from "../Button";
 import Image from "next/image";
 import { Carousel } from "react-responsive-carousel";
 import "react-responsive-carousel/lib/styles/carousel.min.css"; // requires a loader
+import ReactPlayer from "react-player";
 
 export default function ProjectComponent({ project }: { project: Project }) {
-  const { name, subname, year, tags, imgs, skills, reference, description } = project;
+  const { name, subname, year, tags, imgs, skills, reference, description, videos} =
+    project;
 
   const images = imgs.map((elem) => {
     return (
-      <div>
-        <img src={elem} alt={name} height="200px" />
-      </div>
+        <img
+          src={elem}
+          alt={name}
+          className={styles.image}
+          height="400px"
+          object-fit="fill"
+        />
     );
   });
+
+  const vds =  videos?.length == 0 ? null :videos?.map((elem) => {
+    return (
+      <ReactPlayer width="100%" url={elem} playing={false} style = {{objectFit : "contain"}} />
+    )
+  })
+
+
+ 
+  const media = [images, vds]
+
+  const references = reference?.map((elem)=> {
+    return (
+      <a href={elem.link} target="_blank"><Button text={elem.name}/></a>
+    )
+  })
+  
+  
 
   const [isOpenModal, setIsOpenModal] = useState(false);
 
@@ -36,12 +60,10 @@ export default function ProjectComponent({ project }: { project: Project }) {
   return (
     <>
       <div className={styles.container}>
-        <Image src={imgs[0]} alt={name} sizes="(max-width: 768px) 100vw,
-              (max-width: 1200px) 50vw,
-              33vw" fill/>
+        <Image src={imgs[0]} alt={name} fill style={{borderRadius : '10px'}}/>
         <div className={styles.conciseInfo}>
           <h2>{name}</h2>
-          <Button text="More" onClick={openModal} />
+          <Button text="More" style = {{color : '#FFFFFF'}} onClick={openModal}/>
         </div>
       </div>
       <Modal
@@ -51,29 +73,30 @@ export default function ProjectComponent({ project }: { project: Project }) {
         className={styles.Modal}
         contentLabel="Example Modal"
         overlayClassName={styles.Overlay}
+        ariaHideApp={false}
       >
         <div className={styles.ModalContainer}>
-          <h1 style={{ color: "black" }}>{name}</h1>
+          <div className={styles.carouselContainer}>
+            <Carousel showThumbs={false}>
+              {media as any}
+              </Carousel>
+          </div>
+
+          <h1>{name}</h1>
           <h2>{subname}</h2>
           <h2>{year}</h2>
           <div>
-            <span>Skills: </span>
+            <h3>Skills: </h3>
             {skillComponents}
           </div>
+          <br />
 
-          {reference? <h3>{reference}</h3>:null}
-          <div className={styles.carouselContainer}>
-            <Carousel showThumbs = {false}>{images}</Carousel>
-          </div>
+          {references}
 
-          <p>{description}</p>
-
-          
-
-          
+          <p style = {{width:'90%'}}>{description}</p>
+          <Button  text="Close" onClick={closeModal}/>
         </div>
 
-        <button onClick={closeModal}>close</button>
       </Modal>
     </>
   );

@@ -3,10 +3,11 @@ export type Project = {
     subname : string;
     year : string;
     imgs : string[];
+    videos? : string[];
     tags : string[];
     skills : Skill[];
     description : string;
-    reference? : string;
+    reference? : {name: string, link : string}[];
 }
 
 export type Skill = {

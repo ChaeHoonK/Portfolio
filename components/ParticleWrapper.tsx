@@ -1,13 +1,10 @@
-import Head from "next/head";
-import Image from "next/image";
 import Particles from "react-particles";
-import styles from "../styles/Home.module.css";
 import { loadFull } from "tsparticles";
-import { useCallback } from "react";
+import { useCallback,useEffect } from "react";
 
 export default function ParticlesWrapper({ children }: any) {
   const particlesInit = useCallback(async (engine: any) => {
-    console.log(engine);
+    //console.log(engine);
 
     // you can initialize the tsParticles instance (engine) here, adding custom shapes or presets
     // this loads the tsparticles package bundle, it's the easiest method for getting everything ready
@@ -18,23 +15,33 @@ export default function ParticlesWrapper({ children }: any) {
   const particlesLoaded = useCallback(async (container: any) => {
     await console.log(container);
   }, []);
+
+  const bgColor = '#1E3F64'
+
+  const starColor = "#FFFFFF"
+
+  const randomColor = ["random", "random"]
+  
+
   return (
     <>
       <Particles
+      height="100vh"
+        width="100vw"
         init={particlesInit}
         loaded={particlesLoaded}
         options={{
           fullScreen: { enable: false },
           background: {
             color: {
-              value: "#000000",
+              value: bgColor,
             },
           },
           fpsLimit: 60,
           interactivity: {
             events: {
               onClick: {
-                enable: false,
+                enable: true,
                 mode: "repulse",
               },
               //   onHover: {
@@ -49,13 +56,13 @@ export default function ParticlesWrapper({ children }: any) {
               },
               repulse: {
                 distance: 200,
-                duration: 1,
+                duration: 2,
               },
             },
           },
           particles: {
             color: {
-              value: ["random", "random"],
+              value: starColor,
             },
             links: {
               color: "#ffffff",
@@ -79,9 +86,9 @@ export default function ParticlesWrapper({ children }: any) {
             number: {
               density: {
                 enable: true,
-                area: 800,
+                area: 600,
               },
-              value: 80,
+              value: 100,
             },
             opacity: {
               value: 0.5,

@@ -13,7 +13,7 @@ export default function SkillComponent({ skill }: { skill: Skill }) {
     <div className= {styles.dropdown}>
       <span
         className={styles.tag}
-        style={{ color: "white", border: `1px solid ${borderColor}` }}
+        style={{ border: `1px solid ${borderColor}` }}
       >
         {skill.name}
       </span>

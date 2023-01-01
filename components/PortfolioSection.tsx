@@ -1,6 +1,8 @@
 import styles from './PortfolioSection.module.css'
 import type { Skill, Project } from '../types/types'
 import ProjectComponent from './portfolio/ProjectComponent'
+import { useIntersectionObserver } from '../hooks/useIntersectionObserver'
+import { projects as myprojects } from '../src/projects'
 
 const sample3 : Skill = {name : 'JavaScript', comment : "very long kldsjflkasd fjlkasdjfkls adjflkasdjflkasdjfklasdjfklassdaffsadfasd", level : 'expert'}
 const sample2 : Skill = {name : 'JavaScript', comment : "short", level : 'expert'}
@@ -10,15 +12,25 @@ const project : Project = {name : 'sample1', subname: "something project", year 
 const sample_projects = [project, project, project,project,project,project]
 
 export default function PortfolioSection () {
-    const projects = sample_projects.map((proj)=> {
+    const [ref, observer] = useIntersectionObserver((entries : any) => {
+        entries.forEach((entry : any) => {
+            if (entry.intersectionRatio > 0) {
+            entry.target.style.transition = 'opacity 3s';
+            entry.target.style.opacity = 1;
+          } else {
+            entry.target.style.opacity = 0;
+          }
+        });
+      });
+    const projects = myprojects.map((proj)=> {
         return <div className={styles.project}>
             <ProjectComponent project={proj}/>
         </div>
     })
 
     return (
-        <div className={styles.container}>
-            <h1>This is portfolio Section</h1>
+        <div className={styles.container} ref = {ref}>
+            <h1>Projects</h1>
             <div className={styles.portfolioContainer} >
                 {projects}
             </div>

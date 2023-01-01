@@ -10,7 +10,7 @@
 .portfolioContainer {
     display : flex;
     flex-wrap: wrap;
-    gap:10px;
+    gap:20px;
     justify-content: center;
 }
 
@@ -19,6 +19,10 @@
     flex-direction: column;
     width : 20vw;
     height: 200px;
+}
+
+.project:hover {
+    transform: scale(1.05);
 }
 
 @media (max-width:1200px){

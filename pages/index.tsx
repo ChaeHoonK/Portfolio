@@ -11,6 +11,8 @@ import ContactSection from '../components/ContactSection'
 
 import ParticlesWrapper from '../components/ParticleWrapper'
 
+import { useIntersectionObserver } from '../hooks/useIntersectionObserver'
+
 const inter = Inter({ subsets: ['latin'] })
 
 export default function Home() {
@@ -24,10 +26,10 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <main className={styles.main}>
-        <Navbar/>
         <ParticlesWrapper>
         <section id = "info" className='containerInfo'><IntroSection/></section>
         </ParticlesWrapper>
+        <Navbar/>
         <div id = "about" className = 'container'><AboutSection/></div>
 
         <div id = 'portfolio' className='container'><PortfolioSection/></div>

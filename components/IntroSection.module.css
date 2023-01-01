@@ -7,3 +7,24 @@
     justify-content: center;
     align-items: center;
 }
+
+.container span {
+    font-size: 30px;
+    /* color : #b6eafa; */
+    color : antiquewhite;
+    font-family:var(--font-title)
+}
+
+.container h1 {
+    text-shadow: 2px 2px black;
+    color : white
+}
+
+@media screen and (min-width : 800px) {
+    .container h1 {
+        font-size: 50px;
+    }
+    .container span {
+        font-size: 60px;
+    }
+}

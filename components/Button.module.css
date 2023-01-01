@@ -1,7 +1,7 @@
 .button {
     height : 60px;
     min-width: 80px;
-    border : 2px solid aqua;
+    border : 2px solid rgb(var(--foreground-sub-rgb));
     background-color: transparent;
     border-radius: 10px;
     /* box-shadow:0px 0px 0px 10px black inset; */
@@ -13,7 +13,7 @@
 }
 
 .button:hover {
-    background-color: aqua;
+    background-color: rgb(var(--foreground-sub-rgb));
     cursor: pointer;
 }
 
