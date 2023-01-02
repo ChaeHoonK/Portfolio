@@ -19,13 +19,13 @@ const tags = ['all', 'Backend', 'Frontend','DB']
 
 
 
-const queryProjets = function (query : string) {
-    queryByTags(myprojects, query).map((proj)=> {
-        return <div className={styles.project}>
-            {proj ?<ProjectComponent project={proj}/> : null}
-        </div>
-    })
-}
+// const queryProjets = function (query : string) {
+//     queryByTags(myprojects, query).map((proj)=> {
+//         return <div className={styles.project}>
+//             {proj ?<ProjectComponent project={proj}/> : null}
+//         </div>
+//     })
+// }
 
 
 
@@ -54,7 +54,7 @@ export default function PortfolioSection () {
       });
 
     const tagComponents = tags.map ((elem,idx) => {
-        return <Button text = {elem} onClick = {()=>{
+        return <Button key={idx} text = {elem} onClick = {()=>{
             calculateProjects(elem)
             setTagClick(idx);
         }} 
@@ -62,8 +62,8 @@ export default function PortfolioSection () {
         />
     })
 
-    const ProjectComponents = ()=>projects.map((proj)=> {
-        return <div className={styles.project}>
+    const ProjectComponents = ()=>projects.map((proj, idx)=> {
+        return <div className={styles.project} key = {idx}>
             {proj ? <ProjectComponent project={proj}/> : null}
         </div>
     })

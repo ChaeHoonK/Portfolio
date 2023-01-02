@@ -6,8 +6,8 @@ import {front, back, python, deploy, vsc, concept, wish} from '../src/tech'
 
 
 function MakeSkillComponents(skills : Skill[]) {
-    return skills.map((skill) => {
-        return <SkillComponent skill={skill} />;
+    return skills.map((skill,idx) => {
+        return <SkillComponent key={idx} skill={skill} />;
       });
 }
 

@@ -13,7 +13,7 @@ export default function ProjectComponent({ project }: { project: Project }) {
   const { name, subname, year, tags, imgs, skills, reference, description, videos} =
     project;
 
-  const images = imgs.map((elem) => {
+  const images = imgs.map((elem, idx) => {
     return (
         <img
           src={elem}
@@ -21,23 +21,24 @@ export default function ProjectComponent({ project }: { project: Project }) {
           className={styles.image}
           height="400px"
           object-fit="fill"
+          key = {idx}
         />
     );
   });
 
-  const vds =  videos?.length == 0 ? null :videos?.map((elem) => {
+  const vds =  videos?.length == 0 ? null :videos?.map((elem, idx) => {
     return (
-      <ReactPlayer width="100%" url={elem} playing={false} style = {{objectFit : "contain"}} />
+      <ReactPlayer key={idx} width="100%" url={elem} playing={false} controls = {true} style = {{objectFit : "contain"}} />
     )
   })
 
 
  
-  const media = [images, vds]
+  const media = vds ? [images, vds] : [images]
 
-  const references = reference?.map((elem)=> {
+  const references = reference?.map((elem, idx)=> {
     return (
-      <a href={elem.link} target="_blank"><Button text={elem.name}/></a>
+      <a href={elem.link} target="_blank" rel="noreferrer" key={idx}><Button text={elem.name}/></a>
     )
   })
   
@@ -53,8 +54,8 @@ export default function ProjectComponent({ project }: { project: Project }) {
     setIsOpenModal(false);
   }
 
-  const skillComponents = skills.map((skill) => {
-    return <SkillComponent skill={skill} />;
+  const skillComponents = skills.map((skill,idx) => {
+    return <SkillComponent key={idx} skill={skill} />;
   });
 
   return (
@@ -77,7 +78,7 @@ export default function ProjectComponent({ project }: { project: Project }) {
       >
         <div className={styles.ModalContainer}>
           <div className={styles.carouselContainer}>
-            <Carousel showThumbs={false}>
+            <Carousel showThumbs={false} autoPlay = {true} infiniteLoop = {true}>
               {media as any}
               </Carousel>
           </div>

@@ -31,16 +31,16 @@ export default function Navbar() {
     setIsOpen(!isOpen);
   }
   const menus =
-      [<a href="#info" className={style.navbarMenu}>
+      [<a href="#info" className={style.navbarMenu} key = '0'>
         Home
       </a>,
-      <a href="#about" className={style.navbarMenu}>
+      <a href="#about" className={style.navbarMenu} key = '1'>
         About
       </a>,
-      <a href="#portfolio" className={style.navbarMenu}>
+      <a href="#portfolio" className={style.navbarMenu} key = '2'>
         Portfolio
       </a>,
-      <a href="#contact" className={style.navbarMenu}>
+      <a href="#contact" className={style.navbarMenu} key = '3'>
         Contact
       </a>]
   ;
