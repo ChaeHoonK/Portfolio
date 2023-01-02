@@ -8,6 +8,7 @@ import IntroSection from '../components/IntroSection'
 import PortfolioSection from '../components/PortfolioSection'
 import AboutSection from '../components/AboutSection'
 import ContactSection from '../components/ContactSection'
+import SkillSection from '../components/SkillsSection'
 
 import ParticlesWrapper from '../components/ParticleWrapper'
 
@@ -33,6 +34,8 @@ export default function Home() {
         <div id = "about" className = 'container'><AboutSection/></div>
 
         <div id = 'portfolio' className='container'><PortfolioSection/></div>
+
+        <div id = 'skills' className='container'><SkillSection/></div>
 
         <div id = 'contact' className='container'><ContactSection/></div>
         

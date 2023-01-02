@@ -12,7 +12,7 @@ export type Project = {
 
 export type Skill = {
     name : string;
-    comment : string;
+    comment?: string;
     level : Level;
 }
 

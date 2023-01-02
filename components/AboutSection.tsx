@@ -30,10 +30,9 @@ export default function AboutSection() {
             width={200}
             height={100}
           />
-          <h3>Speed</h3>
+          <h3>Efficiency</h3>
           <p>
-            Building Fast interface (3second loading time, 60fr/s) by
-            obtimization Html, Css, JavaScript codes
+          I understand that speed does not always equate to quality. For me, it's about ensuring that my work is accurate and free of errors. I believe that one of the keys to success is learning from past mistakes and taking steps to prevent them from happening again. This mindset allows me to not only deliver top-notch work, but also continuously improve my skills and knowledge. In addition, I understand the value of hard work and am willing to put in the labor and dedication necessary to produce exceptional results. If you want a developer who is committed to excellence and continuous improvement, I'm the perfect fit for your project.
           </p>
         </div>
         <div className={styles.card}>
@@ -44,10 +43,9 @@ export default function AboutSection() {
             width={200}
             height={100}
           />
-          <h3>Responsive</h3>
+          <h3>User</h3>
           <p>
-            Building Responsive interface so that the application is usable
-            throughout any devices
+          I prioritize speed and responsiveness in all of my projects to ensure a seamless and enjoyable experience for the end user. In addition, I value consensus and believe that effective communication and collaboration are key to delivering successful projects. If you want a developer who puts the needs of the end user first and values the importance of teamwork, I'm the perfect fit for your project.
           </p>
         </div>
         <div className={styles.card}>
@@ -73,7 +71,7 @@ export default function AboutSection() {
           />
 
           <h3>Diversified</h3>
-          <p>Diversified Experience enables my fast learning curve.</p>
+          <p>As a full-stack developer, I am constantly seeking new perspectives and opportunities to develop new skills and knowledge. I am not afraid to try new things and embrace new technology, which allows me to stay up-to-date on industry trends and deliver innovative solutions to my clients. If you want a developer who is always looking for ways to improve and grow, I'm the perfect fit for your project.</p>
         </div>
       </div>
       <a href="https://www.linkedin.com/in/chae-hoon-kim-4b81b81a5/" target="_blank"><Button text="Check My LinkedIn" /></a>

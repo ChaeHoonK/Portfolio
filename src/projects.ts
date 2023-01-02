@@ -66,7 +66,7 @@ const roomie: Project = {
     "https://firebasestorage.googleapis.com/v0/b/firescript-577a2.appspot.com/o/imgs%2Fapp%2FChaeHoonNote%2FikEjI7dqUi.png?alt=media&token=a61399d7-4699-4f58-b848-0f94f1935679",
     "https://firebasestorage.googleapis.com/v0/b/firescript-577a2.appspot.com/o/imgs%2Fapp%2FChaeHoonNote%2FSsfOSk1Mbo.png?alt=media&token=49bf9a5b-7f02-4d4a-b2e3-cbdbc8c626e1",
   ],
-  tags: ["Frontend", "Backend", "DataBase", "LogIn"],
+  tags: ["Frontend", "Backend", "DB", "LogIn"],
   description: `This project is a full stack website with login. Since it doesn't require sensitive information Login is simply implemented with JWT. PW is safely hashed before saving in DB. There exist a simple Flask (Python) Server that returns a list of users sorted my matching weights (using Pandas Library).`,
   reference: [{name:'Demo', link:"https://roomie-one.vercel.app/"}],
 };
@@ -95,7 +95,7 @@ const automaticLedger : Project = {
       "https://firebasestorage.googleapis.com/v0/b/firescript-577a2.appspot.com/o/imgs%2Fapp%2FChaeHoonNote%2Foj2kQopf8s.png?alt=media&token=5b3e82dc-bc57-472d-8662-7a97b0f39649"
     ],
     videos:['https://www.youtube.com/embed/0IXLSEBvlGs'],
-    tags:["Web"],
+    tags:["Web","Desktop"],
     reference: [{name: 'Github Repository', link : 'https://github.com/ChaeHoonK/OCR_project'}],
     description: "This project is done for internal business purpose. It receives text date from formatted scanned image or PDF using external OCR service api. The program parses the given text data and creates an EXCEL file. It has successfully reduced the time spent for bookkeeping since a bookkeeper only requires to upload the excel file to ERP."
 }
@@ -109,7 +109,7 @@ const simpleChat : Project = {
     "https://firebasestorage.googleapis.com/v0/b/firescript-577a2.appspot.com/o/imgs%2Fapp%2FChaeHoonNote%2FWhBfK5Q3CU.png?alt=media&token=2eac870a-adb7-4829-adef-f5818a719aa6"
   ],
   videos:['https://www.youtube.com/embed/MEU64xuvpFg'],
-  tags:['Socket', 'BackEnd', "FrontEnd"],
+  tags:['Socket', 'Backend', "Frontend"],
   description: 'Pure Html, CSS, JS project using pug template engine for learning purpose.'
 }
 

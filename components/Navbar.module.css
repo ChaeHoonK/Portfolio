@@ -21,6 +21,10 @@
     display : none;
 }
 
+.navbar .hidden:hover {
+    color:white
+}
+
 .navbarMenu {
     min-width: 80px;
     font-size: 1rem;
@@ -28,6 +32,7 @@
     background-color: transparent;
     padding:5px 5px 5px;
     text-align: center;
+    color:white;
 }
 
 .navbarMenu:hover {
@@ -45,7 +50,8 @@
         width: 100%;
     }
     .hidden .navbarMenu {
-        background-color: rgb(var(--background-main-rgb));
+        /* background-color: rgb(var(--background-main-rgb)); */
+        background-color: rgb(var(--foreground-sub-rgb));
         position:relative;
         display: block;
         /* width: 100%; */
@@ -54,7 +60,8 @@
     }
 
     .hidden .navbarMenu:hover {
-        background-color: rgb(var(--foreground-sub-rgb));
+        background-color: white;
+        color:rgb(var(--foreground-sub-rgb));
     }
 
     .navbar .hidden :nth-child(3) {

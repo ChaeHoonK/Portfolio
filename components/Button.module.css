@@ -8,6 +8,17 @@
     padding:0px 5px 0px;
 }
 
+.buttonClicked {
+    height : 60px;
+    min-width: 80px;
+    border : 2px solid rgb(var(--foreground-sub-rgb));
+    background-color: rgb(var(--foreground-sub-rgb));
+    border-radius: 10px;
+    /* box-shadow:0px 0px 0px 10px black inset; */
+    padding:0px 5px 0px;
+    color:white;
+}
+
 .content {
     margin: 0px 5px 0px;
 }
@@ -15,5 +26,6 @@
 .button:hover {
     background-color: rgb(var(--foreground-sub-rgb));
     cursor: pointer;
+    color:white;
 }
 

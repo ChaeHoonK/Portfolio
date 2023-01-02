@@ -11,6 +11,13 @@
 
 .tag {
     padding:1px 5px 1px;
+    border-radius: 10px;
+    font-size: 20px;
+}
+
+.tag:hover{
+    background-color: rgb(var(--foreground-sub-rgb));
+    color:white;
 }
 
 .dropdown{

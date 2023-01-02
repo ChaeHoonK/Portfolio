@@ -13,12 +13,12 @@ export default function SkillComponent({ skill }: { skill: Skill }) {
     <div className= {styles.dropdown}>
       <span
         className={styles.tag}
-        style={{ border: `1px solid ${borderColor}` }}
+        style={{ border: `2px solid ${borderColor}` }}
       >
         {skill.name}
       </span>
       <div className={styles.comment}>
-        {skill.comment}
+        {(skill.comment? skill.comment : `Level: ${skill.level}`)}
       </div>
       
     </div>

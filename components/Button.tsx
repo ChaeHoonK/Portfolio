@@ -7,15 +7,18 @@ type props = {
   onClick?: Function;
   className? : string;
   style? : CSSProperties;
+  clicked? : boolean;
+  disabled? : boolean;
 };
 
-export default function Button({ style, text, onClick,className }: props): ReactElement {
+export default function Button({ style, text, onClick,className,clicked,disabled }: props): ReactElement {
   console.log('button', style)
   return (
     <button
-      className={styles.button + " " + className}
+      className={(clicked? styles['buttonClicked']:styles.button) + " " + className}
       onClick={() => (onClick ? onClick() : undefined)}
       style = {style}
+      disabled = {disabled}
     >
         {text}
     </button>
