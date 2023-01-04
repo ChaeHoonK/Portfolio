@@ -36,7 +36,7 @@ export default function SkillsSection () {
             </div>
 
             <div className = {styles.skillsContainer}>
-                <span>VSC: </span>
+                <span>VCS: </span>
                 {MakeSkillComponents(vsc)}
             </div>
             
