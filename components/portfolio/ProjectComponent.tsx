@@ -86,7 +86,7 @@ export default function ProjectComponent({ project }: { project: Project }) {
           <h1>{name}</h1>
           <h2>{subname}</h2>
           <h2>{year}</h2>
-          <div>
+          <div style={{position : 'relative'}}>
             <h3>Skills: </h3>
             {skillComponents}
           </div>
