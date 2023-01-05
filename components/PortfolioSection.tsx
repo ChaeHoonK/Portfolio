@@ -72,7 +72,7 @@ export default function PortfolioSection () {
     return (
         <div className={styles.container} ref = {ref}>
             <h1>Projects</h1>
-            <div style={{display : 'flex', gap:'10px'}}>
+            <div style={{display : 'flex', gap:'10px', marginBottom:'10px'}}>
                 {tagComponents}
             </div>
 
