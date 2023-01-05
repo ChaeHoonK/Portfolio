@@ -12,7 +12,6 @@ type props = {
 };
 
 export default function Button({ style, text, onClick,className,clicked,disabled }: props): ReactElement {
-  console.log('button', style)
   return (
     <button
       className={(clicked? styles['buttonClicked']:styles.button) + " " + className}

@@ -15,17 +15,16 @@ import ParticlesWrapper from '../components/ParticleWrapper'
 
 import { useIntersectionObserver } from '../hooks/useIntersectionObserver'
 
-import ReactGA from 'react-ga'
+import ReactGA from 'react-ga4'
 
 const inter = Inter({ subsets: ['latin'] })
 
-ReactGA.initialize('G-C3ZMWSL9NB')
 
 export default function Home() {
+  ReactGA.initialize('G-C3ZMWSL9NB')
 
   useEffect(()=> {
-    ReactGA.pageview(window.location.pathname);
-  })
+    ReactGA.send({hitType :'pageview'})},[])
 
   return (
     <>
