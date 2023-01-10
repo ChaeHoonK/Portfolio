@@ -68,10 +68,13 @@
         animation-delay: 100ms;
     }
     .navbar .hidden :nth-child(4) {
-        animation-delay: 200ms;
+        animation-delay: 150ms;
     }
     .navbar .hidden :nth-child(5) {
-        animation-delay: 300ms;
+        animation-delay: 200ms;
+    }
+    .navbar .hidden :nth-child(6) {
+        animation-delay: 250ms;
     }
 }
 

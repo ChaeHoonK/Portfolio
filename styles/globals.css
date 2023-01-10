@@ -52,10 +52,11 @@ body {
 
 h1 {
   color:rgb(var(--foreground-sub-rgb));
+  font-size: 70px;
 }
 
 h2 {
-  
+  font-size:30px;
 }
 
 a {
@@ -89,11 +90,11 @@ h3 {
   }
 }
 
-@media screen and (min-width : 800px) {
+@media screen and (max-width : 600px) {
   h1 {
       font-size: 50px;
   }
-  /* span {
-      font-size: 60px;
-  } */
+  h2 {
+    font-size: 25px;
+  }
 }

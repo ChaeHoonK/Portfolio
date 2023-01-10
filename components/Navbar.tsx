@@ -37,12 +37,17 @@ export default function Navbar() {
       <a href="#about" className={style.navbarMenu} key = '1'>
         About
       </a>,
-      <a href="#portfolio" className={style.navbarMenu} key = '2'>
+      <a href="#career" className={style.navbarMenu} key = '2'>
+      Career
+    </a>,
+      <a href="#portfolio" className={style.navbarMenu} key = '3'>
         Portfolio
       </a>,
-      <a href="#contact" className={style.navbarMenu} key = '3'>
+      <a href="#contact" className={style.navbarMenu} key = '4'>
         Contact
-      </a>]
+      </a>
+      
+    ]
   ;
   return (
     <nav className={style.navbar}>

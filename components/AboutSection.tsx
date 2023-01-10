@@ -27,7 +27,7 @@ export default function AboutSection() {
       <div className={styles.cardGroup}>
         <div className={styles.card}>
           <Image
-            className={styles.filterMint + " " + styles.img}
+            className={styles.filter + " " + styles.img}
             src="/fast.svg"
             alt="hi"
             width={200}
@@ -38,7 +38,7 @@ export default function AboutSection() {
         </div>
         <div className={styles.card}>
           <Image
-            className={styles.filterMint + " " + styles.img}
+            className={styles.filter + " " + styles.img}
             src="/devices.svg"
             alt="hi"
             width={200}
@@ -49,7 +49,7 @@ export default function AboutSection() {
         </div>
         <div className={styles.card}>
           <Image
-            className={styles.filterMint + " " + styles.img}
+            className={styles.filter + " " + styles.img}
             src="/communication.svg"
             alt="hi"
             width={200}
@@ -60,7 +60,7 @@ export default function AboutSection() {
         </div>
         <div className={styles.card}>
           <Image
-            className={styles.filterMint + " " + styles.img}
+            className={styles.filter + " " + styles.img}
             src="/diversity.svg"
             alt="hi"
             width={200}
