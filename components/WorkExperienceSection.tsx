@@ -41,11 +41,12 @@ const list: any = [
 ];
 
 const content = list.map((elem: any, idx: number) => {
-  const description = elem.description.map((li: string) => {
-    return <li>{li}</li>;
+  const description = elem.description.map((li: string, index : number) => {
+    return <li key = {index}>{li}</li>;
   });
   return (
     <div
+        key = {elem.name}
       style={{
         flexDirection: idx % 2 == 0 ? "row" : "row-reverse",
       }}
