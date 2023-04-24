@@ -42,15 +42,18 @@ export default function Home() {
         <section id = "info" className='containerInfo'><IntroSection/></section>
         </ParticlesWrapper>
         <Navbar/>
-        <div id = "about" className = 'container'><AboutSection/></div>
+        {/* <div> */}
+          <div id = "about" className = 'container'><AboutSection/></div>
 
-        <div id = 'career' className='container'> <WorkExperienceSection/></div>
+          <div id = 'career' className='container'> <WorkExperienceSection/></div>
 
-        <div id = 'portfolio' className='container'><PortfolioSection/></div>
+          <div id = 'portfolio' className='container'><PortfolioSection/></div>
 
-        <div id = 'skills' className='container'><SkillSection/></div>
+          <div id = 'skills' className='container'><SkillSection/></div>
 
-        <div id = 'contact' className='container'><ContactSection/></div>
+          <div id = 'contact' className='container'><ContactSection/></div>
+
+        {/* </div> */}
         
       </main>
     </>

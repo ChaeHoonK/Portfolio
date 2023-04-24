@@ -18,6 +18,12 @@ const Python : Skill = {
     level : "intermediate"
 }
 
+const FastAPI : Skill = {
+  name: "FastAPI",
+  comment : '',
+  level : "intermediate"
+}
+
 const Tauri : Skill = {
     name: "Tauri",
     comment : 'Only know very basic functionality',
@@ -40,6 +46,12 @@ const Socket : Skill = {
   name : 'Socket',
   comment : 'have implemented simple chat app with Socket.io',
   level : 'beginner'
+}
+
+const SQL : Skill = {
+  name : 'SQL',
+  comment : 'mySQL',
+  level : 'intermediate'
 }
 
 const RegEx : Skill = {
@@ -113,4 +125,21 @@ const simpleChat : Project = {
   description: 'Pure Html, CSS, JS project using pug template engine for learning purpose.'
 }
 
-export const projects: Project[] = [roomie, petfinder, automaticLedger, simpleChat];
+const bitcoin_trade : Project = {
+  name : 'Bitcoin Trade Simulation Service',
+  subname : "Practice CryptoCurrency Trade - In Progress",
+  year: '2023',
+  skills: [TypeScript, Python, FastAPI, SQL],
+  imgs: [
+    "/TTM/TTM1.png",
+    "/TTM/TTM2.png",
+    "/TTM/TTM3.png",
+    "/TTM/TTM4.png",
+  ],
+  tags:['Frontend', 'Backend', "SQL", "In Progress"],
+  description: `Collaborated with team of 7 members including designers, frontend, and backend developers. Designing and implementing a bitcoin automatic trading simulation service with multiple trading algorithms. Developing a full-stack service throughout the entire software development cycle from planning to deployment.`,
+  reference: [{name:'Demo', link:"https://crypto-bot-frontend.vercel.app/"},{name:'GitHub-Front', link:"https://github.com/ChaeHoonK/CryptoBotFrontend"}, {name:'GitHub-Back', link:"https://github.com/theoFather/TTM-Backend"}],
+}
+
+
+export const projects: Project[] = [roomie, petfinder, automaticLedger, simpleChat, bitcoin_trade];
