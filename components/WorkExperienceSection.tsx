@@ -3,9 +3,30 @@ import { useIntersectionObserver } from "../hooks/useIntersectionObserver";
 
 const list: any = [
   {
+    name: "University of Illinois at Urbana-Champaign",
+    position: "Major:Actuarial Science/ Minor: Computer Science",
+    period: "Graduated in May 2023",
+    description: [
+      "Prominent in Calculus, Statistics, Risk Management, Economics, Accounting, Finance, and Computer Science",
+      "Web Development Team Leader in Korean Coding Club managing various web-based projects.",
+    ],
+    img: "/grad2.jpg",
+  },
+  {
+    name: "StartUp - Baggume",
+    position: "Founder",
+    period: "May 2021 - May 2022",
+    description: [
+      "Secured $5000 in startup funding from Korean Government and gained education in diverse business concepts such as marketing, entrepreneurship, and basic financial management.",
+      "Developed Application Prototyping with Figma, wrote Business Plan for investment",
+      "End-to-end business experience",
+    ],
+    img: "/startup.jpg",
+  },
+  {
     name: "Saeha Comms Inc.",
     position: "FrontEnd Developer (Windows)",
-    period: "2021 Jan - 2021 Apr",
+    period: "Jan 2021  - Apr 2021",
     description: [
       "Cooperate with designers to develop user interface with MFC (C++) framework according to Zeplin design software. Ex) Chat Interface and Answer Sheet Interface.",
       "Participate in developers' meetings where front and backend developers plan new features.",
@@ -18,7 +39,7 @@ const list: any = [
   {
     name: "DaDream Inc.",
     position: "Marketing Position",
-    period: "2020 Nov - 2021 Jan",
+    period: "Nov 2020 - Jan 2021 ",
     description: ["Manage the company’s home page.", "Bookkeeping.", "Online Selling through platforms such as Naver, Kakao, and Market Curly."],
     link: "https://watsso1.cafe24.com/",
     img: "/study.jpg",
@@ -26,7 +47,7 @@ const list: any = [
   {
     name: "8th Army, US Army",
     position: "Senior Air and Missile Defense KATUSA (Sergeant)",
-    period: "2019 April - 2020 Nov",
+    period: "April 2019 - Nov 2020",
     description: ["Participate in the US-KOR Combined Exercise in 2019, 2020.", "General Officer level Translation.", "Cooperate with the 2020 Nakdong River World Peace Culture Festival TF."],
     img: "https://www.reuters.com/resizer/-0TEImTevDccI4tG075fHY_hXAA=/1200x0/filters:quality(80)/cloudfront-us-east-2.images.arcpublishing.com/reuters/PU3HYPN7FRKSJIH5BMVXQ6A3FI.jpg",
   },
@@ -89,7 +110,7 @@ export default function WorkExperienceSection() {
 
   return (
     <div className={styles.container} ref={ref}>
-      <h1>Work Experience</h1>
+      <h1>Career/Experience</h1>
       <br />
       <ul>{content}</ul>
     </div>

@@ -53,7 +53,7 @@ export default function ProjectComponent({ project }: { project: Project }) {
       <div className={styles.container}>
         <Image src={imgs[0]} alt={name} fill style={{ borderRadius: "10px" }} />
         <div className={styles.conciseInfo}>
-          <h2>{name}</h2>
+          <h2 style={{ marginBottom: "5px" }}>{name}</h2>
           <Button text="More" style={{ color: "#FFFFFF" }} onClick={openModal} />
         </div>
       </div>
@@ -72,17 +72,20 @@ export default function ProjectComponent({ project }: { project: Project }) {
               {media as any}
             </Carousel>
           </div>
+          <div className={styles.titleContainer}>
+            <h1 className={styles.projectTitle}>{name}</h1>
+            <h3>{subname}</h3>
+            <h2>{year}</h2>
+          </div>
 
-          <h1 className={styles.projectTitle}>{name}</h1>
-          <h3>{subname}</h3>
-          <h2>{year}</h2>
-          <div style={{ position: "relative", lineHeight: "35px" }}>
+          <HorizontalLine />
+
+          <div style={{ position: "relative", lineHeight: "35px", textAlign: "center" }}>
             <h3>Skills: </h3>
             {skillComponents}
           </div>
           <br />
-
-          {references}
+          <div className={styles.referenceContainer}>{references}</div>
 
           <HorizontalLine />
 

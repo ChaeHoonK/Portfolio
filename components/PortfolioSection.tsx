@@ -8,22 +8,7 @@ import Button from "./Button";
 
 import { useState, useCallback, useEffect } from "react";
 
-const sample3: Skill = { name: "JavaScript", comment: "very long kldsjflkasd fjlkasdjfkls adjflkasdjflkasdjfklasdjfklassdaffsadfasd", level: "expert" };
-const sample2: Skill = { name: "JavaScript", comment: "short", level: "expert" };
-const sample: Skill = { name: "JavaScript", comment: "pretty good need some more work", level: "beginner" };
-
-const project: Project = {
-  name: "sample1",
-  subname: "something project",
-  year: "2022",
-  tags: ["backend"],
-  imgs: ["/devices.svg", "/flash.svg", "/communication.svg"],
-  skills: [sample, sample2, sample3],
-  description: "this is a good example of test testsetsetestsetset",
-};
-const sample_projects = [project, project, project, project, project, project];
-
-const tags = ["all", "Backend", "Frontend", "DB"];
+const tags = ["All", "Backend", "Frontend", "DB", "Leadership", "Business", "Actuary"];
 
 // const queryProjets = function (query : string) {
 //     queryByTags(myprojects, query).map((proj)=> {
@@ -86,7 +71,7 @@ export default function PortfolioSection() {
     <div className={styles.container} ref={ref}>
       <h1>Projects</h1>
       <br />
-      <div style={{ display: "flex", gap: "10px", marginBottom: "10px" }}>{tagComponents}</div>
+      <div style={{ display: "flex", gap: "10px", marginBottom: "10px", flexWrap: "wrap" }}>{tagComponents}</div>
 
       <div className={styles.portfolioContainer}>{ProjectComponents()}</div>
     </div>

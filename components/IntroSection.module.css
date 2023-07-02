@@ -18,7 +18,8 @@
 
 .container h1 {
     text-shadow: 2px 2px black;
-    color : white
+    color : white;
+    text-align: center;
 }
 
 .job {
@@ -26,27 +27,23 @@
   }
 
 .job::after  {
-    content:"";
+    content:"Actuarial Science";
     animation-name: animate;
-    animation-duration: 10s;
+    animation-duration: 12s;
     animation-iteration-count: infinite;
 }
 
-.left {
-    align-self: start;
-    margin-left:80px
-}
 
 @keyframes animate {
-    0%  { content:"Actuary";}
-    25% { content:"FrontEnd Developer";}
-    50% { content:"BackEnd Developer";}
-    75% { content:"Data Scientist";}
+    0%  { content:"Actuarial Science";}
+    15% { content:"FrontEnd Development";}
+    30% { content:"BackEnd Development";}
+    45% { content:"Data Science";}
+    60% { content:"StartUps";}
+    75% { content:"Finance";}
+    90% { content:"Risk Management";}
 }
 
-@media screen {
-    
-}
 
 
 @media screen and (max-width : 600px) {

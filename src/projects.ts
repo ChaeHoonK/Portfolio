@@ -66,6 +66,26 @@ const MachineLearning : Skill = {
   level : 'intermediate'
 }
 
+const figma : Skill = {
+  name : "Figma",
+  level : 'beginner'
+}
+
+const leanStartup : Skill = {
+  name : "Lean StartUp",
+  level : 'beginner'
+}
+
+const riskManagement : Skill = {
+  name : "Rist Management",
+  level : 'intermediate'
+}
+
+const excel : Skill = {
+  name : "Excel",
+  level : "intermediate"
+}
+
 const roomie: Project = {
   name: "Roomie",
   subname: "Roommate Matching App",
@@ -127,19 +147,50 @@ const simpleChat : Project = {
 
 const bitcoin_trade : Project = {
   name : 'Bitcoin Trade Simulation Service',
-  subname : "Practice CryptoCurrency Trade - In Progress",
+  subname : "Practice CryptoCurrency Trade - (BackEnd Server Currently Not Available)",
   year: '2023',
   skills: [TypeScript, Python, FastAPI, SQL],
   imgs: [
+    "/TTM/TTM6.jpeg",
+    "/TTM/TTM5.jpeg",
     "/TTM/TTM1.png",
     "/TTM/TTM2.png",
     "/TTM/TTM3.png",
     "/TTM/TTM4.png",
   ],
-  tags:['Frontend', 'Backend', "SQL", "In Progress"],
+  tags:['Frontend', 'Backend', "SQL", "In Progress", "DB", "Leadership"],
   description: `Collaborated with team of 7 members including designers, frontend, and backend developers. Designing and implementing a bitcoin automatic trading simulation service with multiple trading algorithms. Developing a full-stack service throughout the entire software development cycle from planning to deployment.`,
-  reference: [{name:'Demo', link:"https://crypto-bot-frontend.vercel.app/"},{name:'GitHub-Front', link:"https://github.com/ChaeHoonK/CryptoBotFrontend"}, {name:'GitHub-Back', link:"https://github.com/theoFather/TTM-Backend"}],
+  reference: [{name:'Demo', link:"https://crypto-bot-frontend.vercel.app/"},{name:'Notion', link:"https://crystalline-supernova-5b3.notion.site/a0ddefd35d59468dbfaaba641ab68df9?v=f0bf82b783854236ba204fbff2566f03"},{name:'GitHub-Front', link:"https://github.com/ChaeHoonK/CryptoBotFrontend"}, {name:'GitHub-Back', link:"https://github.com/theoFather/TTM-Backend"}],
+}
+
+const baggume : Project = {
+  name : 'Baggume - Platform for Small Businesses',
+  subname : "Save Money by Exchanging Goods",
+  year: '2023',
+  skills: [figma, leanStartup],
+  imgs: [
+    "/baggume/4.jpg",
+    "/baggume/1.jpg",
+    "/baggume/2.jpg",
+    "/baggume/3.jpg",
+  ],
+  tags:['Design', "Business", "Leadership"],
+  description: `"Baggume", meaning "Exchange" in Korean, is a financial platform for small businesses such as hair salons, small supermarkets or restaurants. Basically, the idea is that each user (small businesses) create their own coupons, and exchange the coupons with other user to reduce living expense."Baggume", meaning "Exchange" in Korean, is a financial platform for small businesses such as hair salons, small supermarkets or restaurants. Basically, the idea is that each user (small businesses) create their own coupons, and exchange the coupons with other user to reduce living expense.`,
+  reference: [{name:'Figma', link:"https://www.figma.com/file/tX0nVze53F0ut6s7G7S1s0/DEMO-%3A-%EB%B0%94%EA%BF%88?type=design&node-id=0%3A1&mode=design&t=ah65nDPXAemgqzug-1"}],
+}
+
+const actuarial_exam : Project = {
+  name : 'Actuarial Exams - SOA',
+  subname : "FAM-L - Long Term Asset Management, ALTAM - Advanded Long Term Asset Management",
+  year: '2023',
+  skills: [excel, riskManagement],
+  imgs: [
+    "/soa_logo.jpg",
+  ],
+  tags:['Actuary', "Finance"],
+  description: `Passed two actuarial exams including FAM-L - Long Term Asset Management and ALTAM - Advanded Long Term Asset Management.`,
+  reference: [{name:'SOA website', link:"https://www.soa.org/"}],
 }
 
 
-export const projects: Project[] = [roomie, petfinder, automaticLedger, simpleChat, bitcoin_trade];
+export const projects: Project[] = [ bitcoin_trade, baggume, actuarial_exam, roomie, petfinder, automaticLedger, simpleChat, ];

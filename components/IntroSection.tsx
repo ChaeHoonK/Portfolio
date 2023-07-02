@@ -22,10 +22,12 @@ export default function IntroSection() {
   return (
     <div className={styles.container} ref={ref} style={{ opacity: "0" }}>
       <h1>
-        {`Hi, I'm`} <span>Chae Hoon Kim</span>
+        {`Hi, I'm`}
+        <br />
+        <span>Chae Hoon Kim</span>
       </h1>
-      <h1 className={styles.left}>
-        {`I'm a`}
+      <h1>{`Experience in`} </h1>
+      <h1>
         <span className={styles.job}> </span>
         {/* <span>Full Stack</span> developer */}
       </h1>
