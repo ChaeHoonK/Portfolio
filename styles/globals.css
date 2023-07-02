@@ -53,6 +53,11 @@ body {
 h1 {
   color:rgb(var(--foreground-sub-rgb));
   font-size: 70px;
+  font-family: "My Custom",'Courier New', Courier, monospace;
+}
+
+p {
+  font-family: "My Custom",'Courier New', Courier, monospace;
 }
 
 h2 {
@@ -97,4 +102,10 @@ h3 {
   h2 {
     font-size: 25px;
   }
+}
+
+@font-face {
+  font-family: 'My Custom';
+  src: local(''),
+    url('https://firebasestorage.googleapis.com/v0/b/firescript-577a2.appspot.com/o/imgs%2Fapp%2FChaeHoonNote%2FO4sUtlz3Vr.otf?alt=media&token=e473133a-4a05-4f61-a55f-6a9b344969d6')
 }

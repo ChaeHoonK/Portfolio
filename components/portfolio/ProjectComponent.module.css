@@ -35,10 +35,11 @@
     overflow-x: scroll;
     border-radius: 10px;
     animation: fade-in-from-bottom 1s;
+    padding-bottom: 20px;
 }
 
 .ModalContainer > h1 {
-  color : white;
+  color : rgb(var(--foreground-main-rgb));
   font-size: 5vh;
 }
 
