@@ -17,3 +17,5 @@ export type Skill = {
 }
 
 export type Level = "beginner" | "intermediate" | "expert"
+
+

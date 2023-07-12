@@ -18,12 +18,28 @@ const tags = ["All", "Backend", "Frontend", "DB", "Leadership", "Business", "Act
 //     })
 // }
 
-export default function PortfolioSection() {
+export const fetchProjects = async (lan: string): Promise<Project[]> => {
+  const response = await fetch(`/projects_${lan}.json`); // Fetch the data from the public folder
+
+  if (!response.ok) {
+    // If HTTP-status is 200-299
+    // Throw an error
+    throw new Error("HTTP-Error: " + response.status);
+  }
+
+  const projects: Project[] = await response.json(); // Parse it as json
+  return projects; // Return the projects
+};
+
+export default function PortfolioSection({ lan }: { lan: any }) {
   const [projects, setProjects] = useState<(Project | undefined)[]>([]);
   const [tagClick, setTagClick] = useState(0);
 
   useEffect(() => {
-    setProjects(myprojects);
+    //setProjects(myprojects);
+    fetchProjects(lan).then((result) => {
+      setProjects(result);
+    });
   }, []);
 
   const calculateProjects = useCallback(

@@ -53,11 +53,11 @@ body {
 h1 {
   color:rgb(var(--foreground-sub-rgb));
   font-size: 70px;
-  font-family: "My Custom",'Courier New', Courier, monospace;
+  font-family: sans-serif,"My Custom",'Courier New', Courier, monospace;
 }
 
 p {
-  font-family: "My Custom",'Courier New', Courier, monospace;
+  font-family: 'Courier New',"My Custom",'Courier New', Courier, monospace,sans-serif,;
 }
 
 h2 {

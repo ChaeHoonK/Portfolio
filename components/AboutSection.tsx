@@ -15,37 +15,46 @@ export default function AboutSection() {
       }
     });
   });
+
   const efficiency = `I believe that one of the keys to success is learning from past mistakes and taking steps to prevent them from happening again.`;
   const user = `I prioritize speed and responsiveness in all of my projects to ensure a seamless and enjoyable experience for the end user.`;
   const diversity = `I am not afraid to try new things and embrace new technology, which allows me to stay up-to-date on industry trends and deliver innovative solutions to my clients.`;
   const communication = "For effective communication strive to foster connections with my colleagues and ask questions when I don't understand something. ";
 
+  const content = {
+    intro: "I value...",
+    efficiency,
+    user,
+    diversity,
+    communication,
+  };
+
   return (
     <div className={styles.container} ref={ref}>
       <h1>About Me</h1>
-      <h3>I value...</h3>
+      <h3>{content.intro}</h3>
       <br />
       <div className={styles.cardGroup}>
         <div className={styles.card}>
           <Image className={styles.filter + " " + styles.img} src="/fast.svg" alt="hi" width={200} height={100} />
           <h3>Efficiency</h3>
-          <p>{efficiency}</p>
+          <p>{content.efficiency}</p>
         </div>
         <div className={styles.card}>
           <Image className={styles.filter + " " + styles.img} src="/devices.svg" alt="hi" width={200} height={100} />
           <h3>User</h3>
-          <p>{user}</p>
+          <p>{content.user}</p>
         </div>
         <div className={styles.card}>
           <Image className={styles.filter + " " + styles.img} src="/communication.svg" alt="hi" width={200} height={100} />
           <h3>Communication</h3>
-          <p>{communication}</p>
+          <p>{content.communication}</p>
         </div>
         <div className={styles.card}>
           <Image className={styles.filter + " " + styles.img} src="/diversity.svg" alt="hi" width={200} height={100} />
 
           <h3>Diversity</h3>
-          <p>{diversity}</p>
+          <p>{content.diversity}</p>
         </div>
       </div>
       <br />
