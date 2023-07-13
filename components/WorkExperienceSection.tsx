@@ -141,16 +141,19 @@ export const fetchWorkDescription = async (lan: string): Promise<string[][]> => 
 };
 
 export default function WorkExperienceSection({ lan = null }) {
-  const [content, setContent] = useState(list);
+  const [content, setContent] = useState<any>(null);
 
   useEffect(() => {
     if (lan) {
       fetchWorkDescription(lan).then((result) => {
-        console.log(result);
+        console.log("lan", lan);
+        console.log("result", result);
         setContent(result);
       });
+    } else {
+      setContent(list);
     }
-  });
+  }, [content]);
 
   const [ref, observer] = useIntersectionObserver((entries: any) => {
     entries.forEach((entry: any) => {
@@ -178,7 +181,7 @@ export default function WorkExperienceSection({ lan = null }) {
     <div className={styles.container} ref={ref}>
       <h1>Career/Experience</h1>
       <br />
-      <ul>{makeContent(content)}</ul>
+      <ul>{content ? makeContent(content) : null}</ul>
     </div>
   );
 }
