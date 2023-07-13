@@ -1,5 +1,6 @@
 import styles from "./WorkExperienceSection.module.css";
 import { useIntersectionObserver } from "../hooks/useIntersectionObserver";
+import { useEffect, useState } from "react";
 
 const list: any = [
   {
@@ -53,6 +54,41 @@ const list: any = [
   },
 ];
 
+function makeContent(list: any) {
+  const content = list.map((elem: any, idx: number) => {
+    const description = elem.description.map((li: string, index: number) => {
+      return <li key={index}>{li}</li>;
+    });
+    return (
+      <div
+        key={elem.name}
+        style={{
+          flexDirection: idx % 2 == 0 ? "row" : "row-reverse",
+        }}
+        className={styles.tmp}
+      >
+        <div className={styles.workinfo}>
+          <h2>
+            {elem.name}{" "}
+            {elem.link ? (
+              <a href={elem.link} style={{ fontStyle: "italic" }} target="_blank" rel="noreferrer">
+                <u>(link)</u>
+              </a>
+            ) : null}
+          </h2>
+          <h3 className={styles.position}>{elem.position}</h3>
+
+          <h4>{elem.period}</h4>
+          <ul style={{ listStylePosition: "inside", listStyleType: "disc" }}>{description}</ul>
+        </div>
+
+        <img src={elem.img} alt="hi" className={styles.img} />
+      </div>
+    );
+  });
+  return content;
+}
+
 const content = list.map((elem: any, idx: number) => {
   const description = elem.description.map((li: string, index: number) => {
     return <li key={index}>{li}</li>;
@@ -85,7 +121,37 @@ const content = list.map((elem: any, idx: number) => {
   );
 });
 
-export default function WorkExperienceSection() {
+export const fetchWorkDescription = async (lan: string): Promise<string[][]> => {
+  const response = await fetch(`/language/descriptions_${lan}.json`); // Fetch the data from the public folder
+
+  if (!response.ok) {
+    // If HTTP-status is 200-299
+    // Throw an error
+    throw new Error("HTTP-Error: " + response.status);
+  }
+
+  const content = await response.json(); // Parse it as json
+  console.log("content in Work Experience is", content);
+
+  for (let i = 0; i < list.length; i++) {
+    list[i].description = content[i];
+  }
+
+  return list; // Return the projects
+};
+
+export default function WorkExperienceSection({ lan = null }) {
+  const [content, setContent] = useState(list);
+
+  useEffect(() => {
+    if (lan) {
+      fetchWorkDescription(lan).then((result) => {
+        console.log(result);
+        setContent(result);
+      });
+    }
+  });
+
   const [ref, observer] = useIntersectionObserver((entries: any) => {
     entries.forEach((entry: any) => {
       if (entry.intersectionRatio > 0) {
@@ -112,7 +178,7 @@ export default function WorkExperienceSection() {
     <div className={styles.container} ref={ref}>
       <h1>Career/Experience</h1>
       <br />
-      <ul>{content}</ul>
+      <ul>{makeContent(content)}</ul>
     </div>
   );
 }

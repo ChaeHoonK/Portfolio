@@ -13,7 +13,7 @@ interface Project {
 }
 
 export async function translateJsonProject(languageCode: string, filename: string) {
-  console.log('******INFO: translateJsonFile******')
+  console.log('******INFO: translateJsonProjectFile******')
   // Read the original .json file
   const dataBuffer = fs.readFileSync(filename);
   const dataJson = dataBuffer.toString();
@@ -58,6 +58,50 @@ export async function translateJsonProject(languageCode: string, filename: strin
   // Write the translated data to a new .json file
   const translatedJson = JSON.stringify(data, null, 2);
   //filename = filename.slice(7)
-  fs.writeFileSync(`public/projects_${languageCode}.json`, translatedJson);
+  fs.writeFileSync(`public/language/projects_${languageCode}.json`, translatedJson);
 }
 
+
+export async function translateJsonAbout(languageCode: string, filename: string) {
+  console.log('******INFO: translateJsonAboutFile******')
+  const dataBuffer = fs.readFileSync(filename);
+  const dataJson = dataBuffer.toString();
+  const data = JSON.parse(dataJson);
+
+  const translatedTexts = await papagoTranslate(data, languageCode);
+
+  if (!translatedTexts) {
+    throw Error("Error occurred while Translating About")
+  }
+
+  const content = {
+    intro : translatedTexts[0],
+    efficiency : translatedTexts[1],
+    user:translatedTexts[2],
+    diversity:translatedTexts[3],
+    communication:translatedTexts[4],
+  };
+
+  fs.writeFileSync(`public/language/about_${languageCode}.json`, JSON.stringify(content))
+
+}
+
+export async function translateJsonWorkDescriptions(languageCode: string, filename: string) {
+  console.log('******INFO: translateJsonDescriptionsFile******')
+  const dataBuffer = fs.readFileSync(filename);
+  const dataJson = dataBuffer.toString();
+  const data:Array<string[]> = JSON.parse(dataJson);
+
+
+  const result = []
+  for (let i = 0; i<data.length;i++) {
+    const translatedTexts = await papagoTranslate(data[i], languageCode);
+    if (!translatedTexts) {
+      throw Error("Error occurred while Translating About")
+    }
+    result[i] = translatedTexts
+  }
+  
+
+  fs.writeFileSync(`public/language/descriptions_${languageCode}.json`, JSON.stringify(result))
+}

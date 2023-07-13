@@ -3,8 +3,24 @@ import Button from "./Button";
 import Image from "next/image";
 
 import { useIntersectionObserver } from "../hooks/useIntersectionObserver";
+import { useEffect, useState } from "react";
 
-export default function AboutSection() {
+export const fetchAbout = async (lan: string): Promise<string[]> => {
+  const response = await fetch(`/language/about_${lan}.json`); // Fetch the data from the public folder
+
+  if (!response.ok) {
+    // If HTTP-status is 200-299
+    // Throw an error
+    throw new Error("HTTP-Error: " + response.status);
+  }
+
+  const content = await response.json(); // Parse it as json
+  console.log("content in About is", content);
+
+  return content; // Return the projects
+};
+
+export default function AboutSection({ lan = null }) {
   const [ref, observer] = useIntersectionObserver((entries: any) => {
     entries.forEach((entry: any) => {
       if (entry.intersectionRatio > 0) {
@@ -16,18 +32,30 @@ export default function AboutSection() {
     });
   });
 
+  const intro = "I value...";
   const efficiency = `I believe that one of the keys to success is learning from past mistakes and taking steps to prevent them from happening again.`;
   const user = `I prioritize speed and responsiveness in all of my projects to ensure a seamless and enjoyable experience for the end user.`;
   const diversity = `I am not afraid to try new things and embrace new technology, which allows me to stay up-to-date on industry trends and deliver innovative solutions to my clients.`;
   const communication = "For effective communication strive to foster connections with my colleagues and ask questions when I don't understand something. ";
 
-  const content = {
-    intro: "I value...",
+  const defaultContent = {
+    intro,
     efficiency,
     user,
     diversity,
     communication,
   };
+
+  const [content, setContent] = useState<any>(defaultContent);
+
+  useEffect(() => {
+    console.log("lan in aboutSection is", lan);
+    if (lan) {
+      fetchAbout(lan).then((translatedContent) => {
+        setContent(translatedContent);
+      });
+    }
+  }, []);
 
   return (
     <div className={styles.container} ref={ref}>
