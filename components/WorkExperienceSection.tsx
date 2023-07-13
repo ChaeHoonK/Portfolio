@@ -133,11 +133,12 @@ export const fetchWorkDescription = async (lan: string): Promise<string[][]> => 
   const content = await response.json(); // Parse it as json
   console.log("content in Work Experience is", content);
 
-  for (let i = 0; i < list.length; i++) {
-    list[i].description = content[i];
+  const list_copied = JSON.parse(JSON.stringify(list));
+  for (let i = 0; i < list_copied.length; i++) {
+    list_copied[i].description = content[i];
   }
 
-  return list; // Return the projects
+  return list_copied; // Return the projects
 };
 
 export default function WorkExperienceSection({ lan = null }) {
