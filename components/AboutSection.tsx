@@ -54,8 +54,10 @@ export default function AboutSection({ lan = null }) {
       fetchAbout(lan).then((translatedContent) => {
         setContent(translatedContent);
       });
+    } else {
+      setContent(defaultContent);
     }
-  }, []);
+  }, [content]);
 
   return (
     <div className={styles.container} ref={ref}>

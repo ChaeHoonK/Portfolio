@@ -68,7 +68,7 @@ export default function Home({ lan }: any) {
       <main className={styles.main}>
         <ParticlesWrapper>
           <section id="info" className="containerInfo">
-            <IntroSection />
+            <IntroSection lan={lan} />
           </section>
         </ParticlesWrapper>
         <Navbar />
