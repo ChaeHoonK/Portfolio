@@ -19,6 +19,8 @@ import { useIntersectionObserver } from '../hooks/useIntersectionObserver'
 
 import ReactGA from 'react-ga4'
 
+import FloatingChatButton from '../components/FloatingButton/FloatingChatButton'
+
 const inter = Inter({ subsets: ['latin'] })
 
 
@@ -53,6 +55,8 @@ export default function Home() {
 
           <div id = 'contact' className='container'><ContactSection/></div>
 
+
+          <FloatingChatButton/>
         {/* </div> */}
         
       </main>
