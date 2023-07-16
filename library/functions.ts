@@ -3,7 +3,7 @@ import type {Project} from '../types/types'
 
 
 export function queryByTags(projects : Project[] ,query : string) : (Project|undefined)[] {
-    if (query == 'all')
+    if (query == 'All')
         return projects;
     
     const result: Project[] = []

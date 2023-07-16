@@ -61,3 +61,20 @@ export default function Navbar() {
     </nav>
   );
 }
+
+export function translatedNavbar(lan:string){
+  const contents = ['Home','About','Career','Portfolio','Contact']
+  const url = process.env['HOST_URL']
+
+  if (!url) {
+    throw Error('.env file not set')
+  }
+
+
+  async function fetchTranslation() {
+    return (await fetch(url!!,{method:"POST", body:JSON.stringify({text:contents, language:lan})})).json()
+  }
+
+  let result = fetchTranslation()
+
+}

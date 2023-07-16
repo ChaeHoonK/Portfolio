@@ -10,6 +10,7 @@ const html : Skill= {name : 'HTML + CSS', comment: '', level : "expert"}
 const react : Skill = {name : 'React', level : 'expert' }
 const nextjs : Skill = {name : 'Next JS', level : 'intermediate'};
 const mfc : Skill = {name : 'MFC', level : 'intermediate'};
+const redux : Skill = {name : 'Redux', level : 'beginner'};
 
 
 
@@ -27,6 +28,8 @@ const pandas : Skill = {name : 'Pandas', level : 'intermediate'};
 const sklearn : Skill = {name : 'Sci-Kit Learn', level : 'intermediate'};
 const numpy : Skill = {name : 'Numpy', level : 'intermediate'}
 const tensorflow : Skill = {name : 'Tensorflow', level : 'beginner'}
+const pytorch : Skill = {name : 'PyTorch', level : 'beginner'}
+const fastapi : Skill = {name : 'fastAPI', level : 'intermediate'}
 
 // FW - python
 const flask : Skill = {name : "Flask", level : 'beginner'}
@@ -37,6 +40,7 @@ const flask : Skill = {name : "Flask", level : 'beginner'}
 const cpanel : Skill = {name : 'CPanel', level : 'beginner'}
 const vercel : Skill = {name : 'Vercel', level :'beginner'}
 const docker : Skill = {name: 'Docker', level : 'beginner'}
+const gcloud : Skill = {name: 'Google Cloud', level : 'beginner'}
 
 
 
@@ -52,10 +56,14 @@ const ajax : Skill = {name : 'AJAX', level : 'beginner'}
 const cookie : Skill = {name : 'Cookie', level : 'intermediate'}
 const jwt : Skill = {name : 'JWT', level : "beginner"}
 
-export const front = [html, react, nextjs,mfc]
+
+
+
+
+export const front = [html, react, nextjs,mfc, redux]
 export const back = [mongoose,express,socket]
-export const python = [pandas, sklearn,numpy,tensorflow, flask]
-export const deploy = [cpanel,vercel,docker]
+export const python = [pandas, sklearn,numpy,tensorflow, pytorch, flask, fastapi]
+export const deploy = [cpanel,vercel,docker,gcloud]
 
 export const vsc = [git, tortois]
 

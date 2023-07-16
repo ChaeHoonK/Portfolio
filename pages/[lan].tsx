@@ -1,7 +1,7 @@
 import Head from "next/head";
 import Image from "next/image";
-import { Inter } from "@next/font/google";
 import styles from "../styles/Home.module.css";
+import axios from "axios";
 
 import Navbar from "../components/Navbar";
 import IntroSection from "../components/IntroSection";
@@ -11,26 +11,52 @@ import ContactSection from "../components/ContactSection";
 import SkillSection from "../components/SkillsSection";
 import WorkExperienceSection from "../components/WorkExperienceSection";
 
-import { useEffect } from "react";
-
 import ParticlesWrapper from "../components/ParticleWrapper";
+
+import papagoTranslate from "../library/papago";
+import { translateJsonProject, translateJsonAbout, translateJsonWorkDescriptions } from "../library/translate";
 
 import { useIntersectionObserver } from "../hooks/useIntersectionObserver";
 
-import ReactGA from 'react-ga4'
+import fs from "fs";
 
-import FloatingChatButton from '../components/FloatingButton/FloatingChatButton'
+export async function getStaticPaths() {
+  const languages = ["ko", "ja", "zh-CN", "zh-TW", "fr"];
+  const paths = languages.map((lan) => ({
+    params: { lan: lan },
+  }));
 
-const inter = Inter({ subsets: ['latin'] })
+  // We'll pre-render only these paths at build time.
+  // { fallback: false } means other routes should 404.
+  return { paths, fallback: false };
+}
 
+export async function getStaticProps({ params }: any) {
+  // params contains the post `id`.
+  // If the route is like /posts/1, then params.id is 1
+  const lan = params.lan;
 
-export default function Home() {
-  ReactGA.initialize("G-C3ZMWSL9NB");
+  const pathProjects = `public/language/projects_${lan}.json`;
+  if (!fs.existsSync(pathProjects)) {
+    await translateJsonProject(lan, "public/language/projects.json");
+  }
 
-  useEffect(() => {
-    ReactGA.send({ hitType: "pageview" });
-  }, []);
+  const pathAbout = `public/language/about_${lan}.json`;
 
+  if (!fs.existsSync(pathAbout)) {
+    await translateJsonAbout(lan, "public/language/about.json");
+  }
+
+  const pathDescriptions = `public/language/descriptions_${lan}.json`;
+
+  if (!fs.existsSync(pathDescriptions)) {
+    await translateJsonWorkDescriptions(lan, "public/language/descriptions.json");
+  }
+
+  return { props: { lan: lan } };
+}
+
+export default function Home({ lan }: any) {
   return (
     <>
       <Head>
@@ -42,22 +68,22 @@ export default function Home() {
       <main className={styles.main}>
         <ParticlesWrapper>
           <section id="info" className="containerInfo">
-            <IntroSection />
+            <IntroSection lan={lan} />
           </section>
         </ParticlesWrapper>
         <Navbar />
         {/* <div> */}
         <div id="about" className="container">
-          <AboutSection />
+          <AboutSection lan={lan} />
         </div>
 
         <div id="career" className="container">
           {" "}
-          <WorkExperienceSection />
+          <WorkExperienceSection lan={lan} />
         </div>
 
         <div id="portfolio" className="container">
-          <PortfolioSection lan="" />
+          <PortfolioSection lan={lan} />
         </div>
 
         <div id="skills" className="container">
@@ -68,8 +94,6 @@ export default function Home() {
           <ContactSection />
         </div>
 
-
-          <FloatingChatButton/>
         {/* </div> */}
       </main>
     </>

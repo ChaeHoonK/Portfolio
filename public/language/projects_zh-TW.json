@@ -1,0 +1,285 @@
+[
+  {
+    "name": "比特幣貿易模擬服務",
+    "subname": "實踐加密貨幣貿易-(後端伺服器目前沒有)",
+    "year": "2023",
+    "skills": [
+      {
+        "name": "TypeScript",
+        "comment": "Expert",
+        "level": "expert"
+      },
+      {
+        "name": "Python",
+        "comment": "know how to use machine learning library such as Pandas, Numpy, and Tensorflow",
+        "level": "intermediate"
+      },
+      {
+        "name": "FastAPI",
+        "comment": "",
+        "level": "intermediate"
+      },
+      {
+        "name": "SQL",
+        "comment": "mySQL",
+        "level": "intermediate"
+      }
+    ],
+    "imgs": [
+      "/TTM/TTM6.jpeg",
+      "/TTM/TTM5.jpeg",
+      "/TTM/TTM1.png",
+      "/TTM/TTM2.png",
+      "/TTM/TTM3.png",
+      "/TTM/TTM4.png"
+    ],
+    "tags": [
+      "Frontend",
+      "Backend",
+      "SQL",
+      "In Progress",
+      "DB",
+      "Leadership"
+    ],
+    "description": "與包括設計師、前端和後端開發人員在內的7人團隊合作。 設計和實現具有多種交易算法的比特幣自動交易模擬服務。 在從計劃到部署的整個軟件開發週期中開發全堆棧服務。",
+    "reference": [
+      {
+        "name": "Demo",
+        "link": "https://crypto-bot-frontend.vercel.app/"
+      },
+      {
+        "name": "Notion",
+        "link": "https://crystalline-supernova-5b3.notion.site/a0ddefd35d59468dbfaaba641ab68df9?v=f0bf82b783854236ba204fbff2566f03"
+      },
+      {
+        "name": "GitHub-Front",
+        "link": "https://github.com/ChaeHoonK/CryptoBotFrontend"
+      },
+      {
+        "name": "GitHub-Back",
+        "link": "https://github.com/theoFather/TTM-Backend"
+      }
+    ]
+  },
+  {
+    "name": "袋鼠-小型企業平臺",
+    "subname": "換貨省錢",
+    "year": "2023",
+    "skills": [
+      {
+        "name": "Figma",
+        "level": "beginner"
+      },
+      {
+        "name": "Lean StartUp",
+        "level": "beginner"
+      }
+    ],
+    "imgs": [
+      "/baggume/4.jpg",
+      "/baggume/1.jpg",
+      "/baggume/2.jpg",
+      "/baggume/3.jpg"
+    ],
+    "tags": [
+      "Design",
+      "Business",
+      "Leadership"
+    ],
+    "description": "韓語中意爲\"交易所\"的\"baggume\"是美容院、小型超市、餐廳等小商人的金融平臺。 基本上，這個想法是每個用戶（小企業）創建自己的優惠券，並與其他用戶交換優惠券，以減少生活費用。韓語中意爲\"交易所\"的\"baggume\"是美容院、小型超市、餐廳等小商人的金融平臺。 基本上，這個想法是每個用戶（小企業）創建自己的優惠券，並與其他用戶交換優惠券，以減少生活費用。",
+    "reference": [
+      {
+        "name": "Figma",
+        "link": "https://www.figma.com/file/tX0nVze53F0ut6s7G7S1s0/DEMO-%3A-%EB%B0%94%EA%BF%88?type=design&node-id=0%3A1&mode=design&t=ah65nDPXAemgqzug-1"
+      }
+    ]
+  },
+  {
+    "name": "精算師考試-SOA",
+    "subname": "FAM-L-長期資產管理,ALTAM-高級長期資產管理",
+    "year": "2023",
+    "skills": [
+      {
+        "name": "Excel",
+        "level": "intermediate"
+      },
+      {
+        "name": "Rist Management",
+        "level": "intermediate"
+      }
+    ],
+    "imgs": [
+      "/soa_logo.jpg"
+    ],
+    "tags": [
+      "Actuary",
+      "Finance"
+    ],
+    "description": "通過兩次精算考試，包括FAM-L-長期資產管理和ALTAM-高級長期資產管理。",
+    "reference": [
+      {
+        "name": "SOA website",
+        "link": "https://www.soa.org/"
+      }
+    ]
+  },
+  {
+    "name": "羅米",
+    "subname": "室友匹配應用程序",
+    "year": "2022",
+    "skills": [
+      {
+        "name": "TypeScript",
+        "comment": "Expert",
+        "level": "expert"
+      },
+      {
+        "name": "MongoDB",
+        "comment": "beginner",
+        "level": "beginner"
+      },
+      {
+        "name": "Python",
+        "comment": "know how to use machine learning library such as Pandas, Numpy, and Tensorflow",
+        "level": "intermediate"
+      }
+    ],
+    "imgs": [
+      "https://firebasestorage.googleapis.com/v0/b/firescript-577a2.appspot.com/o/imgs%2Fapp%2FChaeHoonNote%2FZzYGrVU46O.png?alt=media&token=c3a459f4-a353-476f-886d-4b78e2cd3810",
+      "https://firebasestorage.googleapis.com/v0/b/firescript-577a2.appspot.com/o/imgs%2Fapp%2FChaeHoonNote%2FzIWDdtWK1F.png?alt=media&token=79422de8-d1f5-4ea9-946e-61a2e68f420d",
+      "https://firebasestorage.googleapis.com/v0/b/firescript-577a2.appspot.com/o/imgs%2Fapp%2FChaeHoonNote%2FbCCCSkE9Iv.png?alt=media&token=17234a0c-c38d-4b9b-97ec-e13dcdc51672",
+      "https://firebasestorage.googleapis.com/v0/b/firescript-577a2.appspot.com/o/imgs%2Fapp%2FChaeHoonNote%2FikEjI7dqUi.png?alt=media&token=a61399d7-4699-4f58-b848-0f94f1935679",
+      "https://firebasestorage.googleapis.com/v0/b/firescript-577a2.appspot.com/o/imgs%2Fapp%2FChaeHoonNote%2FSsfOSk1Mbo.png?alt=media&token=49bf9a5b-7f02-4d4a-b2e3-cbdbc8c626e1"
+    ],
+    "tags": [
+      "Frontend",
+      "Backend",
+      "DB",
+      "LogIn"
+    ],
+    "description": "這個項目是一個完整的堆棧網站與登錄。 由於不需要敏感信息，登錄只需用JWT實現。 PW 在保存到 DB 之前是安全的散列。 存在一個簡單的燒瓶（Python）服務器，它返回一個用戶排序我的匹配權重的列表（使用熊貓庫）。",
+    "reference": [
+      {
+        "name": "Demo",
+        "link": "https://roomie-one.vercel.app/"
+      }
+    ]
+  },
+  {
+    "name": "寵物搜尋器",
+    "subname": "基於訓練模型的領養速度求解",
+    "year": "2022",
+    "skills": [
+      {
+        "name": "TypeScript",
+        "comment": "Expert",
+        "level": "expert"
+      },
+      {
+        "name": "Python",
+        "comment": "know how to use machine learning library such as Pandas, Numpy, and Tensorflow",
+        "level": "intermediate"
+      },
+      {
+        "name": "Machine Learning",
+        "comment": "have build CNN model with Keras, XGBoost model with SKlearn",
+        "level": "intermediate"
+      }
+    ],
+    "imgs": [
+      "https://firebasestorage.googleapis.com/v0/b/firescript-577a2.appspot.com/o/imgs%2Fapp%2FChaeHoonNote%2FumB6Ma6m1g.png?alt=media&token=2e3bd185-65e5-4ac9-85d7-57006192514c"
+    ],
+    "tags": [
+      "Frontend",
+      "Backend",
+      "DataBase",
+      "Machine Learning",
+      "Keras"
+    ],
+    "description": "這個項目是基於機器學習的項目。 用戶填寫寵物紀念品，應用程序將返回預期的領養速度範圍從0到4",
+    "reference": [
+      {
+        "name": "Demo",
+        "link": "https://pet-finder-zeta.vercel.app/"
+      }
+    ],
+    "videos": [
+      "https://www.youtube.com/embed/-dg41MKKZwI",
+      "https://www.youtube.com/embed/gCNdHcvsRUI"
+    ]
+  },
+  {
+    "name": "OCR項目",
+    "subname": "用PDF或圖片創建分類帳Excel文件",
+    "year": "2022",
+    "skills": [
+      {
+        "name": "TypeScript",
+        "comment": "Expert",
+        "level": "expert"
+      },
+      {
+        "name": "Tauri",
+        "comment": "Only know very basic functionality",
+        "level": "beginner"
+      },
+      {
+        "name": "Rest Api",
+        "comment": "fetching from both front and backend",
+        "level": "intermediate"
+      },
+      {
+        "name": "RegEx",
+        "comment": " ",
+        "level": "intermediate"
+      }
+    ],
+    "imgs": [
+      "https://firebasestorage.googleapis.com/v0/b/firescript-577a2.appspot.com/o/imgs%2Fapp%2FChaeHoonNote%2FLXsEDZUDZQ.png?alt=media&token=05f45015-d0c9-4a09-a232-12205226e9f5",
+      "https://firebasestorage.googleapis.com/v0/b/firescript-577a2.appspot.com/o/imgs%2Fapp%2FChaeHoonNote%2Foj2kQopf8s.png?alt=media&token=5b3e82dc-bc57-472d-8662-7a97b0f39649"
+    ],
+    "videos": [
+      "https://www.youtube.com/embed/0IXLSEBvlGs"
+    ],
+    "tags": [
+      "Web",
+      "Desktop"
+    ],
+    "reference": [
+      {
+        "name": "Github Repository",
+        "link": "https://github.com/ChaeHoonK/OCR_project"
+      }
+    ],
+    "description": "這個項目是爲內部業務目的而做的。 它使用外部 OCR 服務 API 從格式化的掃描圖像或 PDF 接收文本日期。 程序解析給定的文本數據並創建一個 EXCEL 文件。 它成功地減少了簿記時間，因爲簿記員只需將Excel文件上載到ERP。"
+  },
+  {
+    "name": "簡易聊天軟件",
+    "subname": "與 Socket.io 、express 和 Pug 模板聊天",
+    "year": "2022",
+    "skills": [
+      {
+        "name": "Javascript",
+        "comment": "confident with Javascript",
+        "level": "expert"
+      },
+      {
+        "name": "Socket",
+        "comment": "have implemented simple chat app with Socket.io",
+        "level": "beginner"
+      }
+    ],
+    "imgs": [
+      "https://firebasestorage.googleapis.com/v0/b/firescript-577a2.appspot.com/o/imgs%2Fapp%2FChaeHoonNote%2FWhBfK5Q3CU.png?alt=media&token=2eac870a-adb7-4829-adef-f5818a719aa6"
+    ],
+    "videos": [
+      "https://www.youtube.com/embed/MEU64xuvpFg"
+    ],
+    "tags": [
+      "Socket",
+      "Backend",
+      "Frontend"
+    ],
+    "description": "純HTML，CSS，JS項目使用Pug模板引擎進行學習。"
+  }
+]
