@@ -26,6 +26,8 @@ export default function IntroSection({ lan = null }) {
     fr: "Salut je suis",
     "zh-CN": "你好我是",
     "zh-TW": "你好我是",
+    de: "Hallo ich bin",
+    ru: "Здравствуйте, я",
   };
 
   const experienceIn = {
@@ -35,6 +37,8 @@ export default function IntroSection({ lan = null }) {
     fr: "de l'expérience en",
     "zh-CN": "经验",
     "zh-TW": "经验",
+    de: "Ich habe verschiedene Erfahrungen.",
+    ru: "У меня разный опыт.",
   };
 
   const name = {
@@ -44,6 +48,8 @@ export default function IntroSection({ lan = null }) {
     fr: "Chen Hoon Kim",
     "zh-CN": "金彩勋",
     "zh-TW": "金彩勋",
+    de: "Chae Hoon Kim",
+    ru: "Че Хун Ким",
   };
 
   return (

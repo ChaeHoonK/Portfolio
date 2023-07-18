@@ -1,4 +1,5 @@
 import React, { FC, useEffect, useRef } from "react";
+import LanguageSelection from "./LanguageComponent";
 
 type Position = {
   x: number;
@@ -27,11 +28,9 @@ const SettingDialog: FC<Props> = ({ position, onClose }) => {
   const clientHeight = document.documentElement.clientHeight;
   const clientWidth = document.documentElement.clientWidth;
   const top = position.y <= clientHeight / 2 ? position.y : "unset";
-  const bottom =
-    position.y > clientHeight / 2 ? clientHeight - position.y : "unset";
+  const bottom = position.y > clientHeight / 2 ? clientHeight - position.y : "unset";
   const left = position.x <= clientWidth / 2 ? position.x : "unset";
-  const right =
-    position.x > clientWidth / 2 ? clientWidth - position.x : "unset";
+  const right = position.x > clientWidth / 2 ? clientWidth - position.x : "unset";
 
   const style = {
     width: "max-content",
@@ -40,6 +39,7 @@ const SettingDialog: FC<Props> = ({ position, onClose }) => {
     // minHeight: '350px',
     position: "fixed" as "fixed",
     backgroundColor: "rgba(0, 0, 0, 0.3)",
+    zIndex: 1,
     top,
     bottom,
     left,
@@ -50,8 +50,7 @@ const SettingDialog: FC<Props> = ({ position, onClose }) => {
     <div style={style} ref={ref}>
       {/* Dialog content goes here */}
 
-      <h2>Choose Language</h2>
-      <div
+      {/* <div
         style={{ display: "flex", flexDirection: "column", flexWrap: "wrap" }}
       >
         <a href="/">
@@ -72,7 +71,8 @@ const SettingDialog: FC<Props> = ({ position, onClose }) => {
         <a href="/fr">
           <button>Français</button>
         </a>
-      </div>
+      </div> */}
+      <LanguageSelection />
     </div>
   );
 };

@@ -1,8 +1,8 @@
 import React, { useState, useEffect, useRef } from "react";
 import styles from "./FloatingSettingButton.module.css";
-import SettingDialog from "./SettingDialog";
-import {CiHospital1, CiSettings} from 'react-icons/ci'
-import {BsArrowsMove} from 'react-icons/bs'
+import SettingDialog from "../SettingDialog/SettingDialog";
+import { CiHospital1, CiSettings } from "react-icons/ci";
+import { BsArrowsMove } from "react-icons/bs";
 
 interface PosType {
   x: number;
@@ -23,8 +23,8 @@ const FloatingSettingButton: React.FC<PropsType> = ({ onToggleChat, position, se
   const handleStart = () => {
     holdTimeout.current = setTimeout(() => {
       setDragging(true);
-    }, 500); 
-    console.log('down')
+    }, 500);
+    console.log("down");
     //setDragging(true);
   };
 
@@ -47,63 +47,51 @@ const FloatingSettingButton: React.FC<PropsType> = ({ onToggleChat, position, se
       if (dragging) {
         e.preventDefault();
         handleMove(e.clientX, e.clientY);
-        console.log('mouse moving')
       }
     };
 
-    const handleMouseUp = (e:MouseEvent) => {
+    const handleMouseUp = (e: MouseEvent) => {
       if (dragging) {
         e.preventDefault();
         handleEnd();
       }
-    }
+    };
 
-    const handleTouchMove = (e:TouchEvent) => {
+    const handleTouchMove = (e: TouchEvent) => {
+      if (dragging) {
+        if (e.cancelable) {
+          e.preventDefault();
+        }
+        handleMove(e.touches[0].clientX, e.touches[0].clientY);
+      }
+    };
+
+    const handleTouchEnd = (e: TouchEvent) => {
       if (dragging) {
         e.preventDefault();
-        handleMove(e.touches[0].clientX, e.touches[0].clientY);
-        document.documentElement.style.overflow = 'hidden';
-        console.log('touch moving')
+        handleEnd();
       }
-    }
-
-    const handleTouchEnd = (e:TouchEvent) => {
-      if (dragging) {
-        e.preventDefault()
-        handleEnd()
-        document.documentElement.style.overflow = 'auto';
-      }
-    }
+    };
 
     document.addEventListener("mousemove", handleMouseMove);
-    document.addEventListener('mouseup',handleMouseUp)
-    document.addEventListener('touchmove',handleTouchMove)
-    document.addEventListener('touchend',handleTouchEnd)
+    document.addEventListener("mouseup", handleMouseUp);
+    document.addEventListener("touchmove", handleTouchMove, { passive: false });
+    document.addEventListener("touchend", handleTouchEnd);
     return () => {
       document.removeEventListener("mousemove", handleMouseMove);
-      document.removeEventListener('mouseup',handleMouseUp)
-      document.removeEventListener('touchmove',handleTouchMove)
-    document.removeEventListener('touchend',handleTouchEnd)
+      document.removeEventListener("mouseup", handleMouseUp);
+      document.removeEventListener("touchmove", handleTouchMove);
+      document.removeEventListener("touchend", handleTouchEnd);
     };
   }, [dragging]);
 
-
   return (
-    <div
-      className={styles.chatButtonContainer}
-      style={{ left:`${position.x}px`, top:`${position.y}px` }}
-    >      
-      <button
-        className={styles.chatButton}
-        onClick={onToggleChat}
-        onMouseDown={(e) => handleStart()}
-        onTouchStart={(e) => handleStart()}
-        onMouseUp={handleEnd}
-      >
-        <CiSettings size='30px'/>
+    <div className={styles.chatButtonContainer} style={{ left: `${position.x}px`, top: `${position.y}px` }}>
+      <button className={styles.chatButton} onClick={onToggleChat} onMouseDown={(e) => handleStart()} onTouchStart={(e) => handleStart()} onMouseUp={handleEnd}>
+        <CiSettings size="40px" />
       </button>
 
-      {dragging?<BsArrowsMove size='20px'>hi</BsArrowsMove>:null}
+      {dragging ? <BsArrowsMove size="20px">hi</BsArrowsMove> : null}
     </div>
   );
 };

@@ -7,20 +7,18 @@ export default function SkillComponent({ skill }: { skill: Skill }) {
     return "#" + Math.floor(Math.random() * 16777215).toString(16);
   }
 
-    const borderColor = randomColor();
+  const [color, setColor] = useState("black");
+
+  useEffect(() => {
+    setColor(randomColor());
+  }, []);
 
   return (
-    <div className= {styles.dropdown}>
-      <span
-        className={styles.tag}
-        style={{ border: `2px solid ${borderColor}` }}
-      >
+    <div className={styles.dropdown}>
+      <span className={styles.tag} style={{ border: `2px solid ${color}` }}>
         {skill.name}
       </span>
-      <div className={styles.comment}>
-        {(skill.comment? skill.comment : `Level: ${skill.level}`)}
-      </div>
-      
+      <div className={styles.comment}>{skill.comment ? skill.comment : `Level: ${skill.level}`}</div>
     </div>
   );
 }

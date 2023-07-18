@@ -5,7 +5,7 @@
     width : 100%;
     align-items: center;
     background-color: rgb(var(--background-sub-rgb));
-    z-index:10;
+    z-index:1;
     position: -webkit-sticky;
     position: -moz-sticky;
     position: -ms-sticky;
