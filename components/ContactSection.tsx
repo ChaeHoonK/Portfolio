@@ -21,26 +21,7 @@ export default function ContactSection() {
             <input type="submit" value="Send"/>
         </form>
       </div> */}
-      <div>
-        <Link href="/">
-          <button>English</button>
-        </Link>
-        <Link href="/ko">
-          <button>한국어</button>
-        </Link>
-        <Link href="/ja">
-          <button>日本語</button>
-        </Link>
-        <Link href="/zh-CN">
-          <button>简体字</button>
-        </Link>
-        <Link href="/zh-TW">
-          <button>傳統的</button>
-        </Link>
-        <Link href="/fr">
-          <button>Français</button>
-        </Link>
-      </div>
+      
     </div>
   );
 }

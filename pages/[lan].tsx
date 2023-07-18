@@ -18,6 +18,8 @@ import { translateJsonProject, translateJsonAbout, translateJsonWorkDescriptions
 
 import { useIntersectionObserver } from "../hooks/useIntersectionObserver";
 
+import SettingLayout from '../components/FloatingButton/SettingLayout'
+
 import fs from "fs";
 
 export async function getStaticPaths() {
@@ -65,6 +67,7 @@ export default function Home({ lan }: any) {
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
+      <SettingLayout>
       <main className={styles.main}>
         <ParticlesWrapper>
           <section id="info" className="containerInfo">
@@ -96,6 +99,7 @@ export default function Home({ lan }: any) {
 
         {/* </div> */}
       </main>
+      </SettingLayout>
     </>
   );
 }

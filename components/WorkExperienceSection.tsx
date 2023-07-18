@@ -154,7 +154,7 @@ export default function WorkExperienceSection({ lan = null }) {
     } else {
       setContent(list);
     }
-  }, [content]);
+  }, []);
 
   const [ref, observer] = useIntersectionObserver((entries: any) => {
     entries.forEach((entry: any) => {

@@ -39,7 +39,7 @@ export default function PortfolioSection({ lan = "" }: { lan: any }) {
     fetchProjects(lan).then((result) => {
       setProjects(result);
     });
-  }, [projects]);
+  }, []);
 
   const calculateProjects = useCallback(
     (str: string) => {

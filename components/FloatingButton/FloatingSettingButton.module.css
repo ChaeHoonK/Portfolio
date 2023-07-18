@@ -1,7 +1,7 @@
 .chatButtonContainer {
   position: fixed;
-  bottom: 82px;
-  right: 20px;
+  /* bottom: 82px;
+  right: 20px; */
   display: flex;
 }
 

@@ -57,7 +57,7 @@ export default function AboutSection({ lan = null }) {
     } else {
       setContent(defaultContent);
     }
-  }, [content]);
+  }, []);
 
   return (
     <div className={styles.container} ref={ref}>
