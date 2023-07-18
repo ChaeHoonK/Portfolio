@@ -26,8 +26,8 @@ export const LanguageButton: React.FC<PropsType> = ({ lan, name, url, selected }
   );
 };
 
-const tmp = { en: "English", ko: "한국어", jp: "日本語", "zh-CN": "简体字", "zh-TW": "傳統的", fr: "Français", ge: "Deutsch", ru: "Русский" };
-const flags: any = { en: "English", ko: "🇰🇷", jp: "日本語", "zh-CN": "简体字", "zh-TW": "傳統的", fr: "Français" };
+const tmp = { en: "English", ko: "한국어", ja: "日本語", "zh-CN": "简体字", "zh-TW": "傳統的", fr: "Français", de: "Deutsch", ru: "Русский" };
+const flags: any = { en: "English", ko: "🇰🇷", ja: "日本語", "zh-CN": "简体字", "zh-TW": "傳統的", fr: "Français" };
 
 const LanguageSelection: React.FC<any> = ({ languages = Object.keys(tmp), names = Object.values(tmp) }: { languages: string[]; names: string[] }) => {
   let currentPath: any = null;
