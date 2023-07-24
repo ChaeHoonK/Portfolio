@@ -45,13 +45,13 @@ const FloatingSettingButton: React.FC<PropsType> = ({
   const holdTimeout = useRef<any>(null);
   const buttonRef = useRef<HTMLDivElement>(null);
 
+
   const closeTutorial = () => {
     setShowTutorial(false);
   };
 
 
   const handleStart = (e:any) => {
-    console.log('touchstart/mouserdown fired')
     e.preventDefault();
     holdTimeout.current = setTimeout(() => {
       setDragging(true);
@@ -76,13 +76,14 @@ const FloatingSettingButton: React.FC<PropsType> = ({
 
   useEffect(() => {
     if (!buttonRef.current) return
-    
+
+    console.log('isCookieAccepted:',isCookieAccepted())
+
     if (isCookieAccepted()) {
       setShowTutorial(false);
     }
 
     const handleMouseMove = (e: MouseEvent) => {
-      console.log('mousemove fired')
       const curr = document.elementFromPoint(e.clientX, e.clientY)
       if (!buttonRef.current?.contains(curr)) {
         clearTimeout(holdTimeout.current);
@@ -97,7 +98,6 @@ const FloatingSettingButton: React.FC<PropsType> = ({
     };
 
     const handleMouseUp = (e: MouseEvent) => {
-      console.log('mouseup fired')
       if (dragging) {
         e.preventDefault();
         handleEnd();
@@ -105,10 +105,10 @@ const FloatingSettingButton: React.FC<PropsType> = ({
     };
 
     const handleTouchMove = (e: TouchEvent) => {
-      console.log('touchmove fired')
       const curr = document.elementFromPoint(e.touches[0].clientX, e.touches[0].clientY)
       if (!buttonRef.current?.contains(curr)) {
         clearTimeout(holdTimeout.current);
+
       }
 
       if (dragging) {
@@ -121,15 +121,16 @@ const FloatingSettingButton: React.FC<PropsType> = ({
     };
 
     const handleTouchEnd = (e: TouchEvent) => {
-      console.log('touchend fired')
-      //const curr = document.elementFromPoint(e.touches[0].clientX, e.touches[0].clientY)
-      if (!dragging && buttonRef.current?.contains(e.target as Node)) {
+      const curr = document.elementFromPoint(e.changedTouches[0].clientX, e.changedTouches[0].clientY)
+
+      if (!dragging  && buttonRef.current?.contains(curr as Node)) {
         onToggleChat(e)
       }
       if (dragging) {
         e.preventDefault();
         handleEnd();
       }
+
     };
 
     document.addEventListener("mousemove", handleMouseMove);
@@ -173,7 +174,7 @@ const FloatingSettingButton: React.FC<PropsType> = ({
           }}
         >
           <h3 style={{ color: "white" }}>Click To Change Language</h3>
-          <p>Push and move this around.</p>
+          <p>Push for 0.5s and move it around.</p>
           <button
             style={{
               position: "absolute",
