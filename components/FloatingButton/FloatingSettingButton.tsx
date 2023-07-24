@@ -5,6 +5,10 @@ import { BsArrowsMove } from "react-icons/bs";
 import { GiCancel } from "react-icons/gi";
 import { isCookieAccepted } from "../../library/cookie";
 
+
+const BUTTON_WIDTH = 70
+const BUTTON_HEIGHT = 70
+const PRESS_TIME = 500
 interface PosType {
   x: number;
   y: number;
@@ -35,8 +39,7 @@ const FloatingSettingButton: React.FC<PropsType> = ({
   showTutorial,
   setShowTutorial
 }) => {
-  const BUTTON_WIDTH = 70
-  const BUTTON_HEIGHT = 70
+  
 
   const [dragging, setDragging] = useState(false);
   const holdTimeout = useRef<any>(null);
@@ -48,16 +51,15 @@ const FloatingSettingButton: React.FC<PropsType> = ({
 
 
   const handleStart = (e:any) => {
+    console.log('touchstart/mouserdown fired')
     e.preventDefault();
     holdTimeout.current = setTimeout(() => {
       setDragging(true);
-    }, 1000);
+    }, PRESS_TIME);
     //setDragging(true);
   };
 
   const handleMove = (clientX: number, clientY: number) => {
-    const curr = document.elementFromPoint(clientX, clientY)
-
     if (dragging) {
       setPosition({
         x: setBoundary(clientX,0,window.innerWidth - BUTTON_WIDTH),
@@ -80,6 +82,7 @@ const FloatingSettingButton: React.FC<PropsType> = ({
     }
 
     const handleMouseMove = (e: MouseEvent) => {
+      console.log('mousemove fired')
       const curr = document.elementFromPoint(e.clientX, e.clientY)
       if (!buttonRef.current?.contains(curr)) {
         clearTimeout(holdTimeout.current);
@@ -94,6 +97,7 @@ const FloatingSettingButton: React.FC<PropsType> = ({
     };
 
     const handleMouseUp = (e: MouseEvent) => {
+      console.log('mouseup fired')
       if (dragging) {
         e.preventDefault();
         handleEnd();
@@ -101,20 +105,27 @@ const FloatingSettingButton: React.FC<PropsType> = ({
     };
 
     const handleTouchMove = (e: TouchEvent) => {
+      console.log('touchmove fired')
       const curr = document.elementFromPoint(e.touches[0].clientX, e.touches[0].clientY)
       if (!buttonRef.current?.contains(curr)) {
         clearTimeout(holdTimeout.current);
       }
+
       if (dragging) {
+        handleMove(e.touches[0].clientX, e.touches[0].clientY);
         if (e.cancelable) {
           e.preventDefault();
         }
-        handleMove(e.touches[0].clientX, e.touches[0].clientY);
       }
       
     };
 
     const handleTouchEnd = (e: TouchEvent) => {
+      console.log('touchend fired')
+      //const curr = document.elementFromPoint(e.touches[0].clientX, e.touches[0].clientY)
+      if (!dragging && buttonRef.current?.contains(e.target as Node)) {
+        onToggleChat(e)
+      }
       if (dragging) {
         e.preventDefault();
         handleEnd();
@@ -125,14 +136,14 @@ const FloatingSettingButton: React.FC<PropsType> = ({
     document.addEventListener("mouseup", handleMouseUp);
     document.addEventListener("touchmove", handleTouchMove, { passive: false });
     document.addEventListener("touchend", handleTouchEnd);
-    buttonRef.current?.addEventListener('touchdown',handleStart,{passive:false});
+    buttonRef.current?.addEventListener('touchstart',handleStart,{passive:false});
 
     return () => {
       document.removeEventListener("mousemove", handleMouseMove);
       document.removeEventListener("mouseup", handleMouseUp);
       document.removeEventListener("touchmove", handleTouchMove);
       document.removeEventListener("touchend", handleTouchEnd);
-      buttonRef.current?.removeEventListener('touchdown',handleStart);
+      buttonRef.current?.removeEventListener('touchstart',handleStart);
     };
   }, [dragging]);
 
