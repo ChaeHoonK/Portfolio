@@ -18,6 +18,16 @@ interface PropsType {
   setShowTutorial:any
 }
 
+function setBoundary(num:number, min:number, max:number) {
+  if (num < min) {
+    return min
+  } else if (num > max) {
+    return max
+  } else {
+    return num
+  }
+}
+
 const FloatingSettingButton: React.FC<PropsType> = ({
   onToggleChat,
   position,
@@ -25,6 +35,9 @@ const FloatingSettingButton: React.FC<PropsType> = ({
   showTutorial,
   setShowTutorial
 }) => {
+  const BUTTON_WIDTH = 70
+  const BUTTON_HEIGHT = 70
+
   const [dragging, setDragging] = useState(false);
   const holdTimeout = useRef<any>(null);
   const dragBorderRef = useRef<HTMLDivElement>(null);
@@ -34,19 +47,20 @@ const FloatingSettingButton: React.FC<PropsType> = ({
   };
 
   const handleStart = (e:any) => {
-    e.preventDefault()
+    // if (e.cancelable) {
+    //   e.preventDefault();
+    // }
     holdTimeout.current = setTimeout(() => {
       setDragging(true);
     }, 500);
-    console.log("down");
     //setDragging(true);
   };
 
   const handleMove = (clientX: number, clientY: number) => {
     if (dragging) {
       setPosition({
-        x: clientX,
-        y: clientY,
+        x: setBoundary(clientX,0,window.screen.width - BUTTON_WIDTH),
+        y: setBoundary(clientY,0, window.screen.height -BUTTON_HEIGHT),
       });
     }
   };
@@ -64,7 +78,9 @@ const FloatingSettingButton: React.FC<PropsType> = ({
 
     const handleMouseMove = (e: MouseEvent) => {
       if (dragging) {
-        e.preventDefault();
+        if (e.cancelable) {
+          e.preventDefault();
+        }
         handleMove(e.clientX, e.clientY);
       }
     };
@@ -112,6 +128,7 @@ const FloatingSettingButton: React.FC<PropsType> = ({
       {dragging ? <div><BsArrowsMove style={{position:'relative', left:'45px'}} size="20px"/></div> : null}
       <div
         className={styles.chatButton}
+        style={{width:`${BUTTON_WIDTH}px`, height:`${BUTTON_HEIGHT}`}}
         onClick={onToggleChat}
         onMouseDown={(e) => handleStart(e)}
         onTouchStart={(e) => handleStart(e)}
@@ -119,11 +136,7 @@ const FloatingSettingButton: React.FC<PropsType> = ({
       >
         <CiSettings size="30px" />
       
-      </div>
-
-      
-
-      
+      </div>  
 
       {showTutorial ? (
         <div
@@ -133,18 +146,18 @@ const FloatingSettingButton: React.FC<PropsType> = ({
           }}
         >
           <h3 style={{ color: "white" }}>Click To Change Language</h3>
-          <p>You can move the button around.</p>
+          <p>Push and move this around.</p>
           <button
             style={{
               position: "absolute",
               backgroundColor: "transparent",
               border: "none",
-              top: "0px",
-              right: "0px",
+              top: "-5px",
+              right: "-5px",
             }}
             onClick={closeTutorial}
           >
-            <GiCancel size="20px" />
+            <GiCancel fill="black" size="30px" />
           </button>
         </div>
       ) : null}
