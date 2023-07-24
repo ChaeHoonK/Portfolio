@@ -6,8 +6,7 @@ import { GiCancel } from "react-icons/gi";
 import { isCookieAccepted } from "../../library/cookie";
 
 
-const BUTTON_WIDTH = 70
-const BUTTON_HEIGHT = 70
+const BUTTON_RADIUS = 28
 const PRESS_TIME = 500
 interface PosType {
   x: number;
@@ -54,6 +53,7 @@ const FloatingSettingButton: React.FC<PropsType> = ({
   const handleStart = (e:any) => {
     e.preventDefault();
     holdTimeout.current = setTimeout(() => {
+      closeTutorial()
       setDragging(true);
     }, PRESS_TIME);
     //setDragging(true);
@@ -62,8 +62,8 @@ const FloatingSettingButton: React.FC<PropsType> = ({
   const handleMove = (clientX: number, clientY: number) => {
     if (dragging) {
       setPosition({
-        x: setBoundary(clientX,0,window.innerWidth - BUTTON_WIDTH),
-        y: setBoundary(clientY,0, window.innerHeight -BUTTON_HEIGHT),
+        x: setBoundary(clientX,BUTTON_RADIUS,window.innerWidth - BUTTON_RADIUS),
+        y: setBoundary(clientY,BUTTON_RADIUS, window.innerHeight -BUTTON_RADIUS),
       });
     }
   };
@@ -98,6 +98,12 @@ const FloatingSettingButton: React.FC<PropsType> = ({
     };
 
     const handleMouseUp = (e: MouseEvent) => {
+      const curr = document.elementFromPoint(e.clientX, e.clientY)
+
+      if (!dragging  && buttonRef.current?.contains(curr as Node)) {
+        onToggleChat(e)
+      }
+
       if (dragging) {
         e.preventDefault();
         handleEnd();
@@ -151,15 +157,15 @@ const FloatingSettingButton: React.FC<PropsType> = ({
   return (
     <div
       className={styles.chatButtonContainer}
-      style={{ left: `${position.x}px`, top: `${position.y}px` , display:'flex', flexDirection:'column-reverse'}}
+      style={{ left: `${position.x - BUTTON_RADIUS}px`, top: `${position.y - BUTTON_RADIUS}px` , display:'flex', flexDirection:'column-reverse'}}
     >
       {dragging ? <div><BsArrowsMove style={{position:'relative', left:'45px'}} size="20px"/></div> : null}
       <div
         className={styles.chatButton}
-        onClick={onToggleChat}
+        // onClick={onToggleChat}
         onMouseDown={(e) => handleStart(e)}
         // onTouchStart={(e) => handleStart(e)}
-        onMouseUp={handleEnd}
+        // onMouseUp={handleEnd}
         ref = {buttonRef}
       >
         <CiSettings size="30px" />
@@ -175,6 +181,7 @@ const FloatingSettingButton: React.FC<PropsType> = ({
         >
           <h3 style={{ color: "white" }}>Click To Change Language</h3>
           <p>Push for 0.5s and move it around.</p>
+          <p>Accept Cookie if you don't want to see this message again</p>
           <button
             style={{
               position: "absolute",

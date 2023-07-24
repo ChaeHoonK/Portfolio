@@ -14,7 +14,7 @@ type Position = {
 
 const SettingLayout: React.FC<Props> = ({ children }: Props) => {
   const [showChatBox, setShowChatBox] = useState(false);
-  const [position, setPosition] = useState<Position>({ x: 10, y: 10 });
+  const [position, setPosition] = useState<Position>({ x: 70, y: 50 });
   const [showTutorial, setShowTutorial] = useState(true);
   const chatBoxRef: any = useRef();
 
