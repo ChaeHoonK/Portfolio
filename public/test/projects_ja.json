@@ -1,0 +1,343 @@
+[
+  {
+    "name": "Bitcoin貿易シミュレーションサービス",
+    "subname": "暗号通貨取引の練習 - （バックエンド サーバは現在利用できません）",
+    "year": "2023",
+    "skills": [
+      {
+        "name": "TypeScript",
+        "comment": "Expert",
+        "level": "expert"
+      },
+      {
+        "name": "Python",
+        "comment": "know how to use machine learning library such as Pandas, Numpy, and Tensorflow",
+        "level": "intermediate"
+      },
+      {
+        "name": "FastAPI",
+        "comment": "",
+        "level": "intermediate"
+      },
+      {
+        "name": "SQL",
+        "comment": "mySQL",
+        "level": "intermediate"
+      }
+    ],
+    "imgs": [
+      "/TTM/TTM6.jpeg",
+      "/TTM/TTM5.jpeg",
+      "/TTM/TTM1.png",
+      "/TTM/TTM2.png",
+      "/TTM/TTM3.png",
+      "/TTM/TTM4.png"
+    ],
+    "tags": [
+      "Frontend",
+      "Backend",
+      "SQL",
+      "In Progress",
+      "DB",
+      "Leadership"
+    ],
+    "description": "デザイナー、フロントエンド、バックエンド開発者を含む7人のメンバーで構成されたチームと協力。 複数の取引アルゴリズムによるビットコイン自動取引シミュレーションサービスの設計と実装。 計画から導入までのソフトウェア開発サイクル全体を通してフルスタックサービスを開発する。",
+    "reference": [
+      {
+        "name": "Demo",
+        "link": "https://crypto-bot-frontend.vercel.app/"
+      },
+      {
+        "name": "Notion",
+        "link": "https://crystalline-supernova-5b3.notion.site/a0ddefd35d59468dbfaaba641ab68df9?v=f0bf82b783854236ba204fbff2566f03"
+      },
+      {
+        "name": "GitHub-Front",
+        "link": "https://github.com/ChaeHoonK/CryptoBotFrontend"
+      },
+      {
+        "name": "GitHub-Back",
+        "link": "https://github.com/theoFather/TTM-Backend"
+      }
+    ]
+  },
+  {
+    "name": "Baggume - スモールビジネス向けプラットフォーム",
+    "subname": "商品を交換してお金の節約",
+    "year": "2023",
+    "skills": [
+      {
+        "name": "Figma",
+        "level": "beginner"
+      },
+      {
+        "name": "Lean StartUp",
+        "level": "beginner"
+      }
+    ],
+    "imgs": [
+      "/baggume/4.jpg",
+      "/baggume/1.jpg",
+      "/baggume/2.jpg",
+      "/baggume/3.jpg"
+    ],
+    "tags": [
+      "Design",
+      "Business",
+      "Leadership"
+    ],
+    "description": "韓国語で「取引所」という意味の「バグメ」は美容室や小規模スーパーマーケット、飲食店など小商工人のための金融プラットフォームだ。 基本的には、利用者（中小企業）ごとにクーポンを作成し、そのクーポンを他の利用者と交換して生活費を削減するという考え方です。韓国語で「取引所」という意味の「バグメ」は美容室や小規模スーパーマーケット、飲食店など小商工人のための金融プラットフォームだ。 基本的には、利用者（中小企業）ごとにクーポンを作成し、そのクーポンを他の利用者と交換して生活費を削減するという考え方です。",
+    "reference": [
+      {
+        "name": "Figma",
+        "link": "https://www.figma.com/file/tX0nVze53F0ut6s7G7S1s0/DEMO-%3A-%EB%B0%94%EA%BF%88?type=design&node-id=0%3A1&mode=design&t=ah65nDPXAemgqzug-1"
+      }
+    ]
+  },
+  {
+    "name": "保険数理試験 - SOA",
+    "subname": "FAM-L - 長期資産管理、ALTAM - 高度な長期資産管理",
+    "year": "2023",
+    "skills": [
+      {
+        "name": "Excel",
+        "level": "intermediate"
+      },
+      {
+        "name": "Rist Management",
+        "level": "intermediate"
+      }
+    ],
+    "imgs": [
+      "/soa_logo.jpg"
+    ],
+    "tags": [
+      "Actuary",
+      "Finance"
+    ],
+    "description": "FAM-L - Long Term Asset ManagementとALTAM - Advanced Long Term Asset Managementを含む2つの保険数理試験に合格しました。",
+    "reference": [
+      {
+        "name": "SOA website",
+        "link": "https://www.soa.org/"
+      }
+    ]
+  },
+  {
+    "name": "ルーミー",
+    "subname": "ルームメイトマッチングアプリ",
+    "year": "2022",
+    "skills": [
+      {
+        "name": "TypeScript",
+        "comment": "Expert",
+        "level": "expert"
+      },
+      {
+        "name": "MongoDB",
+        "comment": "beginner",
+        "level": "beginner"
+      },
+      {
+        "name": "Python",
+        "comment": "know how to use machine learning library such as Pandas, Numpy, and Tensorflow",
+        "level": "intermediate"
+      }
+    ],
+    "imgs": [
+      "https://firebasestorage.googleapis.com/v0/b/firescript-577a2.appspot.com/o/imgs%2Fapp%2FChaeHoonNote%2FZzYGrVU46O.png?alt=media&token=c3a459f4-a353-476f-886d-4b78e2cd3810",
+      "https://firebasestorage.googleapis.com/v0/b/firescript-577a2.appspot.com/o/imgs%2Fapp%2FChaeHoonNote%2FzIWDdtWK1F.png?alt=media&token=79422de8-d1f5-4ea9-946e-61a2e68f420d",
+      "https://firebasestorage.googleapis.com/v0/b/firescript-577a2.appspot.com/o/imgs%2Fapp%2FChaeHoonNote%2FbCCCSkE9Iv.png?alt=media&token=17234a0c-c38d-4b9b-97ec-e13dcdc51672",
+      "https://firebasestorage.googleapis.com/v0/b/firescript-577a2.appspot.com/o/imgs%2Fapp%2FChaeHoonNote%2FikEjI7dqUi.png?alt=media&token=a61399d7-4699-4f58-b848-0f94f1935679",
+      "https://firebasestorage.googleapis.com/v0/b/firescript-577a2.appspot.com/o/imgs%2Fapp%2FChaeHoonNote%2FSsfOSk1Mbo.png?alt=media&token=49bf9a5b-7f02-4d4a-b2e3-cbdbc8c626e1"
+    ],
+    "tags": [
+      "Frontend",
+      "Backend",
+      "DB",
+      "LogIn"
+    ],
+    "description": "このプロジェクトは、ログインを含む完全なスタック Web サイトです。 機密情報を必要としないため、ログインは JWT でのみ実装されます。 PW は、DB に保存する前に安全にハッシュされます。 単純なフラスコ (Python) サーバーが存在し、ユーザーのリストが返されます (Pandas Library を使用して)。",
+    "reference": [
+      {
+        "name": "Demo",
+        "link": "https://roomie-one.vercel.app/"
+      }
+    ]
+  },
+  {
+    "name": "ペット·ファインダー",
+    "subname": "トレーニングを受けたモデルに基づいて導入速度を確認する",
+    "year": "2022",
+    "skills": [
+      {
+        "name": "TypeScript",
+        "comment": "Expert",
+        "level": "expert"
+      },
+      {
+        "name": "Python",
+        "comment": "know how to use machine learning library such as Pandas, Numpy, and Tensorflow",
+        "level": "intermediate"
+      },
+      {
+        "name": "Machine Learning",
+        "comment": "have build CNN model with Keras, XGBoost model with SKlearn",
+        "level": "intermediate"
+      }
+    ],
+    "imgs": [
+      "https://firebasestorage.googleapis.com/v0/b/firescript-577a2.appspot.com/o/imgs%2Fapp%2FChaeHoonNote%2FumB6Ma6m1g.png?alt=media&token=2e3bd185-65e5-4ac9-85d7-57006192514c"
+    ],
+    "tags": [
+      "Frontend",
+      "Backend",
+      "DataBase",
+      "Machine Learning",
+      "Keras"
+    ],
+    "description": "このプロジェクトは機械学習ベースのプロジェクトです。 ユーザーはペットに関するお土産を記入し、アプリは予想される養子縁組速度のカテゴリーを0から4まで返します",
+    "reference": [
+      {
+        "name": "Demo",
+        "link": "https://pet-finder-zeta.vercel.app/"
+      }
+    ],
+    "videos": [
+      "https://www.youtube.com/embed/-dg41MKKZwI",
+      "https://www.youtube.com/embed/gCNdHcvsRUI"
+    ]
+  },
+  {
+    "name": "OCRプロジェクト",
+    "subname": "PDF または Picture で Ledger Excel ファイルを作成する",
+    "year": "2022",
+    "skills": [
+      {
+        "name": "TypeScript",
+        "comment": "Expert",
+        "level": "expert"
+      },
+      {
+        "name": "Tauri",
+        "comment": "Only know very basic functionality",
+        "level": "beginner"
+      },
+      {
+        "name": "Rest Api",
+        "comment": "fetching from both front and backend",
+        "level": "intermediate"
+      },
+      {
+        "name": "RegEx",
+        "comment": " ",
+        "level": "intermediate"
+      }
+    ],
+    "imgs": [
+      "https://firebasestorage.googleapis.com/v0/b/firescript-577a2.appspot.com/o/imgs%2Fapp%2FChaeHoonNote%2FLXsEDZUDZQ.png?alt=media&token=05f45015-d0c9-4a09-a232-12205226e9f5",
+      "https://firebasestorage.googleapis.com/v0/b/firescript-577a2.appspot.com/o/imgs%2Fapp%2FChaeHoonNote%2Foj2kQopf8s.png?alt=media&token=5b3e82dc-bc57-472d-8662-7a97b0f39649"
+    ],
+    "videos": [
+      "https://www.youtube.com/embed/0IXLSEBvlGs"
+    ],
+    "tags": [
+      "Web",
+      "Desktop"
+    ],
+    "reference": [
+      {
+        "name": "Github Repository",
+        "link": "https://github.com/ChaeHoonK/OCR_project"
+      }
+    ],
+    "description": "このプロジェクトは、社内のビジネス目的で行われます。 外部OCRサービスapiを使用してフォーマットされたスキャン画像またはPDFからテキスト日付を受信します。 プログラムは、与えられたテキストデータを解析し、EXCELファイルを作成する。 簿記係はエクセルファイルをERPにアップロードするだけで済むので、簿記にかかる時間を減らすことに成功しました。"
+  },
+  {
+    "name": "シンプルチャットアプリ",
+    "subname": "Socket.io 、express、および Pug テンプレートとのチャット",
+    "year": "2022",
+    "skills": [
+      {
+        "name": "Javascript",
+        "comment": "confident with Javascript",
+        "level": "expert"
+      },
+      {
+        "name": "Socket",
+        "comment": "have implemented simple chat app with Socket.io",
+        "level": "beginner"
+      }
+    ],
+    "imgs": [
+      "https://firebasestorage.googleapis.com/v0/b/firescript-577a2.appspot.com/o/imgs%2Fapp%2FChaeHoonNote%2FWhBfK5Q3CU.png?alt=media&token=2eac870a-adb7-4829-adef-f5818a719aa6"
+    ],
+    "videos": [
+      "https://www.youtube.com/embed/MEU64xuvpFg"
+    ],
+    "tags": [
+      "Socket",
+      "Backend",
+      "Frontend"
+    ],
+    "description": "学習目的でpugテンプレートエンジンを使用する純粋なHtml、CSS、JSプロジェクト。"
+  },
+  {
+    "name": "テスト1",
+    "subname": "Socket.io 、express、および Pug テンプレートとのチャット",
+    "year": "2022",
+    "skills": [
+      {
+        "name": "Javascript",
+        "comment": "confident with Javascript",
+        "level": "expert"
+      },
+      {
+        "name": "Socket",
+        "comment": "have implemented simple chat app with Socket.io",
+        "level": "beginner"
+      }
+    ],
+    "imgs": [
+      "https://firebasestorage.googleapis.com/v0/b/firescript-577a2.appspot.com/o/imgs%2Fapp%2FChaeHoonNote%2FWhBfK5Q3CU.png?alt=media&token=2eac870a-adb7-4829-adef-f5818a719aa6"
+    ],
+    "videos": [
+      "https://www.youtube.com/embed/MEU64xuvpFg"
+    ],
+    "tags": [
+      "Socket",
+      "Backend",
+      "Frontend"
+    ],
+    "description": "学習目的でpugテンプレートエンジンを使用する純粋なHtml、CSS、JSプロジェクト。"
+  },
+  {
+    "name": "テスト2",
+    "subname": "Socket.io 、express、および Pug テンプレートとのチャット",
+    "year": "2022",
+    "skills": [
+      {
+        "name": "Javascript",
+        "comment": "confident with Javascript",
+        "level": "expert"
+      },
+      {
+        "name": "Socket",
+        "comment": "have implemented simple chat app with Socket.io",
+        "level": "beginner"
+      }
+    ],
+    "imgs": [
+      "https://firebasestorage.googleapis.com/v0/b/firescript-577a2.appspot.com/o/imgs%2Fapp%2FChaeHoonNote%2FWhBfK5Q3CU.png?alt=media&token=2eac870a-adb7-4829-adef-f5818a719aa6"
+    ],
+    "videos": [
+      "https://www.youtube.com/embed/MEU64xuvpFg"
+    ],
+    "tags": [
+      "Socket",
+      "Backend",
+      "Frontend"
+    ],
+    "description": "学習目的でpugテンプレートエンジンを使用する純粋なHtml、CSS、JSプロジェクト。"
+  }
+]

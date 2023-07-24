@@ -1,0 +1,343 @@
+[
+  {
+    "name": "Служба симуляции торговли Bitcoin",
+    "subname": "Практика CryptoCwrency Trade - (BackEnd Server в настоящее время недоступен)",
+    "year": "2023",
+    "skills": [
+      {
+        "name": "TypeScript",
+        "comment": "Expert",
+        "level": "expert"
+      },
+      {
+        "name": "Python",
+        "comment": "know how to use machine learning library such as Pandas, Numpy, and Tensorflow",
+        "level": "intermediate"
+      },
+      {
+        "name": "FastAPI",
+        "comment": "",
+        "level": "intermediate"
+      },
+      {
+        "name": "SQL",
+        "comment": "mySQL",
+        "level": "intermediate"
+      }
+    ],
+    "imgs": [
+      "/TTM/TTM6.jpeg",
+      "/TTM/TTM5.jpeg",
+      "/TTM/TTM1.png",
+      "/TTM/TTM2.png",
+      "/TTM/TTM3.png",
+      "/TTM/TTM4.png"
+    ],
+    "tags": [
+      "Frontend",
+      "Backend",
+      "SQL",
+      "In Progress",
+      "DB",
+      "Leadership"
+    ],
+    "description": "Сотрудничал с командой из 7 членов, в том числе дизайнеров, фронтендов и разработчиков backend. Проектирование и внедрение автоматического сервиса моделирования торговли биткойном с несколькими алгоритмами торговли. Разработка полного сервиса на протяжении всего цикла разработки программного обеспечения от планирования до развертывания.",
+    "reference": [
+      {
+        "name": "Demo",
+        "link": "https://crypto-bot-frontend.vercel.app/"
+      },
+      {
+        "name": "Notion",
+        "link": "https://crystalline-supernova-5b3.notion.site/a0ddefd35d59468dbfaaba641ab68df9?v=f0bf82b783854236ba204fbff2566f03"
+      },
+      {
+        "name": "GitHub-Front",
+        "link": "https://github.com/ChaeHoonK/CryptoBotFrontend"
+      },
+      {
+        "name": "GitHub-Back",
+        "link": "https://github.com/theoFather/TTM-Backend"
+      }
+    ]
+  },
+  {
+    "name": "Baggume - Платформа для малого бизнеса",
+    "subname": "Экономить деньги путем обмена товарами",
+    "year": "2023",
+    "skills": [
+      {
+        "name": "Figma",
+        "level": "beginner"
+      },
+      {
+        "name": "Lean StartUp",
+        "level": "beginner"
+      }
+    ],
+    "imgs": [
+      "/baggume/4.jpg",
+      "/baggume/1.jpg",
+      "/baggume/2.jpg",
+      "/baggume/3.jpg"
+    ],
+    "tags": [
+      "Design",
+      "Business",
+      "Leadership"
+    ],
+    "description": "«Баггум», означающий «обмен» на корейском языке, является финансовой платформой для малых предприятий, таких как парикмахерские, маленькие супермаркеты или рестораны. В принципе, идея заключается в том, что каждый пользователь (маленькие предприятия) создает свои собственные купоны, и обменять купоны с другими пользователями, чтобы уменьшить расходы на жизнь.«Баггум», означающий «обмен» на корейском языке, является финансовой платформой для малых предприятий, таких как парикмахерские, маленькие супермаркеты или рестораны. В принципе, идея заключается в том, что каждый пользователь (маленькие предприятия) создает свои собственные купоны, и обменять купоны с другими пользователями, чтобы уменьшить расходы на жизнь.",
+    "reference": [
+      {
+        "name": "Figma",
+        "link": "https://www.figma.com/file/tX0nVze53F0ut6s7G7S1s0/DEMO-%3A-%EB%B0%94%EA%BF%88?type=design&node-id=0%3A1&mode=design&t=ah65nDPXAemgqzug-1"
+      }
+    ]
+  },
+  {
+    "name": "Актуарные экзамены - SOA",
+    "subname": "FAM-L - Долгосрочное управление активами, ALTAM - Повышенное долгосрочное управление активами",
+    "year": "2023",
+    "skills": [
+      {
+        "name": "Excel",
+        "level": "intermediate"
+      },
+      {
+        "name": "Rist Management",
+        "level": "intermediate"
+      }
+    ],
+    "imgs": [
+      "/soa_logo.jpg"
+    ],
+    "tags": [
+      "Actuary",
+      "Finance"
+    ],
+    "description": "Окончил два экзамена, включая FAM-L - Long Term Asset Management и ALTAM - Advanded Long Term Asset Management.",
+    "reference": [
+      {
+        "name": "SOA website",
+        "link": "https://www.soa.org/"
+      }
+    ]
+  },
+  {
+    "name": "Roomie",
+    "subname": "Соответствующее приложение Roommate",
+    "year": "2022",
+    "skills": [
+      {
+        "name": "TypeScript",
+        "comment": "Expert",
+        "level": "expert"
+      },
+      {
+        "name": "MongoDB",
+        "comment": "beginner",
+        "level": "beginner"
+      },
+      {
+        "name": "Python",
+        "comment": "know how to use machine learning library such as Pandas, Numpy, and Tensorflow",
+        "level": "intermediate"
+      }
+    ],
+    "imgs": [
+      "https://firebasestorage.googleapis.com/v0/b/firescript-577a2.appspot.com/o/imgs%2Fapp%2FChaeHoonNote%2FZzYGrVU46O.png?alt=media&token=c3a459f4-a353-476f-886d-4b78e2cd3810",
+      "https://firebasestorage.googleapis.com/v0/b/firescript-577a2.appspot.com/o/imgs%2Fapp%2FChaeHoonNote%2FzIWDdtWK1F.png?alt=media&token=79422de8-d1f5-4ea9-946e-61a2e68f420d",
+      "https://firebasestorage.googleapis.com/v0/b/firescript-577a2.appspot.com/o/imgs%2Fapp%2FChaeHoonNote%2FbCCCSkE9Iv.png?alt=media&token=17234a0c-c38d-4b9b-97ec-e13dcdc51672",
+      "https://firebasestorage.googleapis.com/v0/b/firescript-577a2.appspot.com/o/imgs%2Fapp%2FChaeHoonNote%2FikEjI7dqUi.png?alt=media&token=a61399d7-4699-4f58-b848-0f94f1935679",
+      "https://firebasestorage.googleapis.com/v0/b/firescript-577a2.appspot.com/o/imgs%2Fapp%2FChaeHoonNote%2FSsfOSk1Mbo.png?alt=media&token=49bf9a5b-7f02-4d4a-b2e3-cbdbc8c626e1"
+    ],
+    "tags": [
+      "Frontend",
+      "Backend",
+      "DB",
+      "LogIn"
+    ],
+    "description": "Этот проект представляет собой полный стек сайта с логином. Так как это не требует конфиденциальной информации, логин просто реализован с JWT. PW безопасно хэш перед сохранением в DB. Существует простой сервер Flask (Python) , который возвращает список пользователей сортированных моих совпадений весов (используя библиотеку Pandas).",
+    "reference": [
+      {
+        "name": "Demo",
+        "link": "https://roomie-one.vercel.app/"
+      }
+    ]
+  },
+  {
+    "name": "Найдер домашних животных",
+    "subname": "Найти скорость усыновления на основе тренированной модели",
+    "year": "2022",
+    "skills": [
+      {
+        "name": "TypeScript",
+        "comment": "Expert",
+        "level": "expert"
+      },
+      {
+        "name": "Python",
+        "comment": "know how to use machine learning library such as Pandas, Numpy, and Tensorflow",
+        "level": "intermediate"
+      },
+      {
+        "name": "Machine Learning",
+        "comment": "have build CNN model with Keras, XGBoost model with SKlearn",
+        "level": "intermediate"
+      }
+    ],
+    "imgs": [
+      "https://firebasestorage.googleapis.com/v0/b/firescript-577a2.appspot.com/o/imgs%2Fapp%2FChaeHoonNote%2FumB6Ma6m1g.png?alt=media&token=2e3bd185-65e5-4ac9-85d7-57006192514c"
+    ],
+    "tags": [
+      "Frontend",
+      "Backend",
+      "DataBase",
+      "Machine Learning",
+      "Keras"
+    ],
+    "description": "Этот проект основан на машинном обучении. Пользователи заполнит сувениры о своих домашних животных, и приложение вернет ожидаемый диапазон скорости усыновления от 0 до 4",
+    "reference": [
+      {
+        "name": "Demo",
+        "link": "https://pet-finder-zeta.vercel.app/"
+      }
+    ],
+    "videos": [
+      "https://www.youtube.com/embed/-dg41MKKZwI",
+      "https://www.youtube.com/embed/gCNdHcvsRUI"
+    ]
+  },
+  {
+    "name": "Проект OCR",
+    "subname": "Создает файл Ledger Excel с PDF или картинкой",
+    "year": "2022",
+    "skills": [
+      {
+        "name": "TypeScript",
+        "comment": "Expert",
+        "level": "expert"
+      },
+      {
+        "name": "Tauri",
+        "comment": "Only know very basic functionality",
+        "level": "beginner"
+      },
+      {
+        "name": "Rest Api",
+        "comment": "fetching from both front and backend",
+        "level": "intermediate"
+      },
+      {
+        "name": "RegEx",
+        "comment": " ",
+        "level": "intermediate"
+      }
+    ],
+    "imgs": [
+      "https://firebasestorage.googleapis.com/v0/b/firescript-577a2.appspot.com/o/imgs%2Fapp%2FChaeHoonNote%2FLXsEDZUDZQ.png?alt=media&token=05f45015-d0c9-4a09-a232-12205226e9f5",
+      "https://firebasestorage.googleapis.com/v0/b/firescript-577a2.appspot.com/o/imgs%2Fapp%2FChaeHoonNote%2Foj2kQopf8s.png?alt=media&token=5b3e82dc-bc57-472d-8662-7a97b0f39649"
+    ],
+    "videos": [
+      "https://www.youtube.com/embed/0IXLSEBvlGs"
+    ],
+    "tags": [
+      "Web",
+      "Desktop"
+    ],
+    "reference": [
+      {
+        "name": "Github Repository",
+        "link": "https://github.com/ChaeHoonK/OCR_project"
+      }
+    ],
+    "description": "Этот проект выполняется с целью внутреннего бизнеса. Он получает текстовую дату от отсканированного изображения или PDF с помощью внешнего OCR сервиса api. Программа анализирует данные и создает файл EXCEL. Она успешно сократила время, затраченное на бухгалтерию, так как бухгалтер требует только загрузить файл Excel в ERP."
+  },
+  {
+    "name": "Простое приложение чата",
+    "subname": "Общайтесь с шаблоном Socket.io, экспресс и Pug",
+    "year": "2022",
+    "skills": [
+      {
+        "name": "Javascript",
+        "comment": "confident with Javascript",
+        "level": "expert"
+      },
+      {
+        "name": "Socket",
+        "comment": "have implemented simple chat app with Socket.io",
+        "level": "beginner"
+      }
+    ],
+    "imgs": [
+      "https://firebasestorage.googleapis.com/v0/b/firescript-577a2.appspot.com/o/imgs%2Fapp%2FChaeHoonNote%2FWhBfK5Q3CU.png?alt=media&token=2eac870a-adb7-4829-adef-f5818a719aa6"
+    ],
+    "videos": [
+      "https://www.youtube.com/embed/MEU64xuvpFg"
+    ],
+    "tags": [
+      "Socket",
+      "Backend",
+      "Frontend"
+    ],
+    "description": "Чистый Html, CSS, JS проект с использованием модуля шаблона pug для обучения."
+  },
+  {
+    "name": "Тест1",
+    "subname": "Общайтесь с шаблоном Socket.io, экспресс и Pug",
+    "year": "2022",
+    "skills": [
+      {
+        "name": "Javascript",
+        "comment": "confident with Javascript",
+        "level": "expert"
+      },
+      {
+        "name": "Socket",
+        "comment": "have implemented simple chat app with Socket.io",
+        "level": "beginner"
+      }
+    ],
+    "imgs": [
+      "https://firebasestorage.googleapis.com/v0/b/firescript-577a2.appspot.com/o/imgs%2Fapp%2FChaeHoonNote%2FWhBfK5Q3CU.png?alt=media&token=2eac870a-adb7-4829-adef-f5818a719aa6"
+    ],
+    "videos": [
+      "https://www.youtube.com/embed/MEU64xuvpFg"
+    ],
+    "tags": [
+      "Socket",
+      "Backend",
+      "Frontend"
+    ],
+    "description": "Чистый Html, CSS, JS проект с использованием модуля шаблона pug для обучения."
+  },
+  {
+    "name": "Тест2",
+    "subname": "Общайтесь с шаблоном Socket.io, экспресс и Pug",
+    "year": "2022",
+    "skills": [
+      {
+        "name": "Javascript",
+        "comment": "confident with Javascript",
+        "level": "expert"
+      },
+      {
+        "name": "Socket",
+        "comment": "have implemented simple chat app with Socket.io",
+        "level": "beginner"
+      }
+    ],
+    "imgs": [
+      "https://firebasestorage.googleapis.com/v0/b/firescript-577a2.appspot.com/o/imgs%2Fapp%2FChaeHoonNote%2FWhBfK5Q3CU.png?alt=media&token=2eac870a-adb7-4829-adef-f5818a719aa6"
+    ],
+    "videos": [
+      "https://www.youtube.com/embed/MEU64xuvpFg"
+    ],
+    "tags": [
+      "Socket",
+      "Backend",
+      "Frontend"
+    ],
+    "description": "Чистый Html, CSS, JS проект с использованием модуля шаблона pug для обучения."
+  }
+]

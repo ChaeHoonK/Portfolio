@@ -12,12 +12,60 @@ interface Project {
   reference: { name: string; link: string }[];
 }
 
+export function parseJsonToProjects(jsonFilePath: string):Project[] {
+  const dataBuffer = fs.readFileSync(jsonFilePath);
+  const dataJson = dataBuffer.toString();
+  return JSON.parse(dataJson) as Project[]
+}
+
+export async function traslateProject(project:Project, languageCode:string) {
+  const result = {...project}
+  const texts = [project.name,project.subname,project.description]
+  const translatedTexts = await papagoTranslate(texts, languageCode)
+  if (!translatedTexts) {
+    return
+  }
+  let i = 0
+  result.name = translatedTexts[i++]
+  result.subname = translatedTexts[i++]
+  result.description = translatedTexts[i++]
+  return result
+}
+
+export function writeProjectJson(data:Project[], languageCode:string, filename:string) {
+    // Write the translated data to a new .json file
+    const translatedJson = JSON.stringify(data, null, 2);
+    //filename = filename.slice(7)
+    fs.writeFileSync(`${filename}${languageCode}.json`, translatedJson);
+}
+
+export async function updateProjectTranslation (languageCode:string, filename:string) {
+  const original_projects = parseJsonToProjects(`${filename}.json`)
+  const translated_projects = parseJsonToProjects(`${filename}${languageCode}.json`)
+  const translated_projects_copy = [...translated_projects]
+  const diff = original_projects.length - translated_projects.length
+
+  if (diff == 0) {
+    console.log('NO UPDATE IN PROJECTS')
+    return
+  }
+
+  for(let i = 0 ; i < diff; ++i) {
+    const curr = original_projects[translated_projects.length+i]
+    console.log(`UPDATING Project ${curr.name}`)
+
+    const translated_project = await traslateProject(curr, languageCode)
+    if (translated_project) {
+      translated_projects_copy.push(translated_project)
+    }
+  }
+  writeProjectJson(translated_projects_copy, languageCode, filename)
+}
+
 export async function translateJsonProject(languageCode: string, filename: string) {
   console.log('******INFO: translateJsonProjectFile******')
   // Read the original .json file
-  const dataBuffer = fs.readFileSync(filename);
-  const dataJson = dataBuffer.toString();
-  const data = JSON.parse(dataJson) as Project[];
+  const data = parseJsonToProjects(filename);
 
   // Extract texts to translate
   const texts = data.flatMap(project => [

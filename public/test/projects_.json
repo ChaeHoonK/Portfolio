@@ -1,0 +1,341 @@
+[
+  {
+    "name": "Bitcoin Trade Simulation Service",
+    "subname": "Practice CryptoCurrency Trade - (BackEnd Server Currently Not Available)",
+    "year": "2023",
+    "skills": [
+      {
+        "name": "TypeScript",
+        "comment": "Expert",
+        "level": "expert"
+      },
+      {
+        "name": "Python",
+        "comment": "know how to use machine learning library such as Pandas, Numpy, and Tensorflow",
+        "level": "intermediate"
+      },
+      {
+        "name": "FastAPI",
+        "comment": "",
+        "level": "intermediate"
+      },
+      {
+        "name": "SQL",
+        "comment": "mySQL",
+        "level": "intermediate"
+      }
+    ],
+    "imgs": [
+      "/TTM/TTM6.jpeg",
+      "/TTM/TTM5.jpeg",
+      "/TTM/TTM1.png",
+      "/TTM/TTM2.png",
+      "/TTM/TTM3.png",
+      "/TTM/TTM4.png"
+    ],
+    "tags": [
+      "Frontend",
+      "Backend",
+      "SQL",
+      "In Progress",
+      "DB",
+      "Leadership"
+    ],
+    "description": "Collaborated with team of 7 members including designers, frontend, and backend developers. Designing and implementing a bitcoin automatic trading simulation service with multiple trading algorithms. Developing a full-stack service throughout the entire software development cycle from planning to deployment.",
+    "reference": [
+      {
+        "name": "Demo",
+        "link": "https://crypto-bot-frontend.vercel.app/"
+      },
+      {
+        "name": "Notion",
+        "link": "https://crystalline-supernova-5b3.notion.site/a0ddefd35d59468dbfaaba641ab68df9?v=f0bf82b783854236ba204fbff2566f03"
+      },
+      {
+        "name": "GitHub-Front",
+        "link": "https://github.com/ChaeHoonK/CryptoBotFrontend"
+      },
+      {
+        "name": "GitHub-Back",
+        "link": "https://github.com/theoFather/TTM-Backend"
+      }
+    ]
+  },
+  {
+    "name": "Baggume - Platform for Small Businesses",
+    "subname": "Save Money by Exchanging Goods",
+    "year": "2023",
+    "skills": [
+      {
+        "name": "Figma",
+        "level": "beginner"
+      },
+      {
+        "name": "Lean StartUp",
+        "level": "beginner"
+      }
+    ],
+    "imgs": [
+      "/baggume/4.jpg",
+      "/baggume/1.jpg",
+      "/baggume/2.jpg",
+      "/baggume/3.jpg"
+    ],
+    "tags": [
+      "Design",
+      "Business",
+      "Leadership"
+    ],
+    "description": "\"Baggume\", meaning \"Exchange\" in Korean, is a financial platform for small businesses such as hair salons, small supermarkets or restaurants. Basically, the idea is that each user (small businesses) create their own coupons, and exchange the coupons with other user to reduce living expense.\"Baggume\", meaning \"Exchange\" in Korean, is a financial platform for small businesses such as hair salons, small supermarkets or restaurants. Basically, the idea is that each user (small businesses) create their own coupons, and exchange the coupons with other user to reduce living expense.",
+    "reference": [
+      {
+        "name": "Figma",
+        "link": "https://www.figma.com/file/tX0nVze53F0ut6s7G7S1s0/DEMO-%3A-%EB%B0%94%EA%BF%88?type=design&node-id=0%3A1&mode=design&t=ah65nDPXAemgqzug-1"
+      }
+    ]
+  },
+  {
+    "name": "Actuarial Exams - SOA",
+    "subname": "FAM-L - Long Term Asset Management, ALTAM - Advanded Long Term Asset Management",
+    "year": "2023",
+    "skills": [
+      {
+        "name": "Excel",
+        "level": "intermediate"
+      },
+      {
+        "name": "Rist Management",
+        "level": "intermediate"
+      }
+    ],
+    "imgs": [
+      "/soa_logo.jpg"
+    ],
+    "tags": [
+      "Actuary",
+      "Finance"
+    ],
+    "description": "Passed two actuarial exams including FAM-L - Long Term Asset Management and ALTAM - Advanded Long Term Asset Management.",
+    "reference": [
+      {
+        "name": "SOA website",
+        "link": "https://www.soa.org/"
+      }
+    ]
+  },
+  {
+    "name": "Roomie",
+    "subname": "Roommate Matching App",
+    "year": "2022",
+    "skills": [
+      {
+        "name": "TypeScript",
+        "comment": "Expert",
+        "level": "expert"
+      },
+      {
+        "name": "MongoDB",
+        "comment": "beginner",
+        "level": "beginner"
+      },
+      {
+        "name": "Python",
+        "comment": "know how to use machine learning library such as Pandas, Numpy, and Tensorflow",
+        "level": "intermediate"
+      }
+    ],
+    "imgs": [
+      "https://firebasestorage.googleapis.com/v0/b/firescript-577a2.appspot.com/o/imgs%2Fapp%2FChaeHoonNote%2FZzYGrVU46O.png?alt=media&token=c3a459f4-a353-476f-886d-4b78e2cd3810",
+      "https://firebasestorage.googleapis.com/v0/b/firescript-577a2.appspot.com/o/imgs%2Fapp%2FChaeHoonNote%2FzIWDdtWK1F.png?alt=media&token=79422de8-d1f5-4ea9-946e-61a2e68f420d",
+      "https://firebasestorage.googleapis.com/v0/b/firescript-577a2.appspot.com/o/imgs%2Fapp%2FChaeHoonNote%2FbCCCSkE9Iv.png?alt=media&token=17234a0c-c38d-4b9b-97ec-e13dcdc51672",
+      "https://firebasestorage.googleapis.com/v0/b/firescript-577a2.appspot.com/o/imgs%2Fapp%2FChaeHoonNote%2FikEjI7dqUi.png?alt=media&token=a61399d7-4699-4f58-b848-0f94f1935679",
+      "https://firebasestorage.googleapis.com/v0/b/firescript-577a2.appspot.com/o/imgs%2Fapp%2FChaeHoonNote%2FSsfOSk1Mbo.png?alt=media&token=49bf9a5b-7f02-4d4a-b2e3-cbdbc8c626e1"
+    ],
+    "tags": [
+      "Frontend",
+      "Backend",
+      "DB",
+      "LogIn"
+    ],
+    "description": "This project is a full stack website with login. Since it doesn't require sensitive information Login is simply implemented with JWT. PW is safely hashed before saving in DB. There exist a simple Flask (Python) Server that returns a list of users sorted my matching weights (using Pandas Library).",
+    "reference": [
+      {
+        "name": "Demo",
+        "link": "https://roomie-one.vercel.app/"
+      }
+    ]
+  },
+  {
+    "name": "Pet Finder",
+    "subname": "Find Adoption Speed based on Trained Model",
+    "year": "2022",
+    "skills": [
+      {
+        "name": "TypeScript",
+        "comment": "Expert",
+        "level": "expert"
+      },
+      {
+        "name": "Python",
+        "comment": "know how to use machine learning library such as Pandas, Numpy, and Tensorflow",
+        "level": "intermediate"
+      },
+      {
+        "name": "Machine Learning",
+        "comment": "have build CNN model with Keras, XGBoost model with SKlearn",
+        "level": "intermediate"
+      }
+    ],
+    "imgs": [
+      "https://firebasestorage.googleapis.com/v0/b/firescript-577a2.appspot.com/o/imgs%2Fapp%2FChaeHoonNote%2FumB6Ma6m1g.png?alt=media&token=2e3bd185-65e5-4ac9-85d7-57006192514c"
+    ],
+    "tags": [
+      "Frontend",
+      "Backend",
+      "DataBase",
+      "Machine Learning",
+      "Keras"
+    ],
+    "description": "This project is a machine learning based project. Users fill out the souveneir about their pets, and the app will return expected adoption speed category range from 0 to 4",
+    "reference": [
+      {
+        "name": "Demo",
+        "link": "https://pet-finder-zeta.vercel.app/"
+      }
+    ],
+    "videos": [
+      "https://www.youtube.com/embed/-dg41MKKZwI",
+      "https://www.youtube.com/embed/gCNdHcvsRUI"
+    ]
+  },
+  {
+    "name": "OCR Project",
+    "subname": "Creates Ledger Excel file with PDF or Picture",
+    "year": "2022",
+    "skills": [
+      {
+        "name": "TypeScript",
+        "comment": "Expert",
+        "level": "expert"
+      },
+      {
+        "name": "Tauri",
+        "comment": "Only know very basic functionality",
+        "level": "beginner"
+      },
+      {
+        "name": "Rest Api",
+        "comment": "fetching from both front and backend",
+        "level": "intermediate"
+      },
+      {
+        "name": "RegEx",
+        "comment": " ",
+        "level": "intermediate"
+      }
+    ],
+    "imgs": [
+      "https://firebasestorage.googleapis.com/v0/b/firescript-577a2.appspot.com/o/imgs%2Fapp%2FChaeHoonNote%2FLXsEDZUDZQ.png?alt=media&token=05f45015-d0c9-4a09-a232-12205226e9f5",
+      "https://firebasestorage.googleapis.com/v0/b/firescript-577a2.appspot.com/o/imgs%2Fapp%2FChaeHoonNote%2Foj2kQopf8s.png?alt=media&token=5b3e82dc-bc57-472d-8662-7a97b0f39649"
+    ],
+    "videos": [
+      "https://www.youtube.com/embed/0IXLSEBvlGs"
+    ],
+    "tags": [
+      "Web",
+      "Desktop"
+    ],
+    "reference": [
+      {
+        "name": "Github Repository",
+        "link": "https://github.com/ChaeHoonK/OCR_project"
+      }
+    ],
+    "description": "This project is done for internal business purpose. It receives text date from formatted scanned image or PDF using external OCR service api. The program parses the given text data and creates an EXCEL file. It has successfully reduced the time spent for bookkeeping since a bookkeeper only requires to upload the excel file to ERP."
+  },
+  {
+    "name": "Simple Chat App",
+    "subname": "Chat with Socket.io, express, and Pug template",
+    "year": "2022",
+    "skills": [
+      {
+        "name": "Javascript",
+        "comment": "confident with Javascript",
+        "level": "expert"
+      },
+      {
+        "name": "Socket",
+        "comment": "have implemented simple chat app with Socket.io",
+        "level": "beginner"
+      }
+    ],
+    "imgs": [
+      "https://firebasestorage.googleapis.com/v0/b/firescript-577a2.appspot.com/o/imgs%2Fapp%2FChaeHoonNote%2FWhBfK5Q3CU.png?alt=media&token=2eac870a-adb7-4829-adef-f5818a719aa6"
+    ],
+    "videos": [
+      "https://www.youtube.com/embed/MEU64xuvpFg"
+    ],
+    "tags": [
+      "Socket",
+      "Backend",
+      "Frontend"
+    ],
+    "description": "Pure Html, CSS, JS project using pug template engine for learning purpose."
+  },   {
+    "name": "Test1",
+    "subname": "Chat with Socket.io, express, and Pug template",
+    "year": "2022",
+    "skills": [
+      {
+        "name": "Javascript",
+        "comment": "confident with Javascript",
+        "level": "expert"
+      },
+      {
+        "name": "Socket",
+        "comment": "have implemented simple chat app with Socket.io",
+        "level": "beginner"
+      }
+    ],
+    "imgs": [
+      "https://firebasestorage.googleapis.com/v0/b/firescript-577a2.appspot.com/o/imgs%2Fapp%2FChaeHoonNote%2FWhBfK5Q3CU.png?alt=media&token=2eac870a-adb7-4829-adef-f5818a719aa6"
+    ],
+    "videos": [
+      "https://www.youtube.com/embed/MEU64xuvpFg"
+    ],
+    "tags": [
+      "Socket",
+      "Backend",
+      "Frontend"
+    ],
+    "description": "Pure Html, CSS, JS project using pug template engine for learning purpose."
+  },   {
+    "name": "Test2",
+    "subname": "Chat with Socket.io, express, and Pug template",
+    "year": "2022",
+    "skills": [
+      {
+        "name": "Javascript",
+        "comment": "confident with Javascript",
+        "level": "expert"
+      },
+      {
+        "name": "Socket",
+        "comment": "have implemented simple chat app with Socket.io",
+        "level": "beginner"
+      }
+    ],
+    "imgs": [
+      "https://firebasestorage.googleapis.com/v0/b/firescript-577a2.appspot.com/o/imgs%2Fapp%2FChaeHoonNote%2FWhBfK5Q3CU.png?alt=media&token=2eac870a-adb7-4829-adef-f5818a719aa6"
+    ],
+    "videos": [
+      "https://www.youtube.com/embed/MEU64xuvpFg"
+    ],
+    "tags": [
+      "Socket",
+      "Backend",
+      "Frontend"
+    ],
+    "description": "Pure Html, CSS, JS project using pug template engine for learning purpose."
+  }
+]

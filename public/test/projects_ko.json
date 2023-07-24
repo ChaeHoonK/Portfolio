@@ -1,0 +1,343 @@
+[
+  {
+    "name": "비트코인 거래 시뮬레이션 서비스",
+    "subname": "암호화폐 거래 관행 - (백엔드 서버를 현재 사용할 수 없음)",
+    "year": "2023",
+    "skills": [
+      {
+        "name": "TypeScript",
+        "comment": "Expert",
+        "level": "expert"
+      },
+      {
+        "name": "Python",
+        "comment": "know how to use machine learning library such as Pandas, Numpy, and Tensorflow",
+        "level": "intermediate"
+      },
+      {
+        "name": "FastAPI",
+        "comment": "",
+        "level": "intermediate"
+      },
+      {
+        "name": "SQL",
+        "comment": "mySQL",
+        "level": "intermediate"
+      }
+    ],
+    "imgs": [
+      "/TTM/TTM6.jpeg",
+      "/TTM/TTM5.jpeg",
+      "/TTM/TTM1.png",
+      "/TTM/TTM2.png",
+      "/TTM/TTM3.png",
+      "/TTM/TTM4.png"
+    ],
+    "tags": [
+      "Frontend",
+      "Backend",
+      "SQL",
+      "In Progress",
+      "DB",
+      "Leadership"
+    ],
+    "description": "디자이너, 프런트엔드 및 백엔드 개발자를 포함한 7명으로 구성된 팀과 협업했습니다. 다중 거래 알고리즘을 이용한 비트코인 자동 거래 시뮬레이션 서비스 설계 및 구현. 계획에서 배포에 이르기까지 전체 소프트웨어 개발 주기에 걸쳐 전체 스택 서비스를 개발합니다. 현재 학교에 재학중이지 않아 학교 서버를 이용할 수 없어 서버는 작동중 이지 않습니다.",
+    "reference": [
+      {
+        "name": "Demo",
+        "link": "https://crypto-bot-frontend.vercel.app/"
+      },
+      {
+        "name": "Notion",
+        "link": "https://crystalline-supernova-5b3.notion.site/a0ddefd35d59468dbfaaba641ab68df9?v=f0bf82b783854236ba204fbff2566f03"
+      },
+      {
+        "name": "GitHub-Front",
+        "link": "https://github.com/ChaeHoonK/CryptoBotFrontend"
+      },
+      {
+        "name": "GitHub-Back",
+        "link": "https://github.com/theoFather/TTM-Backend"
+      }
+    ]
+  },
+  {
+    "name": "Baggume - 소상공인을 위한 플랫폼",
+    "subname": "물건을 교환하여 돈을 절약하다",
+    "year": "2023",
+    "skills": [
+      {
+        "name": "Figma",
+        "level": "beginner"
+      },
+      {
+        "name": "Lean StartUp",
+        "level": "beginner"
+      }
+    ],
+    "imgs": [
+      "/baggume/4.jpg",
+      "/baggume/1.jpg",
+      "/baggume/2.jpg",
+      "/baggume/3.jpg"
+    ],
+    "tags": [
+      "Design",
+      "Business",
+      "Leadership"
+    ],
+    "description": "한국어로 \"거래소\"를 의미하는 \"바구메\"는 미용실, 작은 슈퍼마켓 또는 식당과 같은 소기업을 위한 금융 플랫폼이다. 기본적으로 각 사용자(소상공인)가 직접 쿠폰을 만들어 다른 사용자와 교환해 생활비를 절감하자는 취지다.한국어로 \"거래소\"를 의미하는 \"바구메\"는 미용실, 작은 슈퍼마켓 또는 식당과 같은 소기업을 위한 금융 플랫폼이다. 기본적으로 각 사용자(소상공인)가 직접 쿠폰을 만들어 다른 사용자와 교환해 생활비를 절감하자는 취지다.",
+    "reference": [
+      {
+        "name": "Figma",
+        "link": "https://www.figma.com/file/tX0nVze53F0ut6s7G7S1s0/DEMO-%3A-%EB%B0%94%EA%BF%88?type=design&node-id=0%3A1&mode=design&t=ah65nDPXAemgqzug-1"
+      }
+    ]
+  },
+  {
+    "name": "보험계리 자격증 - SOA",
+    "subname": "FAM-L - 장기 자산 관리, ALTAM - 고급 장기 자산 관리",
+    "year": "2023",
+    "skills": [
+      {
+        "name": "Excel",
+        "level": "intermediate"
+      },
+      {
+        "name": "Rist Management",
+        "level": "intermediate"
+      }
+    ],
+    "imgs": [
+      "/soa_logo.jpg"
+    ],
+    "tags": [
+      "Actuary",
+      "Finance"
+    ],
+    "description": "FAM-L(장기 자산 관리 자격증) 및 ALTAM(심화 장기 자산 관리 자격증)를 포함한 두 개의 보험계리학 자격증 시험을 통과했습니다.",
+    "reference": [
+      {
+        "name": "SOA website",
+        "link": "https://www.soa.org/"
+      }
+    ]
+  },
+  {
+    "name": "룸미",
+    "subname": "룸메이트 매칭 앱",
+    "year": "2022",
+    "skills": [
+      {
+        "name": "TypeScript",
+        "comment": "Expert",
+        "level": "expert"
+      },
+      {
+        "name": "MongoDB",
+        "comment": "beginner",
+        "level": "beginner"
+      },
+      {
+        "name": "Python",
+        "comment": "know how to use machine learning library such as Pandas, Numpy, and Tensorflow",
+        "level": "intermediate"
+      }
+    ],
+    "imgs": [
+      "https://firebasestorage.googleapis.com/v0/b/firescript-577a2.appspot.com/o/imgs%2Fapp%2FChaeHoonNote%2FZzYGrVU46O.png?alt=media&token=c3a459f4-a353-476f-886d-4b78e2cd3810",
+      "https://firebasestorage.googleapis.com/v0/b/firescript-577a2.appspot.com/o/imgs%2Fapp%2FChaeHoonNote%2FzIWDdtWK1F.png?alt=media&token=79422de8-d1f5-4ea9-946e-61a2e68f420d",
+      "https://firebasestorage.googleapis.com/v0/b/firescript-577a2.appspot.com/o/imgs%2Fapp%2FChaeHoonNote%2FbCCCSkE9Iv.png?alt=media&token=17234a0c-c38d-4b9b-97ec-e13dcdc51672",
+      "https://firebasestorage.googleapis.com/v0/b/firescript-577a2.appspot.com/o/imgs%2Fapp%2FChaeHoonNote%2FikEjI7dqUi.png?alt=media&token=a61399d7-4699-4f58-b848-0f94f1935679",
+      "https://firebasestorage.googleapis.com/v0/b/firescript-577a2.appspot.com/o/imgs%2Fapp%2FChaeHoonNote%2FSsfOSk1Mbo.png?alt=media&token=49bf9a5b-7f02-4d4a-b2e3-cbdbc8c626e1"
+    ],
+    "tags": [
+      "Frontend",
+      "Backend",
+      "DB",
+      "LogIn"
+    ],
+    "description": "이 프로젝트는 로그인이 가능한 풀 스택 웹 사이트입니다. 민감한 정보를 필요로 하지 않기 때문에 로그인은 JWT로 간단하게 구현됩니다. PW는 DB에 저장하기 전에 안전하게 해시됩니다. Pandas Library를 사용하여 일치하는 가중치를 정렬한 사용자 목록을 반환하는 플라스크(Python) 서버가 있습니다.",
+    "reference": [
+      {
+        "name": "Demo",
+        "link": "https://roomie-one.vercel.app/"
+      }
+    ]
+  },
+  {
+    "name": "펫 파인더",
+    "subname": "교육된 모델을 기반으로 채택 속도 확인",
+    "year": "2022",
+    "skills": [
+      {
+        "name": "TypeScript",
+        "comment": "Expert",
+        "level": "expert"
+      },
+      {
+        "name": "Python",
+        "comment": "know how to use machine learning library such as Pandas, Numpy, and Tensorflow",
+        "level": "intermediate"
+      },
+      {
+        "name": "Machine Learning",
+        "comment": "have build CNN model with Keras, XGBoost model with SKlearn",
+        "level": "intermediate"
+      }
+    ],
+    "imgs": [
+      "https://firebasestorage.googleapis.com/v0/b/firescript-577a2.appspot.com/o/imgs%2Fapp%2FChaeHoonNote%2FumB6Ma6m1g.png?alt=media&token=2e3bd185-65e5-4ac9-85d7-57006192514c"
+    ],
+    "tags": [
+      "Frontend",
+      "Backend",
+      "DataBase",
+      "Machine Learning",
+      "Keras"
+    ],
+    "description": "이 프로젝트는 기계 학습 기반 프로젝트입니다. 사용자들은 그들의 애완동물에 대한 기념품을 작성하고, 앱은 0에서 4까지의 예상 입양 속도 범주를 반환할 것이다",
+    "reference": [
+      {
+        "name": "Demo",
+        "link": "https://pet-finder-zeta.vercel.app/"
+      }
+    ],
+    "videos": [
+      "https://www.youtube.com/embed/-dg41MKKZwI",
+      "https://www.youtube.com/embed/gCNdHcvsRUI"
+    ]
+  },
+  {
+    "name": "OCR 프로젝트",
+    "subname": "거래 명세서의 사진 또는 PDF 로 Ledger Excel 파일을 만듭니다",
+    "year": "2022",
+    "skills": [
+      {
+        "name": "TypeScript",
+        "comment": "Expert",
+        "level": "expert"
+      },
+      {
+        "name": "Tauri",
+        "comment": "Only know very basic functionality",
+        "level": "beginner"
+      },
+      {
+        "name": "Rest Api",
+        "comment": "fetching from both front and backend",
+        "level": "intermediate"
+      },
+      {
+        "name": "RegEx",
+        "comment": " ",
+        "level": "intermediate"
+      }
+    ],
+    "imgs": [
+      "https://firebasestorage.googleapis.com/v0/b/firescript-577a2.appspot.com/o/imgs%2Fapp%2FChaeHoonNote%2FLXsEDZUDZQ.png?alt=media&token=05f45015-d0c9-4a09-a232-12205226e9f5",
+      "https://firebasestorage.googleapis.com/v0/b/firescript-577a2.appspot.com/o/imgs%2Fapp%2FChaeHoonNote%2Foj2kQopf8s.png?alt=media&token=5b3e82dc-bc57-472d-8662-7a97b0f39649"
+    ],
+    "videos": [
+      "https://www.youtube.com/embed/0IXLSEBvlGs"
+    ],
+    "tags": [
+      "Web",
+      "Desktop"
+    ],
+    "reference": [
+      {
+        "name": "Github Repository",
+        "link": "https://github.com/ChaeHoonK/OCR_project"
+      }
+    ],
+    "description": "이 프로젝트는 내부 사업 목적으로 진행됩니다. 외부 OCR 서비스 API를 사용하여 포맷된 스캔 이미지 또는 PDF에서 텍스트 날짜를 수신합니다. 프로그램은 주어진 텍스트 데이터를 구문 분석하고 EXCEL 파일을 생성합니다. 부기 담당자가 엑셀 파일을 ERP에 업로드하기만 하면 되기 때문에 부기에 소요되는 시간을 성공적으로 줄였다."
+  },
+  {
+    "name": "간단한 채팅 앱",
+    "subname": "Socket.io , Express 및 Pug 템플릿과 채팅",
+    "year": "2022",
+    "skills": [
+      {
+        "name": "Javascript",
+        "comment": "confident with Javascript",
+        "level": "expert"
+      },
+      {
+        "name": "Socket",
+        "comment": "have implemented simple chat app with Socket.io",
+        "level": "beginner"
+      }
+    ],
+    "imgs": [
+      "https://firebasestorage.googleapis.com/v0/b/firescript-577a2.appspot.com/o/imgs%2Fapp%2FChaeHoonNote%2FWhBfK5Q3CU.png?alt=media&token=2eac870a-adb7-4829-adef-f5818a719aa6"
+    ],
+    "videos": [
+      "https://www.youtube.com/embed/MEU64xuvpFg"
+    ],
+    "tags": [
+      "Socket",
+      "Backend",
+      "Frontend"
+    ],
+    "description": "학습 목적으로 pug 템플릿 엔진을 사용한 순수 Html, CSS, JS 프로젝트."
+  },
+  {
+    "name": "테스트 1",
+    "subname": "Socket.io , Express 및 Pug 템플릿과 채팅",
+    "year": "2022",
+    "skills": [
+      {
+        "name": "Javascript",
+        "comment": "confident with Javascript",
+        "level": "expert"
+      },
+      {
+        "name": "Socket",
+        "comment": "have implemented simple chat app with Socket.io",
+        "level": "beginner"
+      }
+    ],
+    "imgs": [
+      "https://firebasestorage.googleapis.com/v0/b/firescript-577a2.appspot.com/o/imgs%2Fapp%2FChaeHoonNote%2FWhBfK5Q3CU.png?alt=media&token=2eac870a-adb7-4829-adef-f5818a719aa6"
+    ],
+    "videos": [
+      "https://www.youtube.com/embed/MEU64xuvpFg"
+    ],
+    "tags": [
+      "Socket",
+      "Backend",
+      "Frontend"
+    ],
+    "description": "학습 목적으로 pug 템플릿 엔진을 사용한 순수 Html, CSS, JS 프로젝트."
+  },
+  {
+    "name": "테스트 2",
+    "subname": "Socket.io , Express 및 Pug 템플릿과 채팅",
+    "year": "2022",
+    "skills": [
+      {
+        "name": "Javascript",
+        "comment": "confident with Javascript",
+        "level": "expert"
+      },
+      {
+        "name": "Socket",
+        "comment": "have implemented simple chat app with Socket.io",
+        "level": "beginner"
+      }
+    ],
+    "imgs": [
+      "https://firebasestorage.googleapis.com/v0/b/firescript-577a2.appspot.com/o/imgs%2Fapp%2FChaeHoonNote%2FWhBfK5Q3CU.png?alt=media&token=2eac870a-adb7-4829-adef-f5818a719aa6"
+    ],
+    "videos": [
+      "https://www.youtube.com/embed/MEU64xuvpFg"
+    ],
+    "tags": [
+      "Socket",
+      "Backend",
+      "Frontend"
+    ],
+    "description": "학습 목적으로 pug 템플릿 엔진을 사용한 순수 Html, CSS, JS 프로젝트."
+  }
+]

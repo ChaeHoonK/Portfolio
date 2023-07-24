@@ -14,7 +14,7 @@ import WorkExperienceSection from "../components/WorkExperienceSection";
 import ParticlesWrapper from "../components/ParticleWrapper";
 
 import papagoTranslate from "../library/papago";
-import { translateJsonProject, translateJsonAbout, translateJsonWorkDescriptions } from "../library/translate";
+import { translateJsonProject, translateJsonAbout, translateJsonWorkDescriptions, updateProjectTranslation } from "../library/translate";
 
 import CookieConsent from "../components/CookieConsent/CookieConsent";
 
@@ -42,6 +42,8 @@ export async function getStaticProps({ params }: any) {
   if (!fs.existsSync(pathProjects)) {
     await translateJsonProject(lan, "public/language/projects_.json");
   }
+
+  await updateProjectTranslation(lan, 'public/test/projects_')
 
   const pathAbout = `public/language/about_${lan}.json`;
 
