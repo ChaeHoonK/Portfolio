@@ -1,11 +1,9 @@
 import React, { useState, useEffect, useRef } from "react";
 import styles from "./FloatingSettingButton.module.css";
-import SettingDialog from "./SettingDialog";
 import { CiHospital1, CiSettings } from "react-icons/ci";
 import { BsArrowsMove } from "react-icons/bs";
 import { GiCancel } from "react-icons/gi";
 import { isCookieAccepted } from "../../library/cookie";
-import {isMobile} from '../../library/functions'
 
 interface PosType {
   x: number;
@@ -68,7 +66,6 @@ const FloatingSettingButton: React.FC<PropsType> = ({
       if (dragging) {
         e.preventDefault();
         handleMove(e.clientX, e.clientY);
-        console.log("mouse moving");
       }
     };
 
@@ -81,10 +78,10 @@ const FloatingSettingButton: React.FC<PropsType> = ({
 
     const handleTouchMove = (e: TouchEvent) => {
       if (dragging) {
-        e.preventDefault();
+        if (e.cancelable) {
+          e.preventDefault();
+        }
         handleMove(e.touches[0].clientX, e.touches[0].clientY);
-        document.documentElement.style.overflow = "hidden";
-        console.log("touch moving");
       }
     };
 
@@ -92,13 +89,12 @@ const FloatingSettingButton: React.FC<PropsType> = ({
       if (dragging) {
         e.preventDefault();
         handleEnd();
-        document.documentElement.style.overflow = "auto";
       }
     };
 
     document.addEventListener("mousemove", handleMouseMove);
     document.addEventListener("mouseup", handleMouseUp);
-    document.addEventListener("touchmove", handleTouchMove);
+    document.addEventListener("touchmove", handleTouchMove, { passive: false });
     document.addEventListener("touchend", handleTouchEnd);
     return () => {
       document.removeEventListener("mousemove", handleMouseMove);

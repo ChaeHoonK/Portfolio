@@ -18,12 +18,12 @@ import { translateJsonProject, translateJsonAbout, translateJsonWorkDescriptions
 
 import CookieConsent from "../components/CookieConsent/CookieConsent";
 
-import SettingLayout from '../components/FloatingButton/SettingLayout'
+import SettingLayout from "../components/SettingDialog/SettingLayout";
 
 import fs from "fs";
 
 export async function getStaticPaths() {
-  const languages = ["ko", "ja", "zh-CN", "zh-TW", "fr"];
+  const languages = ["ko", "ja", "zh-CN", "zh-TW", "fr", "de", "ru"];
   const paths = languages.map((lan) => ({
     params: { lan: lan },
   }));
@@ -40,7 +40,7 @@ export async function getStaticProps({ params }: any) {
 
   const pathProjects = `public/language/projects_${lan}.json`;
   if (!fs.existsSync(pathProjects)) {
-    await translateJsonProject(lan, "public/language/projects.json");
+    await translateJsonProject(lan, "public/language/projects_.json");
   }
 
   const pathAbout = `public/language/about_${lan}.json`;
@@ -68,37 +68,37 @@ export default function Home({ lan }: any) {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <SettingLayout>
-      <main className={styles.main}>
-        <ParticlesWrapper>
-          <section id="info" className="containerInfo">
-            <IntroSection lan={lan} />
-          </section>
-        </ParticlesWrapper>
-        <Navbar />
-        {/* <div> */}
-        <div id="about" className="container">
-          <AboutSection lan={lan} />
-        </div>
+        <main className={styles.main}>
+          <ParticlesWrapper>
+            <section id="info" className="containerInfo">
+              <IntroSection lan={lan} />
+            </section>
+          </ParticlesWrapper>
+          <Navbar />
+          {/* <div> */}
+          <div id="about" className="container">
+            <AboutSection lan={lan} />
+          </div>
 
-        <div id="career" className="container">
-          {" "}
-          <WorkExperienceSection lan={lan} />
-        </div>
+          <div id="career" className="container">
+            {" "}
+            <WorkExperienceSection lan={lan} />
+          </div>
 
-        <div id="portfolio" className="container">
-          <PortfolioSection lan={lan} />
-        </div>
+          <div id="portfolio" className="container">
+            <PortfolioSection lan={lan} />
+          </div>
 
-        <div id="skills" className="container">
-          <SkillSection />
-        </div>
+          <div id="skills" className="container">
+            <SkillSection />
+          </div>
 
-        <div id="contact" className="container">
-          <ContactSection />
-        </div>
+          <div id="contact" className="container">
+            <ContactSection />
+          </div>
 
-        {/* </div> */}
-      </main>
+          {/* </div> */}
+        </main>
       </SettingLayout>
       <CookieConsent/>
     </>

@@ -180,7 +180,7 @@ export default function WorkExperienceSection({ lan = null }) {
 
   return (
     <div className={styles.container} ref={ref}>
-      <h1>Career/Experience</h1>
+      <h1 className={styles.title}>Career/Experience</h1>
       <br />
       <ul>{content ? makeContent(content) : null}</ul>
     </div>

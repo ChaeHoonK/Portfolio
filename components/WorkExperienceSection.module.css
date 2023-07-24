@@ -8,6 +8,12 @@
     text-align: center;
 }
 
+.title {
+    width:100%;
+    text-overflow:clip;
+    overflow-x:scroll ;
+}
+
 .tmp {
     width: 80%;
     display: flex;

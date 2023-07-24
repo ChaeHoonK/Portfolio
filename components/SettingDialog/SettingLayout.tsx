@@ -1,5 +1,5 @@
 import React, { useState, useRef, useEffect } from "react";
-import FloatingSettingButton from "./FloatingSettingButton";
+import FloatingSettingButton from "../FloatingButton/FloatingSettingButton";
 import SettingDialog from "./SettingDialog";
 import { truncate } from "fs";
 
@@ -29,11 +29,7 @@ const SettingLayout: React.FC<Props> = ({ children }: Props) => {
 
   const handleDocumentClick = (event: any) => {
     console.log("document click");
-    if (
-      chatBoxRef.current &&
-      !chatBoxRef.current.contains(event.target) &&
-      showChatBox == true
-    ) {
+    if (chatBoxRef.current && !chatBoxRef.current.contains(event.target) && showChatBox == true) {
       console.log("chat should be close");
 
       setShowChatBox(false);
@@ -58,18 +54,10 @@ const SettingLayout: React.FC<Props> = ({ children }: Props) => {
     <>
       <div>{children}</div>
       {showChatBox ? (
-        <SettingDialog
-          position={position}
-          onClose={() => setShowChatBox(false)}
-        />
+        <SettingDialog position={position} onClose={() => setShowChatBox(false)} />
       ) : (
-        <FloatingSettingButton
-          onToggleChat={handleChatButtonClick}
-          position={position}
-          setPosition={setPosition}
-          showTutorial={showTutorial}
-          setShowTutorial={setShowTutorial}
-        />
+        <FloatingSettingButton onToggleChat={handleChatButtonClick} position={position} setPosition={setPosition}           showTutorial={showTutorial}
+        setShowTutorial={setShowTutorial}/>
       )}
     </>
   );

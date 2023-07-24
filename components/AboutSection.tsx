@@ -67,7 +67,7 @@ export default function AboutSection({ lan = null }) {
       <div className={styles.cardGroup}>
         <div className={styles.card}>
           <Image className={styles.filter + " " + styles.img} src="/fast.svg" alt="hi" width={200} height={100} />
-          <h3>Efficiency</h3>
+          <h3>Challenge</h3>
           <p>{content.efficiency}</p>
         </div>
         <div className={styles.card}>

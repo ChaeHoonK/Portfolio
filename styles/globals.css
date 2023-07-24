@@ -57,7 +57,7 @@ h1 {
 }
 
 p {
-  font-family: 'Courier New',"My Custom",'Courier New', Courier, monospace,sans-serif,;
+  /* font-family: 'Courier New',"My Custom",'Courier New', Courier, monospace,sans-serif,; */
 }
 
 h2 {
@@ -75,7 +75,7 @@ h3 {
 }
 
 .container {
-  width: 95%;
+  width: 90%;
   display : flex;
   margin: 100px 100px;
 }
@@ -97,7 +97,7 @@ h3 {
 
 @media screen and (max-width : 600px) {
   h1 {
-      font-size: 50px;
+      font-size: 45px;
   }
   h2 {
     font-size: 25px;

@@ -1,7 +1,7 @@
 [
   {
-    "name": "비트코인 거래 시뮬레이션 서비스",
-    "subname": "암호화폐 거래 관행 - (백엔드 서버를 현재 사용할 수 없음)",
+    "name": "Bitcoin Trade Simulation Service",
+    "subname": "Praxis CryptoCwrency Trade - (BackEnd Server zur Zeit nicht verfügbar)",
     "year": "2023",
     "skills": [
       {
@@ -41,7 +41,7 @@
       "DB",
       "Leadership"
     ],
-    "description": "디자이너, 프런트엔드 및 백엔드 개발자를 포함한 7명으로 구성된 팀과 협업했습니다. 다중 거래 알고리즘을 이용한 비트코인 자동 거래 시뮬레이션 서비스 설계 및 구현. 계획에서 배포에 이르기까지 전체 소프트웨어 개발 주기에 걸쳐 전체 스택 서비스를 개발합니다. 현재 학교에 재학중이지 않아 학교 서버를 이용할 수 없어 서버는 작동중 이지 않습니다.",
+    "description": "Zusammenarbeit mit 7 Mitgliedern, darunter Designer, Frontend- und Backend-Entwickler. Entwicklung und Implementierung eines Bitcoin-Automatischen Trading Simulationsdienstes mit mehreren Handelsalgorithmen. Entwicklung eines kompletten Service während des gesamten Software-Entwicklungszyklus von der Planung bis zum Einsatz.",
     "reference": [
       {
         "name": "Demo",
@@ -62,8 +62,8 @@
     ]
   },
   {
-    "name": "Baggume - 소상공인을 위한 플랫폼",
-    "subname": "물건을 교환하여 돈을 절약하다",
+    "name": "Baggume - Plattform für kleine Unternehmen",
+    "subname": "Sparen Sie Geld, indem Sie Waren tauschen.",
     "year": "2023",
     "skills": [
       {
@@ -86,7 +86,7 @@
       "Business",
       "Leadership"
     ],
-    "description": "한국어로 \"거래소\"를 의미하는 \"바구메\"는 미용실, 작은 슈퍼마켓 또는 식당과 같은 소기업을 위한 금융 플랫폼이다. 기본적으로 각 사용자(소상공인)가 직접 쿠폰을 만들어 다른 사용자와 교환해 생활비를 절감하자는 취지다.한국어로 \"거래소\"를 의미하는 \"바구메\"는 미용실, 작은 슈퍼마켓 또는 식당과 같은 소기업을 위한 금융 플랫폼이다. 기본적으로 각 사용자(소상공인)가 직접 쿠폰을 만들어 다른 사용자와 교환해 생활비를 절감하자는 취지다.",
+    "description": "\"Baggume\", also \"Exchange\" in Koreanisch, ist eine Finanzplattform für kleine Unternehmen wie Haartrockner, kleine Supermärkte oder Restaurants. Grundsätzlich ist die Idee, dass jeder Benutzer (kleine Unternehmen) ihre eigenen Coupons erstellen und die Coupons mit anderen Nutzern tauschen, um die Lebenskosten zu reduzieren.\"Baggume\", also \"Exchange\" in Koreanisch, ist eine Finanzplattform für kleine Unternehmen wie Haartrockner, kleine Supermärkte oder Restaurants. Grundsätzlich ist die Idee, dass jeder Benutzer (kleine Unternehmen) ihre eigenen Coupons erstellen und die Coupons mit anderen Nutzern tauschen, um die Lebenskosten zu reduzieren.",
     "reference": [
       {
         "name": "Figma",
@@ -95,8 +95,8 @@
     ]
   },
   {
-    "name": "보험계리 자격증 - SOA",
-    "subname": "FAM-L - 장기 자산 관리, ALTAM - 고급 장기 자산 관리",
+    "name": "Aktuarische Prüfungen - SOA",
+    "subname": "FAM-L - Langzeit Asset Management, ALTAM - erweiterte Langzeit Asset Management",
     "year": "2023",
     "skills": [
       {
@@ -115,7 +115,7 @@
       "Actuary",
       "Finance"
     ],
-    "description": "FAM-L(장기 자산 관리 자격증) 및 ALTAM(심화 장기 자산 관리 자격증)를 포함한 두 개의 보험계리학 자격증 시험을 통과했습니다.",
+    "description": "Sie hat zwei Aktuariumsprüfungen absolviert, darunter FAM-L - Long Term Asset Management und ALTAM - Advanded Long Term Asset Management.",
     "reference": [
       {
         "name": "SOA website",
@@ -124,8 +124,8 @@
     ]
   },
   {
-    "name": "룸미",
-    "subname": "룸메이트 매칭 앱",
+    "name": "Roomie",
+    "subname": "Roommate Matching App",
     "year": "2022",
     "skills": [
       {
@@ -157,7 +157,7 @@
       "DB",
       "LogIn"
     ],
-    "description": "이 프로젝트는 로그인이 가능한 풀 스택 웹 사이트입니다. 민감한 정보를 필요로 하지 않기 때문에 로그인은 JWT로 간단하게 구현됩니다. PW는 DB에 저장하기 전에 안전하게 해시됩니다. Pandas Library를 사용하여 일치하는 가중치를 정렬한 사용자 목록을 반환하는 플라스크(Python) 서버가 있습니다.",
+    "description": "Dieses Projekt ist eine komplette Stack-Website mit Login. Da es keine sensiblen Informationen benötigt, wird das Login einfach mit JWT implementiert. PW wird vor dem Speichern in DB gesichert. Es gibt einen einfachen Flask (Python) Server, der eine Liste von Benutzern zurückgibt, die meine passenden Gewichte sortiert haben (mit Hilfe der Pandas Library).",
     "reference": [
       {
         "name": "Demo",
@@ -166,8 +166,8 @@
     ]
   },
   {
-    "name": "펫 파인더",
-    "subname": "교육된 모델을 기반으로 채택 속도 확인",
+    "name": "Pet Finder",
+    "subname": "Adoptionsgeschwindigkeit nach ausgebildeten Modellen finden",
     "year": "2022",
     "skills": [
       {
@@ -196,7 +196,7 @@
       "Machine Learning",
       "Keras"
     ],
-    "description": "이 프로젝트는 기계 학습 기반 프로젝트입니다. 사용자들은 그들의 애완동물에 대한 기념품을 작성하고, 앱은 0에서 4까지의 예상 입양 속도 범주를 반환할 것이다",
+    "description": "Dieses Projekt ist ein maschinelles Lernprojekt. Benutzer füllen die Erinnerungen über ihre Haustiere aus, und die Anwendung wird die erwartete Adoptionsgeschwindigkeitskategorie von 0 bis 4 zurückgeben.",
     "reference": [
       {
         "name": "Demo",
@@ -209,8 +209,8 @@
     ]
   },
   {
-    "name": "OCR 프로젝트",
-    "subname": "거래 명세서의 사진 또는 PDF 로 Ledger Excel 파일을 만듭니다",
+    "name": "OCR-Projekt",
+    "subname": "Erstellt Ledger Excel-Datei mit PDF oder Bild.",
     "year": "2022",
     "skills": [
       {
@@ -251,11 +251,11 @@
         "link": "https://github.com/ChaeHoonK/OCR_project"
       }
     ],
-    "description": "이 프로젝트는 내부 사업 목적으로 진행됩니다. 외부 OCR 서비스 API를 사용하여 포맷된 스캔 이미지 또는 PDF에서 텍스트 날짜를 수신합니다. 프로그램은 주어진 텍스트 데이터를 구문 분석하고 EXCEL 파일을 생성합니다. 부기 담당자가 엑셀 파일을 ERP에 업로드하기만 하면 되기 때문에 부기에 소요되는 시간을 성공적으로 줄였다."
+    "description": "Dieses Projekt dient internen Geschäftszwecken. Es erhält Textdatum aus formatierten gescannten Bildern oder PDF mit Hilfe externer OCR-Dienstapi. Das Programm analysiert die angegebenen Textdaten und erstellt eine EXCEL-Datei. Es hat die Zeit für Buchhaltung erfolgreich reduziert, da der Buchhalter nur die Excel-Datei in ERP hochladen muss."
   },
   {
-    "name": "간단한 채팅 앱",
-    "subname": "Socket.io , Express 및 Pug 템플릿과 채팅",
+    "name": "Einfache Chat-Applikation",
+    "subname": "Chat mit Socket.io, Express und Pug Template.",
     "year": "2022",
     "skills": [
       {
@@ -280,6 +280,6 @@
       "Backend",
       "Frontend"
     ],
-    "description": "학습 목적으로 pug 템플릿 엔진을 사용한 순수 Html, CSS, JS 프로젝트."
+    "description": "Pure Html, CSS, JS Projekt mit pug Template Engine für Lernzwecke."
   }
 ]
