@@ -59,8 +59,8 @@ const FloatingSettingButton: React.FC<PropsType> = ({
   const handleMove = (clientX: number, clientY: number) => {
     if (dragging) {
       setPosition({
-        x: setBoundary(clientX,0,window.screen.width - BUTTON_WIDTH),
-        y: setBoundary(clientY,0, window.screen.height -BUTTON_HEIGHT),
+        x: setBoundary(clientX,0,window.innerWidth - BUTTON_WIDTH),
+        y: setBoundary(clientY,0, window.innerHeight -BUTTON_HEIGHT),
       });
     }
   };
@@ -128,7 +128,6 @@ const FloatingSettingButton: React.FC<PropsType> = ({
       {dragging ? <div><BsArrowsMove style={{position:'relative', left:'45px'}} size="20px"/></div> : null}
       <div
         className={styles.chatButton}
-        style={{width:`${BUTTON_WIDTH}px`, height:`${BUTTON_HEIGHT}`}}
         onClick={onToggleChat}
         onMouseDown={(e) => handleStart(e)}
         onTouchStart={(e) => handleStart(e)}
