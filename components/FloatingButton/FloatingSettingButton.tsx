@@ -77,8 +77,6 @@ const FloatingSettingButton: React.FC<PropsType> = ({
   useEffect(() => {
     if (!buttonRef.current) return
 
-    console.log('isCookieAccepted:',isCookieAccepted())
-
     if (isCookieAccepted()) {
       setShowTutorial(false);
     }
@@ -181,7 +179,7 @@ const FloatingSettingButton: React.FC<PropsType> = ({
         >
           <h3 style={{ color: "white" }}>Click To Change Language</h3>
           <p>Push for 0.5s and move it around.</p>
-          <p>Accept Cookie if you don't want to see this message again</p>
+          <p>Accept Cookie if you do not want to see this message again</p>
           <button
             style={{
               position: "absolute",
