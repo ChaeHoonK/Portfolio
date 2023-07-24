@@ -16,7 +16,7 @@ import ParticlesWrapper from "../components/ParticleWrapper";
 import papagoTranslate from "../library/papago";
 import { translateJsonProject, translateJsonAbout, translateJsonWorkDescriptions } from "../library/translate";
 
-import { useIntersectionObserver } from "../hooks/useIntersectionObserver";
+import CookieConsent from "../components/CookieConsent/CookieConsent";
 
 import SettingLayout from '../components/FloatingButton/SettingLayout'
 
@@ -100,6 +100,7 @@ export default function Home({ lan }: any) {
         {/* </div> */}
       </main>
       </SettingLayout>
+      <CookieConsent/>
     </>
   );
 }

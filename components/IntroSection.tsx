@@ -58,7 +58,14 @@ export default function IntroSection({ lan = null }) {
         <span className={styles.job}> </span>
         {/* <span>Full Stack</span> developer */}
       </h1>
-      <Button style={{ color: "white", border: "2px solid white" }} text={"Go to My Works"} onClick={scrollToForm} />
+      <div style={{display:"flex", flexDirection:"column", rowGap:'3px'}}>
+        <Button style={{ color: "white", border: "2px solid white" }} text={"Go to My Works"} onClick={scrollToForm} />
+        <a href="https://github.com/ChaeHoonK/Portfolio" target="_blank" rel="noreferrer">
+          <Button style={{ color: "white", border: "2px solid white"}} text={"GitHub for Current Website"}></Button>
+        </a>
+      </div>
+      
+
     </div>
   );
 }

@@ -21,6 +21,8 @@ import ReactGA from 'react-ga4'
 
 import SettingLayout from '../components/FloatingButton/SettingLayout'
 
+import CookieConsent from "../components/CookieConsent/CookieConsent";
+
 const inter = Inter({ subsets: ['latin'] })
 
 
@@ -71,6 +73,7 @@ export default function Home() {
         {/* </div> */}
       </main>
       </SettingLayout>
+      <CookieConsent/>
     </>
   );
 }
