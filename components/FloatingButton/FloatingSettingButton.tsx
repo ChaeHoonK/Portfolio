@@ -40,23 +40,24 @@ const FloatingSettingButton: React.FC<PropsType> = ({
 
   const [dragging, setDragging] = useState(false);
   const holdTimeout = useRef<any>(null);
-  const dragBorderRef = useRef<HTMLDivElement>(null);
+  const buttonRef = useRef<HTMLDivElement>(null);
 
   const closeTutorial = () => {
     setShowTutorial(false);
   };
 
+
   const handleStart = (e:any) => {
-    // if (e.cancelable) {
-    //   e.preventDefault();
-    // }
+    e.preventDefault();
     holdTimeout.current = setTimeout(() => {
       setDragging(true);
-    }, 500);
+    }, 1000);
     //setDragging(true);
   };
 
   const handleMove = (clientX: number, clientY: number) => {
+    const curr = document.elementFromPoint(clientX, clientY)
+
     if (dragging) {
       setPosition({
         x: setBoundary(clientX,0,window.innerWidth - BUTTON_WIDTH),
@@ -68,15 +69,22 @@ const FloatingSettingButton: React.FC<PropsType> = ({
   const handleEnd = () => {
     clearTimeout(holdTimeout.current);
     setDragging(false);
+    //document.removeEventListener('drag',makeDefault)
   };
 
   useEffect(() => {
+    if (!buttonRef.current) return
     
     if (isCookieAccepted()) {
       setShowTutorial(false);
     }
 
     const handleMouseMove = (e: MouseEvent) => {
+      const curr = document.elementFromPoint(e.clientX, e.clientY)
+      if (!buttonRef.current?.contains(curr)) {
+        clearTimeout(holdTimeout.current);
+      }
+
       if (dragging) {
         if (e.cancelable) {
           e.preventDefault();
@@ -93,12 +101,17 @@ const FloatingSettingButton: React.FC<PropsType> = ({
     };
 
     const handleTouchMove = (e: TouchEvent) => {
+      const curr = document.elementFromPoint(e.touches[0].clientX, e.touches[0].clientY)
+      if (!buttonRef.current?.contains(curr)) {
+        clearTimeout(holdTimeout.current);
+      }
       if (dragging) {
         if (e.cancelable) {
           e.preventDefault();
         }
         handleMove(e.touches[0].clientX, e.touches[0].clientY);
       }
+      
     };
 
     const handleTouchEnd = (e: TouchEvent) => {
@@ -112,11 +125,14 @@ const FloatingSettingButton: React.FC<PropsType> = ({
     document.addEventListener("mouseup", handleMouseUp);
     document.addEventListener("touchmove", handleTouchMove, { passive: false });
     document.addEventListener("touchend", handleTouchEnd);
+    buttonRef.current?.addEventListener('touchdown',handleStart,{passive:false});
+
     return () => {
       document.removeEventListener("mousemove", handleMouseMove);
       document.removeEventListener("mouseup", handleMouseUp);
       document.removeEventListener("touchmove", handleTouchMove);
       document.removeEventListener("touchend", handleTouchEnd);
+      buttonRef.current?.removeEventListener('touchdown',handleStart);
     };
   }, [dragging]);
 
@@ -130,8 +146,9 @@ const FloatingSettingButton: React.FC<PropsType> = ({
         className={styles.chatButton}
         onClick={onToggleChat}
         onMouseDown={(e) => handleStart(e)}
-        onTouchStart={(e) => handleStart(e)}
+        // onTouchStart={(e) => handleStart(e)}
         onMouseUp={handleEnd}
+        ref = {buttonRef}
       >
         <CiSettings size="30px" />
       
@@ -155,6 +172,7 @@ const FloatingSettingButton: React.FC<PropsType> = ({
               right: "-5px",
             }}
             onClick={closeTutorial}
+            
           >
             <GiCancel fill="black" size="30px" />
           </button>
