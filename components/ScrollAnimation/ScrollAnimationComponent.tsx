@@ -1,11 +1,7 @@
 import { useRef, useEffect, useState } from "react";
-import styles from "./ScrollAnimationWrapper.module.css";
+import styles from "./ScrollAnimationComponent.module.css";
 import { BsRocket } from "react-icons/bs";
 import { BiSolidFlame } from "react-icons/bi";
-
-type Props = {
-  children: React.ReactNode;
-};
 
 const rocketKF = [{ transform: "scale(1)" }, { transform: "translateY(4px) scale(0.9)" }, { transform: "translateY(-300px) scale(2)" }];
 
@@ -27,7 +23,7 @@ function textMapper(percentage: number) {
   if (percentage < 5) return "Watch All my Page to Shoot Rocket To The Moon.";
 }
 
-export default function ScrollAnimationWrapper({ children }: Props) {
+export default function ScrollAnimationWrapper() {
   let CLIENT_HEIGHT = 5000;
   const rocket = useRef<HTMLDivElement>(null);
   const [percentage, setPercentage] = useState(0);
@@ -71,7 +67,6 @@ export default function ScrollAnimationWrapper({ children }: Props) {
 
   return (
     <>
-      {children}
       <div className={styles.container} style={{ position: "fixed", right: "0px", top: `${yPos}px` }}>
         <p>{textMapper(percentage)}</p>
         <div className={styles.rocketReady} ref={rocket}>

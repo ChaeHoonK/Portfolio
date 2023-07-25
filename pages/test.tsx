@@ -21,7 +21,7 @@ import ReactGA from "react-ga4";
 import SettingLayout from "../components/SettingDialog/SettingLayout";
 import CookieConsent from "../components/CookieConsent/CookieConsent";
 
-import ScrollAnimationWrapper from "../components/ScrollAnimation/ScrollAnimationWrapper";
+import ScrollAnimationWrapper from "../components/ScrollAnimation/ScrollAnimationComponent";
 
 export default function Home() {
   ReactGA.initialize("G-C3ZMWSL9NB");
@@ -39,38 +39,37 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <SettingLayout>
-        <ScrollAnimationWrapper>
-          <main className={styles.main}>
-            <ParticlesWrapper>
-              <section id="info" className="containerInfo">
-                <IntroSection />
-              </section>
-            </ParticlesWrapper>
-            <Navbar />
-            {/* <div> */}
-            <div id="about" className="container">
-              <AboutSection />
-            </div>
+        <ScrollAnimationWrapper />
+        <main className={styles.main}>
+          <ParticlesWrapper>
+            <section id="info" className="containerInfo">
+              <IntroSection />
+            </section>
+          </ParticlesWrapper>
+          <Navbar />
+          {/* <div> */}
+          <div id="about" className="container">
+            <AboutSection />
+          </div>
 
-            <div id="career" className="container">
-              {" "}
-              <WorkExperienceSection />
-            </div>
+          <div id="career" className="container">
+            {" "}
+            <WorkExperienceSection />
+          </div>
 
-            <div id="portfolio" className="container">
-              <PortfolioSection lan="" />
-            </div>
+          <div id="portfolio" className="container">
+            <PortfolioSection lan="" />
+          </div>
 
-            <div id="skills" className="container">
-              <SkillSection />
-            </div>
+          <div id="skills" className="container">
+            <SkillSection />
+          </div>
 
-            <div id="contact" className="container">
-              <ContactSection />
-            </div>
-            {/* </div> */}
-          </main>
-        </ScrollAnimationWrapper>
+          <div id="contact" className="container">
+            <ContactSection />
+          </div>
+          {/* </div> */}
+        </main>
       </SettingLayout>
       <CookieConsent />
     </>
