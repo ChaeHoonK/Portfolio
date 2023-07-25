@@ -2,7 +2,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    text-overflow: ellipsis ..;
+    text-overflow: ellipsis;
     border-radius: 50%;
     background-color: rgb(73, 117, 199);
     width: 30px;
