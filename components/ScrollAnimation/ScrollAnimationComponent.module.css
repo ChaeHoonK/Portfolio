@@ -5,6 +5,18 @@
 
 .flame {
     transform: translateY(-4px);
+    animation: 2s flameEffect  ease-in-out infinite
+}
+
+@keyframes flameEffect {
+    from {
+        transform: rotateY(0deg);
+    }
+
+    to {
+        transform: rotateY(70deg);
+        opacity: 0.5;
+    }
 }
 
 .rocketReady {
@@ -29,11 +41,11 @@
     }
 
     20% {
-        transform:translateY(-5px) scale(1.8)
+        transform:translateY(-5px) scale(1.8) rotate(-15deg)
     }
 
     100% {
-        transform:translateY(-2000px) scale(2)
+        transform:translateY(-2000px) translateX(-200px) scale(2)
     }
 
 }

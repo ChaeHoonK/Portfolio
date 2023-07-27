@@ -54,7 +54,7 @@ export default function ScrollAnimationWrapper() {
     }
 
     setPercentage(getScrollPercent());
-    setYPos(((CLIENT_HEIGHT ? CLIENT_HEIGHT : 0) * percentage) / 120);
+    setYPos(((CLIENT_HEIGHT ? CLIENT_HEIGHT : 0) * percentage) / 150);
   }
 
   useEffect(() => {
@@ -68,8 +68,9 @@ export default function ScrollAnimationWrapper() {
   return (
     <>
       <div className={styles.container} style={{ position: "fixed", right: "0px", top: `${yPos}px` }}>
-        <p>{textMapper(percentage)}</p>
+      {rocket.current &&rocket.current.className == styles.rocketReady? <p>{textMapper(percentage)}</p> : null}
         <div className={styles.rocketReady} ref={rocket}>
+          {rocket.current &&rocket.current.className == styles.rocketLaunch? <p>"Going to the Moon"</p>: null}
           <div>
             <BsRocket size="30px" />
           </div>
