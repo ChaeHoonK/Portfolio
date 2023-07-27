@@ -34,7 +34,7 @@ const list: any = [
       "Fix bugs that are listed by the QT team.",
       "Version Control System: SVN Tortoise.",
     ],
-    link: "https://www.saeha.com/main",
+    link: "https://www.saeha.com/",
     img: "/Saeha-1.png",
   },
   {
@@ -42,7 +42,7 @@ const list: any = [
     position: "Marketing Position",
     period: "Nov 2020 - Jan 2021 ",
     description: ["Manage the company’s home page.", "Bookkeeping.", "Online Selling through platforms such as Naver, Kakao, and Market Curly."],
-    link: "https://watsso1.cafe24.com/",
+    // link: "https://watsso1.cafe24.com/",
     img: "/study.jpg",
   },
   {
