@@ -5,9 +5,8 @@ import { BsArrowsMove } from "react-icons/bs";
 import { GiCancel } from "react-icons/gi";
 import { isCookieAccepted } from "../../library/cookie";
 
-
-const BUTTON_RADIUS = 28
-const PRESS_TIME = 500
+const BUTTON_RADIUS = 28;
+const PRESS_TIME = 500;
 interface PosType {
   x: number;
   y: number;
@@ -17,43 +16,33 @@ interface PropsType {
   onToggleChat: any;
   position: PosType;
   setPosition: (pos: PosType) => void;
-  showTutorial:boolean;
-  setShowTutorial:any
+  showTutorial: boolean;
+  setShowTutorial: any;
 }
 
-function setBoundary(num:number, min:number, max:number) {
+function setBoundary(num: number, min: number, max: number) {
   if (num < min) {
-    return min
+    return min;
   } else if (num > max) {
-    return max
+    return max;
   } else {
-    return num
+    return num;
   }
 }
 
-const FloatingSettingButton: React.FC<PropsType> = ({
-  onToggleChat,
-  position,
-  setPosition,
-  showTutorial,
-  setShowTutorial
-}) => {
-  
-
+const FloatingSettingButton: React.FC<PropsType> = ({ onToggleChat, position, setPosition, showTutorial, setShowTutorial }) => {
   const [dragging, setDragging] = useState(false);
   const holdTimeout = useRef<any>(null);
   const buttonRef = useRef<HTMLDivElement>(null);
-
 
   const closeTutorial = () => {
     setShowTutorial(false);
   };
 
-
-  const handleStart = (e:any) => {
+  const handleStart = (e: any) => {
     e.preventDefault();
     holdTimeout.current = setTimeout(() => {
-      closeTutorial()
+      closeTutorial();
       setDragging(true);
     }, PRESS_TIME);
     //setDragging(true);
@@ -62,8 +51,8 @@ const FloatingSettingButton: React.FC<PropsType> = ({
   const handleMove = (clientX: number, clientY: number) => {
     if (dragging) {
       setPosition({
-        x: setBoundary(clientX,BUTTON_RADIUS,window.innerWidth - BUTTON_RADIUS),
-        y: setBoundary(clientY,BUTTON_RADIUS, window.innerHeight -BUTTON_RADIUS),
+        x: setBoundary(clientX, BUTTON_RADIUS, window.innerWidth - BUTTON_RADIUS),
+        y: setBoundary(clientY, BUTTON_RADIUS, window.innerHeight - BUTTON_RADIUS),
       });
     }
   };
@@ -75,14 +64,14 @@ const FloatingSettingButton: React.FC<PropsType> = ({
   };
 
   useEffect(() => {
-    if (!buttonRef.current) return
+    if (!buttonRef.current) return;
 
     if (isCookieAccepted()) {
       setShowTutorial(false);
     }
 
     const handleMouseMove = (e: MouseEvent) => {
-      const curr = document.elementFromPoint(e.clientX, e.clientY)
+      const curr = document.elementFromPoint(e.clientX, e.clientY);
       if (!buttonRef.current?.contains(curr)) {
         clearTimeout(holdTimeout.current);
       }
@@ -96,10 +85,10 @@ const FloatingSettingButton: React.FC<PropsType> = ({
     };
 
     const handleMouseUp = (e: MouseEvent) => {
-      const curr = document.elementFromPoint(e.clientX, e.clientY)
+      const curr = document.elementFromPoint(e.clientX, e.clientY);
 
-      if (!dragging  && buttonRef.current?.contains(curr as Node)) {
-        onToggleChat(e)
+      if (!dragging && buttonRef.current?.contains(curr as Node)) {
+        onToggleChat(e);
       }
 
       if (dragging) {
@@ -109,10 +98,9 @@ const FloatingSettingButton: React.FC<PropsType> = ({
     };
 
     const handleTouchMove = (e: TouchEvent) => {
-      const curr = document.elementFromPoint(e.touches[0].clientX, e.touches[0].clientY)
+      const curr = document.elementFromPoint(e.touches[0].clientX, e.touches[0].clientY);
       if (!buttonRef.current?.contains(curr)) {
         clearTimeout(holdTimeout.current);
-
       }
 
       if (dragging) {
@@ -121,58 +109,55 @@ const FloatingSettingButton: React.FC<PropsType> = ({
           e.preventDefault();
         }
       }
-      
     };
 
     const handleTouchEnd = (e: TouchEvent) => {
-      const curr = document.elementFromPoint(e.changedTouches[0].clientX, e.changedTouches[0].clientY)
+      const curr = document.elementFromPoint(e.changedTouches[0].clientX, e.changedTouches[0].clientY);
 
-      if (!dragging  && buttonRef.current?.contains(curr as Node)) {
-        onToggleChat(e)
+      if (!dragging && buttonRef.current?.contains(curr as Node)) {
+        onToggleChat(e);
       }
       if (dragging) {
         e.preventDefault();
         handleEnd();
       }
-
     };
 
     document.addEventListener("mousemove", handleMouseMove);
     document.addEventListener("mouseup", handleMouseUp);
     document.addEventListener("touchmove", handleTouchMove, { passive: false });
     document.addEventListener("touchend", handleTouchEnd);
-    buttonRef.current?.addEventListener('touchstart',handleStart,{passive:false});
+    buttonRef.current?.addEventListener("touchstart", handleStart, { passive: false });
 
     return () => {
       document.removeEventListener("mousemove", handleMouseMove);
       document.removeEventListener("mouseup", handleMouseUp);
       document.removeEventListener("touchmove", handleTouchMove);
       document.removeEventListener("touchend", handleTouchEnd);
-      buttonRef.current?.removeEventListener('touchstart',handleStart);
+      buttonRef.current?.removeEventListener("touchstart", handleStart);
     };
   }, [dragging]);
 
   return (
-    <div
-      className={styles.chatButtonContainer}
-      style={{ left: `${position.x - BUTTON_RADIUS}px`, top: `${position.y - BUTTON_RADIUS}px` , display:'flex', flexDirection:'column-reverse'}}
-    >
-      {dragging ? <div><BsArrowsMove style={{position:'relative', left:'45px'}} size="20px"/></div> : null}
+    <div className={styles.chatButtonContainer} style={{ left: `${position.x - BUTTON_RADIUS}px`, top: `${position.y - BUTTON_RADIUS}px`, display: "flex", flexDirection: "column-reverse" }}>
+      {dragging ? (
+        <div>
+          <BsArrowsMove style={{ position: "relative", left: "45px" }} size="20px" />
+        </div>
+      ) : null}
       <div
         className={styles.chatButton}
         // onClick={onToggleChat}
         onMouseDown={(e) => handleStart(e)}
         // onTouchStart={(e) => handleStart(e)}
         // onMouseUp={handleEnd}
-        ref = {buttonRef}
+        ref={buttonRef}
       >
         <CiSettings size="30px" />
-      
-      </div>  
-
+      </div>
       {showTutorial ? (
         <div
-        className={styles.comment}
+          className={styles.comment}
           style={{
             padding: "20px 20px 20px",
           }}
@@ -189,7 +174,6 @@ const FloatingSettingButton: React.FC<PropsType> = ({
               right: "-5px",
             }}
             onClick={closeTutorial}
-            
           >
             <GiCancel fill="black" size="30px" />
           </button>

@@ -1,0 +1,39 @@
+.container{
+    display: flex;
+    align-items: center;
+}
+
+.flame {
+    transform: translateY(-4px);
+}
+
+.rocketReady {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    transform:rotate(-180deg);
+}
+
+.rocketLaunch {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    animation: 3s rocketFire ease-in 1 normal forwards;
+    transform:rotate(-180deg);
+}
+
+
+@keyframes rocketFire {
+    0% {
+
+    }
+
+    20% {
+        transform:translateY(-5px) scale(1.8)
+    }
+
+    100% {
+        transform:translateY(-2000px) scale(2)
+    }
+
+}

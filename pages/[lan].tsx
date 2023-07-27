@@ -21,6 +21,7 @@ import CookieConsent from "../components/CookieConsent/CookieConsent";
 import SettingLayout from "../components/SettingDialog/SettingLayout";
 
 import fs from "fs";
+import ScrollAnimationWrapper from "../components/ScrollAnimation/ScrollAnimationComponent";
 
 export async function getStaticPaths() {
   const languages = ["ko", "ja", "zh-CN", "zh-TW", "fr", "de", "ru"];
@@ -43,7 +44,7 @@ export async function getStaticProps({ params }: any) {
     await translateJsonProject(lan, "public/language/projects_.json");
   }
 
-  await updateProjectTranslation(lan, 'public/test/projects_')
+  await updateProjectTranslation(lan, "public/test/projects_");
 
   const pathAbout = `public/language/about_${lan}.json`;
 
@@ -71,6 +72,7 @@ export default function Home({ lan }: any) {
       </Head>
       <SettingLayout>
         <main className={styles.main}>
+          <ScrollAnimationWrapper />
           <ParticlesWrapper>
             <section id="info" className="containerInfo">
               <IntroSection lan={lan} />
@@ -102,7 +104,7 @@ export default function Home({ lan }: any) {
           {/* </div> */}
         </main>
       </SettingLayout>
-      <CookieConsent/>
+      <CookieConsent />
     </>
   );
 }
