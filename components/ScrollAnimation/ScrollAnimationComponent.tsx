@@ -70,7 +70,7 @@ export default function ScrollAnimationWrapper() {
       <div className={styles.container} style={{ position: "fixed", right: "0px", top: `${yPos}px` }}>
       {rocket.current &&rocket.current.className == styles.rocketReady? <p>{textMapper(percentage)}</p> : null}
         <div className={styles.rocketReady} ref={rocket}>
-          {rocket.current &&rocket.current.className == styles.rocketLaunch? <p>"Going to the Moon"</p>: null}
+          {rocket.current &&rocket.current.className == styles.rocketLaunch? <p>{`"Going to the Moon"`}</p>: null}
           <div>
             <BsRocket size="30px" />
           </div>
