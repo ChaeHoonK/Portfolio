@@ -1,0 +1,22 @@
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background-color: white;
+    height: 20vh;
+    width: 48vw;
+}
+
+.container:hover {
+    background-color: aquamarine;
+}
+
+.container h1 {
+    color:black
+}
+
+.container h2 {
+    color: black
+}
+

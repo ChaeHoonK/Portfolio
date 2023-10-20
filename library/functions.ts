@@ -36,3 +36,9 @@ width=600,height=300,left=100,top=100`;
         window.open(src,title,params)
 }
 
+export function numberWithCommas(x: number) {
+    let x_s = x.toString();
+    var pattern = /(-?\d+)(\d{3})/;
+    while (pattern.test(x_s)) x_s = x_s.replace(pattern, "$1,$2");
+    return x_s;
+  }
