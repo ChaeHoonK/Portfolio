@@ -6,7 +6,16 @@ import styles from "./pos.module.css";
 import Cookies from "js-cookie";
 import { numberWithCommas } from "../../library/functions";
 
-type table = [adult: number, elementary: number, child: number, soju: number, beer: number, softdrink: number, soup: number, noodle: number];
+type table = [
+  adult: number,
+  elementary: number,
+  child: number,
+  soju: number,
+  beer: number,
+  softdrink: number,
+  soup: number,
+  noodle: number
+];
 
 const menu: table = [28900, 19000, 9000, 5000, 5000, 2000, 5000, 5000];
 //     person:28900,
@@ -16,6 +25,8 @@ const menu: table = [28900, 19000, 9000, 5000, 5000, 2000, 5000, 5000];
 //     soup:5000,
 //     noodle:5000
 // }
+
+const NUM_TABLE = 8
 
 interface cookie {
   cookie: table[];
@@ -33,6 +44,8 @@ function calculateTotal(tb: table) {
 export default function Home() {
   const [isOpenModal, setIsOpenModal] = useState(false);
 
+  const [todayTotal, setTodayTotal] = useState(0);
+
   const [tableOne, setTableOne] = useState(null);
   const [tableTwo, setTableTwo] = useState(null);
   const [tableThree, setTableThree] = useState(null);
@@ -40,7 +53,7 @@ export default function Home() {
   const [tableFive, setTableFive] = useState(null);
   const [tableSix, setTableSix] = useState(null);
   const [tableSeven, setTableSeven] = useState(null);
-  const [tableEIght, setTableEight] = useState(null);
+  const [tableEight, settableEight] = useState(null);
 
   const [currentTable, setCurrentTable] = useState(0);
 
@@ -59,26 +72,48 @@ export default function Home() {
     });
   }
 
-  const arrays: Function[] = [setTableOne, setTableTwo, setTableThree, setTableFour, setTableFive, setTableSix, setTableSeven, setTableEight];
+  const arrays: Function[] = [
+    setTableOne,
+    setTableTwo,
+    setTableThree,
+    setTableFour,
+    setTableFive,
+    setTableSix,
+    setTableSeven,
+    settableEight,
+  ];
 
-  const order_arrays: Function[] = [setAdult, setElementary, setChild, setSoju, setBeer, setSoftdrink, setSoup, setNoodle];
+  const order_arrays: Function[] = [
+    setAdult,
+    setElementary,
+    setChild,
+    setSoju,
+    setBeer,
+    setSoftdrink,
+    setSoup,
+    setNoodle,
+  ];
 
   function loadCookie() {
     for (let i = 1; i < 9; i++) {
-      const tmp = getTable(i);
+      const tmp = getCookieTable(i);
       if (tmp) {
         arrays[i - 1](tmp);
       }
     }
+    const c_total = Cookies.get("total");
+    if (c_total) {
+      setTodayTotal(Number(c_total));
+    }
   }
 
-  function getTable(num: number) {
+  function getCookieTable(num: number) {
     const tmp = Cookies.get(`${num}`);
     if (tmp) return JSON.parse(tmp);
     else return false;
   }
 
-  function deleteTable(num: number) {
+  function deleteTableFromCookie(num: number) {
     Cookies.remove(`${num}`);
   }
 
@@ -112,9 +147,37 @@ export default function Home() {
     }
     arrays[currentTable - 1](null);
 
-    deleteTable(currentTable);
+    deleteTableFromCookie(currentTable);
     //add to total
+    const new_total =
+      todayTotal +
+      calculateTotal([
+        adult,
+        elementary,
+        child,
+        soju,
+        beer,
+        softdrink,
+        soup,
+        noodle,
+      ]);
+    setTodayTotal(new_total);
+
+    Cookies.set("total", `${new_total}`);
+
     closeModal();
+  }
+
+  function resetTotal() {
+    if (!confirm("정말로 오늘의 매출을 초기화 시키시겠습니까?")) return;
+
+    for(let i = 0; i< NUM_TABLE; i++) {
+      arrays[i](null);
+      deleteTableFromCookie(i+1)
+    }
+
+    Cookies.set("total", "0");
+    setTodayTotal(0);
   }
 
   return (
@@ -127,89 +190,169 @@ export default function Home() {
       </Head>
       <div className={styles.container}>
         <div onClick={() => openModal(tableOne, 1)}>
-          <TableButton number={1} price={tableOne ? calculateTotal(tableOne) : 0} />
+          <TableButton
+            number={1}
+            price={tableOne ? calculateTotal(tableOne) : 0}
+          />
         </div>
         <div onClick={() => openModal(tableTwo, 2)}>
-          <TableButton number={2} price={tableTwo ? calculateTotal(tableTwo) : 0} />
+          <TableButton
+            number={2}
+            price={tableTwo ? calculateTotal(tableTwo) : 0}
+          />
         </div>
         <div onClick={() => openModal(tableThree, 3)}>
-          <TableButton number={3} price={tableThree ? calculateTotal(tableThree) : 0} />
+          <TableButton
+            number={3}
+            price={tableThree ? calculateTotal(tableThree) : 0}
+          />
         </div>
         <div onClick={() => openModal(tableFour, 4)}>
-          <TableButton number={4} price={tableFour ? calculateTotal(tableFour) : 0} />
+          <TableButton
+            number={4}
+            price={tableFour ? calculateTotal(tableFour) : 0}
+          />
         </div>
         <div onClick={() => openModal(tableFive, 5)}>
-          <TableButton number={5} price={tableFive ? calculateTotal(tableFive) : 0} />
+          <TableButton
+            number={5}
+            price={tableFive ? calculateTotal(tableFive) : 0}
+          />
         </div>
         <div onClick={() => openModal(tableSix, 6)}>
-          <TableButton number={6} price={tableSix ? calculateTotal(tableSix) : 0} />
+          <TableButton
+            number={6}
+            price={tableSix ? calculateTotal(tableSix) : 0}
+          />
         </div>
         <div onClick={() => openModal(tableSeven, 7)}>
-          <TableButton number={7} price={tableSeven ? calculateTotal(tableSeven) : 0} />
+          <TableButton
+            number={7}
+            price={tableSeven ? calculateTotal(tableSeven) : 0}
+          />
         </div>
-        <div onClick={() => openModal(tableEIght, 8)}>
-          <TableButton number={8} price={tableEIght ? calculateTotal(tableEIght) : 0} />
+        <div onClick={() => openModal(tableEight, 8)}>
+          <TableButton
+            number={8}
+            price={tableEight ? calculateTotal(tableEight) : 0}
+          />
+        </div>
+        <div>
+          <div style={{ fontSize: "20px", color: "white" }}>
+            <h1>{numberWithCommas(todayTotal)}원</h1>
+          </div>
+          <div onClick={resetTotal}>
+            <button>초기화</button>
+          </div>
         </div>
       </div>
-      <Modal isOpen={isOpenModal} onRequestClose={closeModal} className={styles.Modal} contentLabel="Example Modal" overlayClassName={styles.Overlay} ariaHideApp={false}>
+      <Modal
+        isOpen={isOpenModal}
+        onRequestClose={closeModal}
+        contentLabel="Example Modal"
+        overlayClassName={styles.Overlay}
+        ariaHideApp={false}
+      >
         <div className={styles.ModalContainer}>
           <div style={{ textAlign: "center", color: "black" }}>
-            <h3>현재 테이블: {currentTable}</h3>
+            <h2>현재 테이블: {currentTable}</h2>
           </div>
           <div className={styles.menuList}>
             <div className={styles.menuContainer}>
-              <button className={styles.menuButton} onClick={() => setAdult(adult + 1)}>
+              <button
+                className={styles.menuButton}
+                onClick={() => setAdult(adult + 1)}
+              >
                 성인
               </button>
-              <div className={styles.menuNumber} onClick={() => setAdult(adult - 1)}>
+              <div
+                className={styles.menuNumber}
+                onClick={() => setAdult(adult - 1)}
+              >
                 <h2>{adult}</h2>
               </div>
             </div>
             <div className={styles.menuContainer}>
-              <button className={styles.menuButton} onClick={() => setElementary(elementary + 1)}>
+              <button
+                className={styles.menuButton}
+                onClick={() => setElementary(elementary + 1)}
+              >
                 초등
               </button>
-              <div className={styles.menuNumber} onClick={() => setElementary(elementary - 1)}>
+              <div
+                className={styles.menuNumber}
+                onClick={() => setElementary(elementary - 1)}
+              >
                 <h2>{elementary}</h2>
               </div>
             </div>
             <div className={styles.menuContainer}>
-              <button className={styles.menuButton} onClick={() => setChild(child + 1)}>
+              <button
+                className={styles.menuButton}
+                onClick={() => setChild(child + 1)}
+              >
                 유아
               </button>
-              <div className={styles.menuNumber} onClick={() => setChild(child - 1)}>
+              <div
+                className={styles.menuNumber}
+                onClick={() => setChild(child - 1)}
+              >
                 <h2>{child}</h2>
               </div>
             </div>
             <div className={styles.menuContainer}>
-              <button className={styles.menuButton} onClick={() => setSoju(soju + 1)}>
+              <button
+                className={styles.menuButton}
+                onClick={() => setSoju(soju + 1)}
+              >
                 소주
               </button>
-              <div className={styles.menuNumber} onClick={() => setSoju(soju - 1)}>
+              <div
+                className={styles.menuNumber}
+                onClick={() => setSoju(soju - 1)}
+              >
                 <h2>{soju}</h2>
               </div>
             </div>
             <div className={styles.menuContainer}>
-              <button className={styles.menuButton} onClick={() => setBeer(beer + 1)}>
+              <button
+                className={styles.menuButton}
+                onClick={() => setBeer(beer + 1)}
+              >
                 맥주
               </button>
-              <div className={styles.menuNumber} onClick={() => setBeer(beer - 1)}>
+              <div
+                className={styles.menuNumber}
+                onClick={() => setBeer(beer - 1)}
+              >
                 <h2>{beer}</h2>
               </div>
             </div>
             <div className={styles.menuContainer}>
-              <button className={styles.menuButton} onClick={() => setSoup(soup + 1)}>
+              <button
+                className={styles.menuButton}
+                onClick={() => setSoup(soup + 1)}
+              >
                 된장찌개
               </button>
-              <div className={styles.menuNumber} onClick={() => setSoup(soup - 1)}>
+              <div
+                className={styles.menuNumber}
+                onClick={() => setSoup(soup - 1)}
+              >
                 <h2>{soup}</h2>
               </div>
             </div>
             <div className={styles.menuContainer}>
-              <button className={styles.menuButton} onClick={() => setNoodle(noodle + 1)}>
+              <button
+                className={styles.menuButton}
+                onClick={() => setNoodle(noodle + 1)}
+              >
                 막국수
               </button>
-              <div className={styles.menuNumber} onClick={() => setNoodle(noodle - 1)}>
+              <div
+                className={styles.menuNumber}
+                onClick={() => setNoodle(noodle - 1)}
+              >
                 <h2>{noodle}</h2>
               </div>
             </div>
@@ -220,10 +363,24 @@ export default function Home() {
             </button>
             <div className={styles.finalContainer}>
               <div className={styles.menuNumber}>
-                <h3 style={{ color: "black" }}>{numberWithCommas(calculateTotal([adult, elementary, child, soju, beer, softdrink, soup, noodle]))} 원</h3>
+                <h3 style={{ color: "black" }}>
+                  {numberWithCommas(
+                    calculateTotal([
+                      adult,
+                      elementary,
+                      child,
+                      soju,
+                      beer,
+                      softdrink,
+                      soup,
+                      noodle,
+                    ])
+                  )}{" "}
+                  원
+                </h3>
               </div>
               <button className={styles.menuButton} onClick={clear}>
-                완료
+                계산
               </button>
             </div>
           </div>

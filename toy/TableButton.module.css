@@ -3,9 +3,9 @@
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    background-color: white;
     height: 20vh;
     width: 48vw;
+    min-height: 100px;
 }
 
 .container:hover {
