@@ -334,13 +334,13 @@ export default function Home() {
             <div className={styles.menuContainer}>
               <button
                 className={styles.menuButton}
-                onClick={() => setSoftdrink(soup + 1)}
+                onClick={() => setSoftdrink(softdrink + 1)}
               >
                   음료
               </button>
               <div
                 className={styles.menuNumber}
-                onClick={() => setSoftdrink(soup - 1)}
+                onClick={() => setSoftdrink(softdrink - 1)}
               >
                 <h2>{softdrink}</h2>
               </div>
