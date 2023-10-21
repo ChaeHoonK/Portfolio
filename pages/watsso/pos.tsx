@@ -17,7 +17,7 @@ type table = [
   noodle: number
 ];
 
-const menu: table = [28900, 19000, 9000, 5000, 5000, 2000, 5000, 5000];
+const menu: table = [28900, 19000, 9000, 5000, 5000, 2000, 5000, 6000];
 //     person:28900,
 //     soju:5000,
 //     beer:5000,
@@ -195,28 +195,16 @@ export default function Home() {
             price={tableOne ? calculateTotal(tableOne) : 0}
           />
         </div>
-        <div onClick={() => openModal(tableTwo, 2)}>
-          <TableButton
-            number={2}
-            price={tableTwo ? calculateTotal(tableTwo) : 0}
-          />
-        </div>
-        <div onClick={() => openModal(tableThree, 3)}>
-          <TableButton
-            number={3}
-            price={tableThree ? calculateTotal(tableThree) : 0}
-          />
-        </div>
-        <div onClick={() => openModal(tableFour, 4)}>
-          <TableButton
-            number={4}
-            price={tableFour ? calculateTotal(tableFour) : 0}
-          />
-        </div>
         <div onClick={() => openModal(tableFive, 5)}>
           <TableButton
             number={5}
             price={tableFive ? calculateTotal(tableFive) : 0}
+          />
+        </div>
+        <div onClick={() => openModal(tableTwo, 2)}>
+          <TableButton
+            number={2}
+            price={tableTwo ? calculateTotal(tableTwo) : 0}
           />
         </div>
         <div onClick={() => openModal(tableSix, 6)}>
@@ -225,25 +213,40 @@ export default function Home() {
             price={tableSix ? calculateTotal(tableSix) : 0}
           />
         </div>
+        <div onClick={() => openModal(tableThree, 3)}>
+          <TableButton
+            number={3}
+            price={tableThree ? calculateTotal(tableThree) : 0}
+          />
+        </div>
         <div onClick={() => openModal(tableSeven, 7)}>
           <TableButton
             number={7}
             price={tableSeven ? calculateTotal(tableSeven) : 0}
           />
         </div>
+        <div onClick={() => openModal(tableFour, 4)}>
+          <TableButton
+            number={4}
+            price={tableFour ? calculateTotal(tableFour) : 0}
+          />
+        </div>
+        
+ 
+  
         <div onClick={() => openModal(tableEight, 8)}>
           <TableButton
             number={8}
             price={tableEight ? calculateTotal(tableEight) : 0}
           />
         </div>
-        <div>
-          <div style={{ fontSize: "20px", color: "white" }}>
+        <div style={{display:'flex', flexDirection:'column', justifyContent:'flex-end', width:'90%'}}>
+          <div style={{ fontSize: "20px", color: "white", textAlign:"right" }}>
             <h1>{numberWithCommas(todayTotal)}원</h1>
           </div>
-          <div onClick={resetTotal}>
-            <button>초기화</button>
-          </div>
+         <div>
+            <button onClick={resetTotal }>영업마감</button>
+            </div>
         </div>
       </div>
       <Modal
@@ -331,6 +334,20 @@ export default function Home() {
             <div className={styles.menuContainer}>
               <button
                 className={styles.menuButton}
+                onClick={() => setSoftdrink(soup + 1)}
+              >
+                  음료
+              </button>
+              <div
+                className={styles.menuNumber}
+                onClick={() => setSoftdrink(soup - 1)}
+              >
+                <h2>{softdrink}</h2>
+              </div>
+            </div>
+            <div className={styles.menuContainer}>
+              <button
+                className={styles.menuButton}
                 onClick={() => setSoup(soup + 1)}
               >
                 된장찌개
@@ -363,7 +380,7 @@ export default function Home() {
             </button>
             <div className={styles.finalContainer}>
               <div className={styles.menuNumber}>
-                <h3 style={{ color: "black" }}>
+                <h3 style={{ color: "black", textAlign:'right' }}>
                   {numberWithCommas(
                     calculateTotal([
                       adult,
