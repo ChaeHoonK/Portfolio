@@ -56,6 +56,7 @@
     height:6vh;
     width: 40vw;
     min-height: 50px;
+    font-size: larger;
   }
 
   .menuNumber{
@@ -79,6 +80,7 @@
     width: 80vw;
     height: 6vh;
     min-height: 30px;
+    font-size: larger;
   }
 
 .finalContainer {
